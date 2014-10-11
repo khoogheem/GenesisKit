@@ -36,6 +36,12 @@ import Foundation
 	let IOS7 = Diagnostics.OSVerison(7.0)
 	let IOS6 = Diagnostics.OSVerison(6.0) //this would be odd given swift doesn't support it ;)-
 	
+	let IPAD = UIDevice.currentDevice().userInterfaceIdiom == .Pad
+	let IPHONE = UIDevice.currentDevice().userInterfaceIdiom == .Phone
+
+	let isLandscape = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
+	let isPortrait = UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)
+
 	#elseif os(OSX)
 	import Cocoa
 
@@ -104,7 +110,7 @@ public class Diagnostics : NSObject {
 		
 		return "Unknown"
 	}
-
+	
 	#endif
 
 
@@ -145,7 +151,7 @@ public class Diagnostics : NSObject {
 				
 				let checkVer: CGFloat = versMaj+(versMin/100);
 				if (checkVer >= version) {
-				systemIsVersion = true
+					systemIsVersion = true
 				}
 				
 			#endif

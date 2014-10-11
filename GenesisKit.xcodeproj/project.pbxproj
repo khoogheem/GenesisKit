@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		960833F819E818BD004F885E /* GenesisKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 960833F719E818BD004F885E /* GenesisKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9608340219E818BD004F885E /* GenesisKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608340119E818BD004F885E /* GenesisKitTests.swift */; };
+		96BED12A19E9C7D700ACA0C9 /* GenesisKitiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BED13419E9C7D700ACA0C9 /* GenesisKitiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */; };
+		96BED13C19E9C86F00ACA0C9 /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 96BED13B19E9C86F00ACA0C9 /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		960833F219E818BD004F885E /* GenesisKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		960833F619E818BD004F885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		960833F719E818BD004F885E /* GenesisKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKit.h; sourceTree = "<group>"; };
-		960833FD19E818BD004F885E /* GenesisKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9608340019E818BD004F885E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9608340119E818BD004F885E /* GenesisKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitTests.swift; sourceTree = "<group>"; };
+		96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BED12819E9C7D700ACA0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitiOS.h; sourceTree = "<group>"; };
+		96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BED13219E9C7D700ACA0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitiOSTests.swift; sourceTree = "<group>"; };
+		96BED13B19E9C86F00ACA0C9 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		960833EE19E818BD004F885E /* Frameworks */ = {
+		96BED12019E9C7D700ACA0C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		960833FA19E818BD004F885E /* Frameworks */ = {
+		96BED12C19E9C7D700ACA0C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,54 +40,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		960833E819E818BD004F885E = {
+		96BED11819E9C7BA00ACA0C9 = {
 			isa = PBXGroup;
 			children = (
-				960833F419E818BD004F885E /* GenesisKit */,
-				960833FE19E818BD004F885E /* GenesisKitTests */,
-				960833F319E818BD004F885E /* Products */,
+				96BED13B19E9C86F00ACA0C9 /* Shared */,
+				96BED12619E9C7D700ACA0C9 /* GenesisKitiOS */,
+				96BED13019E9C7D700ACA0C9 /* GenesisKitiOSTests */,
+				96BED12519E9C7D700ACA0C9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		960833F319E818BD004F885E /* Products */ = {
+		96BED12519E9C7D700ACA0C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				960833F219E818BD004F885E /* GenesisKit.framework */,
-				960833FD19E818BD004F885E /* GenesisKitTests.xctest */,
+				96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */,
+				96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		960833F419E818BD004F885E /* GenesisKit */ = {
+		96BED12619E9C7D700ACA0C9 /* GenesisKitiOS */ = {
 			isa = PBXGroup;
 			children = (
-				960833F719E818BD004F885E /* GenesisKit.h */,
-				960833F519E818BD004F885E /* Supporting Files */,
+				96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */,
+				96BED12719E9C7D700ACA0C9 /* Supporting Files */,
 			);
-			path = GenesisKit;
+			path = GenesisKitiOS;
 			sourceTree = "<group>";
 		};
-		960833F519E818BD004F885E /* Supporting Files */ = {
+		96BED12719E9C7D700ACA0C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				960833F619E818BD004F885E /* Info.plist */,
+				96BED12819E9C7D700ACA0C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		960833FE19E818BD004F885E /* GenesisKitTests */ = {
+		96BED13019E9C7D700ACA0C9 /* GenesisKitiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9608340119E818BD004F885E /* GenesisKitTests.swift */,
-				960833FF19E818BD004F885E /* Supporting Files */,
+				96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */,
+				96BED13119E9C7D700ACA0C9 /* Supporting Files */,
 			);
-			path = GenesisKitTests;
+			path = GenesisKitiOSTests;
 			sourceTree = "<group>";
 		};
-		960833FF19E818BD004F885E /* Supporting Files */ = {
+		96BED13119E9C7D700ACA0C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9608340019E818BD004F885E /* Info.plist */,
+				96BED13219E9C7D700ACA0C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -93,96 +96,96 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		960833EF19E818BD004F885E /* Headers */ = {
+		96BED12119E9C7D700ACA0C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960833F819E818BD004F885E /* GenesisKit.h in Headers */,
+				96BED12A19E9C7D700ACA0C9 /* GenesisKitiOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		960833F119E818BD004F885E /* GenesisKit */ = {
+		96BED12319E9C7D700ACA0C9 /* GenesisKitiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9608340519E818BD004F885E /* Build configuration list for PBXNativeTarget "GenesisKit" */;
+			buildConfigurationList = 96BED13519E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOS" */;
 			buildPhases = (
-				960833ED19E818BD004F885E /* Sources */,
-				960833EE19E818BD004F885E /* Frameworks */,
-				960833EF19E818BD004F885E /* Headers */,
-				960833F019E818BD004F885E /* Resources */,
+				96BED11F19E9C7D700ACA0C9 /* Sources */,
+				96BED12019E9C7D700ACA0C9 /* Frameworks */,
+				96BED12119E9C7D700ACA0C9 /* Headers */,
+				96BED12219E9C7D700ACA0C9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GenesisKit;
-			productName = GenesisKit;
-			productReference = 960833F219E818BD004F885E /* GenesisKit.framework */;
+			name = GenesisKitiOS;
+			productName = GenesisKitiOS;
+			productReference = 96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		960833FC19E818BD004F885E /* GenesisKitTests */ = {
+		96BED12E19E9C7D700ACA0C9 /* GenesisKitiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9608340819E818BD004F885E /* Build configuration list for PBXNativeTarget "GenesisKitTests" */;
+			buildConfigurationList = 96BED13819E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOSTests" */;
 			buildPhases = (
-				960833F919E818BD004F885E /* Sources */,
-				960833FA19E818BD004F885E /* Frameworks */,
-				960833FB19E818BD004F885E /* Resources */,
+				96BED12B19E9C7D700ACA0C9 /* Sources */,
+				96BED12C19E9C7D700ACA0C9 /* Frameworks */,
+				96BED12D19E9C7D700ACA0C9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GenesisKitTests;
-			productName = GenesisKitTests;
-			productReference = 960833FD19E818BD004F885E /* GenesisKitTests.xctest */;
+			name = GenesisKitiOSTests;
+			productName = GenesisKitiOSTests;
+			productReference = 96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		960833E919E818BD004F885E /* Project object */ = {
+		96BED11919E9C7BA00ACA0C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Kevin A. Hoogheem";
 				TargetAttributes = {
-					960833F119E818BD004F885E = {
+					96BED12319E9C7D700ACA0C9 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
-					960833FC19E818BD004F885E = {
+					96BED12E19E9C7D700ACA0C9 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 960833EC19E818BD004F885E /* Build configuration list for PBXProject "GenesisKit" */;
+			buildConfigurationList = 96BED11C19E9C7BA00ACA0C9 /* Build configuration list for PBXProject "GenesisKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 960833E819E818BD004F885E;
-			productRefGroup = 960833F319E818BD004F885E /* Products */;
+			mainGroup = 96BED11819E9C7BA00ACA0C9;
+			productRefGroup = 96BED12519E9C7D700ACA0C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				960833F119E818BD004F885E /* GenesisKit */,
-				960833FC19E818BD004F885E /* GenesisKitTests */,
+				96BED12319E9C7D700ACA0C9 /* GenesisKitiOS */,
+				96BED12E19E9C7D700ACA0C9 /* GenesisKitiOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		960833F019E818BD004F885E /* Resources */ = {
+		96BED12219E9C7D700ACA0C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BED13C19E9C86F00ACA0C9 /* Shared in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		960833FB19E818BD004F885E /* Resources */ = {
+		96BED12D19E9C7D700ACA0C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,25 +195,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		960833ED19E818BD004F885E /* Sources */ = {
+		96BED11F19E9C7D700ACA0C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		960833F919E818BD004F885E /* Sources */ = {
+		96BED12B19E9C7D700ACA0C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9608340219E818BD004F885E /* GenesisKitTests.swift in Sources */,
+				96BED13419E9C7D700ACA0C9 /* GenesisKitiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9608340319E818BD004F885E /* Debug */ = {
+		96BED11D19E9C7BA00ACA0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		96BED11E19E9C7BA00ACA0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		96BED13619E9C7D700ACA0C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,6 +245,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -245,10 +264,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GenesisKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -256,7 +280,7 @@
 			};
 			name = Debug;
 		};
-		9608340419E818BD004F885E /* Release */ = {
+		96BED13719E9C7D700ACA0C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -276,6 +300,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -285,9 +313,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GenesisKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -295,95 +328,125 @@
 			};
 			name = Release;
 		};
-		9608340619E818BD004F885E /* Debug */ = {
+		96BED13919E9C7D700ACA0C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GenesisKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9608340719E818BD004F885E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GenesisKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		9608340919E818BD004F885E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GenesisKitTests/Info.plist;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GenesisKitiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		9608340A19E818BD004F885E /* Release */ = {
+		96BED13A19E9C7D700ACA0C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GenesisKitTests/Info.plist;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GenesisKitiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		960833EC19E818BD004F885E /* Build configuration list for PBXProject "GenesisKit" */ = {
+		96BED11C19E9C7BA00ACA0C9 /* Build configuration list for PBXProject "GenesisKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9608340319E818BD004F885E /* Debug */,
-				9608340419E818BD004F885E /* Release */,
+				96BED11D19E9C7BA00ACA0C9 /* Debug */,
+				96BED11E19E9C7BA00ACA0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9608340519E818BD004F885E /* Build configuration list for PBXNativeTarget "GenesisKit" */ = {
+		96BED13519E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9608340619E818BD004F885E /* Debug */,
-				9608340719E818BD004F885E /* Release */,
+				96BED13619E9C7D700ACA0C9 /* Debug */,
+				96BED13719E9C7D700ACA0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9608340819E818BD004F885E /* Build configuration list for PBXNativeTarget "GenesisKitTests" */ = {
+		96BED13819E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9608340919E818BD004F885E /* Debug */,
-				9608340A19E818BD004F885E /* Release */,
+				96BED13919E9C7D700ACA0C9 /* Debug */,
+				96BED13A19E9C7D700ACA0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 960833E919E818BD004F885E /* Project object */;
+	rootObject = 96BED11919E9C7BA00ACA0C9 /* Project object */;
 }

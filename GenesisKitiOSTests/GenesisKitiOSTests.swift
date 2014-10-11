@@ -1,15 +1,15 @@
 //
-//  GenesisKitTests.swift
-//  GenesisKitTests
+//  GenesisKitiOSTests.swift
+//  GenesisKitiOSTests
 //
-//  Created by Kevin A. Hoogheem on 10/10/14.
-//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
+//  Created by Kevin A. Hoogheem on 10/11/14.
+//
 //
 
 import UIKit
 import XCTest
 
-class GenesisKitTests: XCTestCase {
+class GenesisKitiOSTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
