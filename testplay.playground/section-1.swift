@@ -4,205 +4,97 @@ import Foundation
 import UIKit
 
 
+var platform: String = {
+	// Declare an array that can hold the bytes required to store `utsname`, initilized
+	// with zeros. We do this to get a chunk of memory that is freed upon return of
+	// the method
+	var sysInfo: [CChar] = Array(count: sizeof(utsname), repeatedValue: 0)
 
-struct GenericGenerator<T>: GeneratorType {
-	var items: Slice<T>
+	// We need to get to the underlying memory of the array:
+	let machine = sysInfo.withUnsafeMutableBufferPointer {
+		(inout ptr: UnsafeMutableBufferPointer<CChar>) -> String in
+		// Call uname and let it write into the memory Swift allocated for the array
+		uname(UnsafeMutablePointer<utsname>(ptr.baseAddress))
+		
+		// Now here is the ugly part: `machine` is the 5th member of `utsname` and
+		// each member member is `_SYS_NAMELEN` sized. We skip the the first 4 members
+		// of the struct which will land us at the memory address of the `machine`
+		// member
+		let machinePtr = advance(ptr.baseAddress, Int(_SYS_NAMELEN * 4))
+		
+		// Create a Swift string from the C string
+		return String.fromCString(machinePtr)!
+	}
+	return "iPhone4,1"
+//	return machine
+}()
+
+
+let platformString: (device: String, desciption: String, number: Int?) = {
 	
-	mutating func next() -> T? {
-		if items.isEmpty {return nil}
-		let ret = items[0]
-		items = items[1..<items.count]
-		return ret
+	//will keep it simple here..
+	switch platform {
+		case "x86_64", "i386":
+			return ("Simulator", "Simulator", nil)
+		
+		//iPhones
+		case "iPhone1,1":
+			return ("iPhone", "iPhone 1G", nil)
+		case "iPhone1,2":
+			return ("iPhone", "iPhone 3G", nil)
+		case "iPhone2,1":
+			return ("iPhone", "iPhone 3G3", nil)
+		//iPhone 4's
+		case "iPhone3,1":
+			return ("iPhone", "iPhone 4", 4)
+		case "iPhone3,3":
+			return ("iPhone", "Verizon iPhone 4", 4)
+		case "iPhone4,1":
+			return ("iPhone", "iPhone 4S", 4)
+		//iPhone 5's
+		case "iPhone4,1":
+			return ("iPhone", "iPhone 4S", 4)
+
+		
+		
+		default:
+			return ("unk", "unk", nil)
+	}
+	
+}()
+
+let shit = platformString.desciption
+
+
+enum Suit {
+	case Spades, Hearts, Diamonds, Clubs
+	func simpleDescription() -> String {
+		switch self {
+		case .Spades:
+			return "spaces"
+		case .Hearts:
+			return "hearts"
+		case .Diamonds:
+			return "diamonds"
+		case .Clubs:
+			return "clubs"
+		}
 	}
 }
 
-extension Stack : SequenceType {	func generate() -> GenericGenerator<T> {		return GenericGenerator( items: items[0..<items.endIndex] )	}}
-
-struct Stack<T: Equatable>{
-	private var items = [T]()
-	
-	var topItem: T? {
-		return items.isEmpty ? nil : items[items.count - 1]
-	}
-
-	var count: Int {
-		return items.endIndex
-	}
-	
-	var firstObject: T? {
-		return items.first
-	}
-	
-	var lastObject: T? {
-		return items.last
-	}
-	
-	mutating func push(item: T) {
-		items.append(item)
-	}
-	
-	mutating func pop() -> T {
-		return items.removeLast()
-	}
-	
-	func objectAtIndex(index: Int) -> T? {
-		if index >= 0 && index <= items.count {
-			return items[index]
-		}
-		
-		return nil
-	}
-
-	func indexOfObject(object:T) -> Int? {
-		for i in 0..<items.count {
-			if items[i] == object {
-				return i
-			}
-		}
-
-		return nil
-	}
-		
-	mutating func removeAll() {
-		items.removeAll(keepCapacity: false)
-	}
-
-}
-
-var donkey = Stack<String>()
-donkey.push("done")
-var crap: String = donkey.topItem!
-donkey.push("fuckr")
-
-donkey.indexOfObject(crap)
-donkey.indexOfObject("fuckrd")
-
-//donkey.lastObject
-//donkey.count
-donkey.push("dick")
-donkey.push("dong")
-donkey.removeAll()
-donkey.push("wang")
-donkey.push("pecker")
-donkey.objectAtIndex(3)
-donkey.objectAtIndex(33)
-//donkey.items.endIndex
-
-//for x in donkey {
-//	x
-//}
+Suit.Spades.simpleDescription()
 
 
-//// like this vs the crazy way
-//class LogManagerBitMask {
-//	class var None			: UInt8 { return 0 }
-//	class var All			: UInt8 { return UInt8.max }
-//	class var Default		: UInt8 { return 1 }
-//	class var Loading		: UInt8 { return 1<<1 }
-//	class var UnLoading		: UInt8 { return 1<<2 }
-//	class var Banner		: UInt8 { return 1<<3 }
-//	class var Video			: UInt8 { return 1<<4 }
-//	class var Notification	: UInt8 { return 1<<5 }
-//	class var Layers		: UInt8 { return 1<<6 }
-//	class var DataLoading	: UInt8 { return 1<<7 }
+//var _SYS_NAMELEN: Int32 { get }
+//
+//struct utsname {
+//	var sysname: (Int8, Int8) /* [XSI] Name of OS */
+//	var nodename: (Int8, Int8) /* [XSI] Name of this network node */
+//	var release: (Int8, Int8) /* [XSI] Release level */
+//	var version: (Int8, Int8) /* [XSI] Version level */
+//	var machine: (Int8, Int8 ) /* [XSI] Hardware type */
 //}
 //
-//
-//private func getcallstack(source: String) -> NSArray {
-//	var sourceString = source
-//	var seperatorSet: NSCharacterSet
-//	seperatorSet = NSCharacterSet(charactersInString:" -[]+?.,")
-//	var array: [String] = sourceString.componentsSeparatedByCharactersInSet(seperatorSet).filter({$0 != ""})
-//	
-//	return array
-//}
-//
-//
-//func GKLog(format:String, args: CVarArgType...){
-//	//	var shit: NSArray = NSThread.callStackSymbols()
-//	//	//		var sourced: String = shit[1] as String!
-//	//	//		var sourced =  shit["Source"]
-//	//	var fucker: [String] = shit as Array
-//	//
-//	//	print(fucker)
-//	//
-//	//	var callStack: NSArray = getcallstack(fucker[0]	)
-//	//	//
-//	//	print(callStack.objectAtIndex(0))
-//	//	print(callStack.objectAtIndex(1))
-//	//	print(callStack.objectAtIndex(3))
-//
-////	NSArray *callStack = getcallstack([[NSThread callStackSymbols] objectAtIndex:1]);
-////	if ([TTLogManager sharedLogger].verboseLogging) {
-////		output = [NSString stringWithFormat:@"[%@ %@] - %@", [callStack objectAtIndex:3], [callStack objectAtIndex:4], output];
-////	}
-//	
-//	var callStack: NSArray = NSThread.callStackSymbols()
-//	var callStrings: [String] = callStack as Array
-//	
-//	
-//	LogManager.sharedLogger.logMessage(NSString(format:format, arguments: getVaList(args)), withLogManagerBitMask: 0)
-//}
-//
-//
-//class LogManager  : NSObject {
-//	var logValueMask = LogManagerBitMask.All
-//
-//	class var sharedLogger : LogManager {
-//	struct Static {
-//		static var onceToken : dispatch_once_t = 0
-//		static var instance : LogManager? = nil
-//
-//		}
-//		dispatch_once(&Static.onceToken) {
-//			Static.instance = LogManager()
-//		}
-//		return Static.instance!
-//	}
-//	
-//	override init() {
-//
-//		logValueMask = LogManagerBitMask.All
-//		println(logValueMask)
-//
-//		super.init()
-//	}
-//	
-//	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	// Main Log Code
-//	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	//MARK: Main Log Code
-//	
-//	func logMessage(message: String, withLogManagerBitMask logbitmask: UInt8 = LogManagerBitMask.All ) {
-//
-//		//Ok.. so lets just not do this for now..
-//		//ok no mask set
-//		println(message)
-//	}
-//	
-//	
-//	//	var shit: NSArray = NSThread.callStackSymbols()
-//	//	//		var sourced: String = shit[1] as String!
-//	//	//		var sourced =  shit["Source"]
-//	//	var fucker: [String] = shit as Array
-//	//
-//	//	print(fucker)
-//	//
-//	//	var callStack: NSArray = getcallstack(fucker[0]	)
-//	//	//
-//	//	print(callStack.objectAtIndex(0))
-//	//	print(callStack.objectAtIndex(1))
-//	//	print(callStack.objectAtIndex(3))
-//	
-//}
-//
-//LogManager.sharedLogger.logValueMask =  LogManagerBitMask.None | LogManagerBitMask.Default
-////LogManager.sharedLogger.logMessage("d")
-////GKLog(format: "What: %@, %@", "poo", "peed")
-//GKLog("asfd")
-
 
 //LUHN - CC validation
 
