@@ -57,26 +57,25 @@ import Foundation
 public class Diagnostics : NSObject {
 	
 	// MARK: App Info
-	//Until Swift supports Class Vars.. lets just make this a function..
-	
-	class func appName() -> String {
+	class var appName: String {
 		return self.fromInfoBundle("CFBundleName")!
 	}
 	
-	class func appVersion() -> String {
+	
+	class var appVersion: String {
 		return self.fromInfoBundle("CFBundleShortVersionString")!
 	}
 
-	class func appBuild() -> String {
+	class var appBuild: String {
 		return self.fromInfoBundle("CFBundleVersion")!
 	}
 	
-	class func appIdentifer() -> String {
+	class var appIdentifer: String {
 		return self.fromInfoBundle("CFBundleIdentifier")!
 	}
 
 	
-	#if os(iOS)
+//	#if os(iOS)
 	// MARK: Radio Information
 
 	/**
@@ -84,7 +83,8 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The string value of the Radio Access Technology name
 	*/
-	class func radioAccessName() -> String {
+	@availability(iOS, introduced=4.0)
+	class var radioAccessName: String {
 		
 		//Not really needed.. but will just protect on Simulator and such.
 		if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
@@ -99,7 +99,8 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The string value of the current Cellular Carriers Name
 	*/
-	class func carrierName() -> String {
+	@availability(iOS, introduced=4.0)
+	class var carrierName: String {
 		
 		//Not really needed.. but will just protect on Simulator and such.
 		if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
@@ -111,7 +112,7 @@ public class Diagnostics : NSObject {
 		return "Unknown"
 	}
 	
-	#endif
+//	#endif
 
 
 	// MARK: System Version Check
@@ -161,18 +162,19 @@ public class Diagnostics : NSObject {
 		return systemIsVersion
 	}
 	
+	typealias SystemVerisonCompletion = (success: Bool) -> Void
 	/**
 	Compares a float representation of the system version and returns a Closure
  
 	:param: sysVersion A float value of the System Version.  ie `"8.0"`
-	:returns: returns completionClosure with `success` as a bool value
+	:returns: returns SystemVerisonCompletion with `success` as a bool value
 	*/
-	class func onSystemVerison(sysVersion: Float, completionClosure: (success: Bool) -> ()) {
+	class func onSystemVerison(sysVersion: Float, completion: SystemVerisonCompletion) {
 		
 		if self.OSVerison(sysVersion) {
-			completionClosure(success: true)
+			completion(success: true)
 		}else {
-			completionClosure(success: false)
+			completion(success: false)
 		}
 	}
 	
@@ -181,7 +183,7 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The Systems Version as a String value
 	*/
-	class func systemVersion() -> String {
+	class var systemVersion: String {
 		struct Static {
 			static var systemVer: String? = nil
 			static var onceToken : dispatch_once_t = 0

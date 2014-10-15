@@ -65,9 +65,9 @@ let kConversionMetersPerMile = 1609.347
 let kConversionMetersPerFoot = 3.280839895
 
 //GEOGRAPHIC / ANGLE
-/** Radius of Earth at Equator (Clarke Ellipsoid) */
+/** Radius of Earth at Equator (Clarke Ellipsoid) in km */
 let kConversionEarthRadiusAtEquator: Kilometer  = 6_378.2  //In km
-/** Radius of Earth at Pole (Clarke Ellipsoid) */
+/** Radius of Earth at Pole (Clarke Ellipsoid) in km */
 let kConversionEarthRadiusAtPole: Kilometer  = 6_356.6  //In km
 let kConversionDegreesToRadians = 0.0174532925
 let kConversionDegreesToGradian = 1.111111111
@@ -86,13 +86,13 @@ let kConversionStonesPerKilograms = 0.157473
 extension Double {
 	
 	/** returns the minimum value in Degress Celsius */
-	static var minDegressCelsius: Celsius {return -273.15}
+	static var minDegressCelsius: Celsius {return Conversion.minDegCelsius}
 	
 	/** returns the minimum value in Degress Fahrenheit */
-	static var minDegressFahrenheit: Fahrenheit {return -459.67}
+	static var minDegressFahrenheit: Fahrenheit {return Conversion.minDegFahrenheit}
 
 	/** returns the minimum value in Degress Kelvin */
-	static var minDegressKelvin: Kelvin {return 0}
+	static var minDegressKelvin: Kelvin {return Conversion.minDegKelvin }
 	
 	/** Converts the Celsius value to Fahrenheit */
 	func toFahrenheit() -> Fahrenheit { return (self * 9.0/5.0) + 32.0 }
@@ -241,15 +241,15 @@ public class Conversion : NSObject {
 ///---------------------------------------------------------------------------------------
 //MARK: Temp
 	
-	func minDegCelsius() -> Double {
+	class var minDegCelsius: Double {
 		return -273.15
 	}
 	
-	func minDegFahrenheit() -> Double {
+	class var minDegFahrenheit: Double {
 		return -459.67
 	}
 	
-	func minDegKelvin() -> Int {
+	class var minDegKelvin: Double {
 		return 0
 	}
 
