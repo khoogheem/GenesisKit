@@ -97,6 +97,13 @@ struct Stack<T: Equatable> {
 		return nil
 	}
 	
+	/** 
+	 Removes all the objects from the Stack
+	 */
+	mutating func removeAll() {
+		items.removeAll(keepCapacity: false)
+	}
+
 }
 
 //MARK: Extensions

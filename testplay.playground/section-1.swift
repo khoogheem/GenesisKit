@@ -63,6 +63,10 @@ struct Stack<T: Equatable>{
 		return nil
 	}
 		
+	mutating func removeAll() {
+		items.removeAll(keepCapacity: false)
+	}
+
 }
 
 var donkey = Stack<String>()
@@ -75,12 +79,13 @@ donkey.indexOfObject("fuckrd")
 
 //donkey.lastObject
 //donkey.count
-//donkey.push("dick")
-//donkey.push("dong")
-//donkey.push("wang")
-//donkey.push("pecker")
-//donkey.objectAtIndex(3)
-//donkey.objectAtIndex(33)
+donkey.push("dick")
+donkey.push("dong")
+donkey.removeAll()
+donkey.push("wang")
+donkey.push("pecker")
+donkey.objectAtIndex(3)
+donkey.objectAtIndex(33)
 //donkey.items.endIndex
 
 //for x in donkey {
