@@ -253,7 +253,8 @@ public class Diagnostics : NSObject {
 	 :returns: desciption A string of the Device types full description.. Verizon iPhone 4
 	 :returns: number An optional Int value of the device.. 6 - for iPhone 6 or 6 Plus
 	*/
-	class func platformString() -> (device: String, desciption: String, number: Int?) {
+	class var platformString:(device: String, desciption: String, number: Int?) {
+//	class func platformString() -> (device: String, desciption: String, number: Int?) {
 		
 		//will keep it simple here..
 		switch platform {

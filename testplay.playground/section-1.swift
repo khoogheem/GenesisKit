@@ -3,67 +3,90 @@
 import Foundation
 import UIKit
 
+//
+//{
+//	"code" : "AED",
+//	"number" : "784",
+//	"ecode" : "2",
+//	"fundscode" : false,
+//	"name" : {
+//		"prename" : "United Arab Emirates",
+//		"majorName" : "Dirham",
+//		"fractionalName" : "Fils",
+//		"nicknames" : []
+//	},
+//	"symbol" : {
+//		"major" : "د.إ",
+//		"minor" : "فلس"
+//	},
+//	"centralBank" : {
+//		"name" : "Central Bank of the UAE",
+//		"url" : "http://www.centralbank.ae"
+//	}
+//},
 
-var platform: String = {
-	// Declare an array that can hold the bytes required to store `utsname`, initilized
-	// with zeros. We do this to get a chunk of memory that is freed upon return of
-	// the method
-	var sysInfo: [CChar] = Array(count: sizeof(utsname), repeatedValue: 0)
+//{
+//	"code" : "USD",
+//	"number" : "840",
+//	"ecode" : "2",
+//	"fundscode" : false,
+//	"name" : {
+//		"prename" : "United States",
+//		"majorName" : "Dollar",
+//		"fractionalName" : "Cent",
+//		"nicknames" : [
+//		"greenback",
+//		"buck",
+//		"green",
+//		"dough",
+//		"smacker",
+//		"bones",
+//		"dead presidents",
+//		"simoleons",
+//		"moola",
+//		"moolah"
+//		]
+//	},
+//	"symbol" : {
+//		"major" : "$",
+//		"minor" : "¢"
+//	},
+//	"centralBank" : {
+//		"name" : "Federal Reserve Bank",
+//		"url" : "http://www.federalreserve.gov"
+//	}
+//},
+//
 
-	// We need to get to the underlying memory of the array:
-	let machine = sysInfo.withUnsafeMutableBufferPointer {
-		(inout ptr: UnsafeMutableBufferPointer<CChar>) -> String in
-		// Call uname and let it write into the memory Swift allocated for the array
-		uname(UnsafeMutablePointer<utsname>(ptr.baseAddress))
-		
-		// Now here is the ugly part: `machine` is the 5th member of `utsname` and
-		// each member member is `_SYS_NAMELEN` sized. We skip the the first 4 members
-		// of the struct which will land us at the memory address of the `machine`
-		// member
-		let machinePtr = advance(ptr.baseAddress, Int(_SYS_NAMELEN * 4))
-		
-		// Create a Swift string from the C string
-		return String.fromCString(machinePtr)!
-	}
-	return "iPhone4,1"
-//	return machine
-}()
-
-
-let platformString: (device: String, desciption: String, number: Int?) = {
+struct Currency {
+	/** The Symbol for the Major part of the currency.. ex: USD - $ */
+	var majorSymbol: String? = nil
 	
-	//will keep it simple here..
-	switch platform {
-		case "x86_64", "i386":
-			return ("Simulator", "Simulator", nil)
-		
-		//iPhones
-		case "iPhone1,1":
-			return ("iPhone", "iPhone 1G", nil)
-		case "iPhone1,2":
-			return ("iPhone", "iPhone 3G", nil)
-		case "iPhone2,1":
-			return ("iPhone", "iPhone 3G3", nil)
-		//iPhone 4's
-		case "iPhone3,1":
-			return ("iPhone", "iPhone 4", 4)
-		case "iPhone3,3":
-			return ("iPhone", "Verizon iPhone 4", 4)
-		case "iPhone4,1":
-			return ("iPhone", "iPhone 4S", 4)
-		//iPhone 5's
-		case "iPhone4,1":
-			return ("iPhone", "iPhone 4S", 4)
-
-		
-		
-		default:
-			return ("unk", "unk", nil)
-	}
+	/** The Symbol for the Minor part of the currency.. ex: USD - ¢ */
+	var minorSymbol: String? = nil
 	
-}()
+	/** The Code typically the ISO Alpha-3 Code.. ex United States Dollars USD */
+	var code: String? = nil
+	
+	/** The ISO number for the currency. */
+	var number: Int? = nil
+	
+	var name: String? = nil
+	
+	/** If the Currency is a Funds code or a hard currency */
+	var fundscode: Bool = false
+	
+	//don't need init() since we set inital values..
+	
+}
 
-let shit = platformString.desciption
+//var turd =  Stack<String>()
+
+var cod = Currency()
+cod.code = "UDS"
+var USD  = Currency(majorSymbol: nil, minorSymbol: nil, code: "USD", number: 204, name: "United States Dollar", fundscode: false)
+USD.code
+USD.name
 
 
 enum Suit {
