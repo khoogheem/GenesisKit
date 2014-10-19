@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		961C967B19ED787C005DBB88 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C967A19ED787C005DBB88 /* Stack.swift */; };
+		962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BA51519F44BE500888F19 /* NetworkActivityController.swift */; };
 		9648735D19EDA9D200638279 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648735C19EDA9D200638279 /* Generator.swift */; };
 		9648739919F4092C00638279 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */; };
 		9648739C19F40F0700638279 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739B19F40F0700638279 /* NSDate+Extension.swift */; };
@@ -23,6 +24,7 @@
 		961C967A19ED787C005DBB88 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		962BA51219F44B2C00888F19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		962BA51419F44B6B00888F19 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		962BA51519F44BE500888F19 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkActivityController.swift; path = UI/Controllers/NetworkActivityController.swift; sourceTree = "<group>"; };
 		9648735C19EDA9D200638279 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Extension.swift"; path = "Extensions/NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		9648739B19F40F0700638279 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extension.swift"; path = "Extensions/NSDate+Extension.swift"; sourceTree = "<group>"; };
@@ -56,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962BA51719F44BEA00888F19 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				962BA51819F44BEE00888F19 /* Controllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		962BA51819F44BEE00888F19 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				962BA51519F44BE500888F19 /* NetworkActivityController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		9648735E19EDAA7100638279 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,7 @@
 				96D1CA1619ED984800B9A88B /* Memoization.swift */,
 				9648739A19F4093300638279 /* Extensions */,
 				9648735E19EDAA7100638279 /* Structures */,
+				962BA51719F44BEA00888F19 /* UI */,
 			);
 			name = GenesisKit;
 			path = Shared;
@@ -256,6 +275,7 @@
 				967F272719EAEC7700F33493 /* Diagnostics.swift in Sources */,
 				9648735D19EDA9D200638279 /* Generator.swift in Sources */,
 				967F272619EAEC7700F33493 /* DefaultsManager.swift in Sources */,
+				962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,8 @@
 import Foundation
 
 
-private var defaults = Dictionary<String, AnyObject>()
+//private var defaults = Dictionary<String, AnyObject>()
+private var defaults = [String: AnyObject]()
 private var sDebug: Bool = false
 
 
