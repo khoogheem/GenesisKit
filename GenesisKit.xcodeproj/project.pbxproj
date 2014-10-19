@@ -21,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		961C967A19ED787C005DBB88 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		962BA51219F44B2C00888F19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		962BA51419F44B6B00888F19 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		9648735C19EDA9D200638279 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Extension.swift"; path = "Extensions/NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		9648739B19F40F0700638279 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extension.swift"; path = "Extensions/NSDate+Extension.swift"; sourceTree = "<group>"; };
@@ -72,9 +74,11 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		967F272119EAEC7700F33493 /* Shared */ = {
+		967F272119EAEC7700F33493 /* GenesisKit */ = {
 			isa = PBXGroup;
 			children = (
+				962BA51219F44B2C00888F19 /* README.md */,
+				962BA51419F44B6B00888F19 /* LICENSE */,
 				967F272219EAEC7700F33493 /* Conversion.swift */,
 				967F272319EAEC7700F33493 /* DefaultsManager.swift */,
 				967F272419EAEC7700F33493 /* Diagnostics.swift */,
@@ -82,13 +86,14 @@
 				9648739A19F4093300638279 /* Extensions */,
 				9648735E19EDAA7100638279 /* Structures */,
 			);
+			name = GenesisKit;
 			path = Shared;
 			sourceTree = "<group>";
 		};
 		96BED11819E9C7BA00ACA0C9 = {
 			isa = PBXGroup;
 			children = (
-				967F272119EAEC7700F33493 /* Shared */,
+				967F272119EAEC7700F33493 /* GenesisKit */,
 				96BED12619E9C7D700ACA0C9 /* GenesisKitiOS */,
 				96BED13019E9C7D700ACA0C9 /* GenesisKitiOSTests */,
 				96BED12519E9C7D700ACA0C9 /* Products */,

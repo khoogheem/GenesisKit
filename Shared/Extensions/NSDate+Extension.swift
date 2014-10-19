@@ -83,4 +83,11 @@ extension NSDate {
 		}
 	}
 	
+	class func thisYear() -> Int {
+		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
+		var unitFlags : NSCalendarUnit = .CalendarUnitYear
+		var dateComponentNow : NSDateComponents = calendar.components(.CalendarUnitYear, fromDate: NSDate.date())
+		return dateComponentNow.year
+	}
+
 }
