@@ -67,19 +67,19 @@ extension NSDate {
 		return NSDate(year: year, month: month, day: day)
 	}
 	
-	class func ageFromDate(birthday: NSDate) -> Int {
+	class func yearsFromDate(date: NSDate) -> Int {
 		
 		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
 		var unitFlags : NSCalendarUnit = NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay
 		var dateComponentNow : NSDateComponents = calendar.components(unitFlags, fromDate: NSDate.date())
-		var dateComponentBirth : NSDateComponents = calendar.components(unitFlags, fromDate: birthday)
+		var dateComponentFrom : NSDateComponents = calendar.components(unitFlags, fromDate: date)
 		
-		if ( (dateComponentNow.month < dateComponentBirth.month) ||
-			((dateComponentNow.month == dateComponentBirth.month) && (dateComponentNow.day < dateComponentBirth.day))
+		if ( (dateComponentNow.month < dateComponentFrom.month) ||
+			((dateComponentNow.month == dateComponentFrom.month) && (dateComponentNow.day < dateComponentFrom.day))
 			){
-				return dateComponentNow.year - dateComponentBirth.year - 1
+				return dateComponentNow.year - dateComponentFrom.year - 1
 		} else {
-			return dateComponentNow.year - dateComponentBirth.year
+			return dateComponentNow.year - dateComponentFrom.year
 		}
 	}
 	

@@ -210,7 +210,7 @@ public class Diagnostics : NSObject {
 				
 				//TODO: Add the OSX Version
 				dispatch_once(&Static.onceToken) {
-					Static.systemVer = "1"
+					Static.systemVer = "10"
 				}
 
 			#endif
