@@ -28,7 +28,6 @@ import Foundation
 import UIKit
 #endif
 
-@availability(iOS, introduced=7.0)
 @objc class NetworkActivityController {
 	
 	/**
@@ -45,10 +44,16 @@ import UIKit
 		return Static.instance!
 	}
 
+	/**
+	Determines if there is current network acvitiy.  For OSX this can be used to display network activity
+	*/
+	var isActive:Bool {
+		get {
+			return activity
+		}
+	}
 	
-	/// The number of activities in progress. If the number is greater than 0, the network activity indicator is visible (unless modified by an external source).
-	private var numberOfRegisteredActivities: Int = 0
-	
+
 	/**
 	 Push a NetworkActivity to the stack.
 	 While there is items in the stack the Network Activity Indicator will be visible
@@ -57,9 +62,10 @@ import UIKit
 		withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
 		
 		numberOfRegisteredActivities += 1
-		if numberOfRegisteredActivities > 0 {
-			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-		}
+		//Lets let the didset of numberOfRegisteredActivities do the work.
+//		if numberOfRegisteredActivities > 0 {
+//			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+//		}
 		
 		withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
 	}
@@ -73,13 +79,42 @@ import UIKit
 		
 		let newValue = numberOfRegisteredActivities - 1
 		numberOfRegisteredActivities = newValue >= 0 ? newValue : 0
-		if numberOfRegisteredActivities == 0 {
-			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-		}
+//		if numberOfRegisteredActivities == 0 {
+//			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+//		}
 		
 		withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
 	}
 	
 	//MARK: Private
 	private var spinLock = OS_SPINLOCK_INIT
+	private var activity: Bool = false
+	
+	/// The number of activities in progress. If the number is greater than 0, the network activity indicator is visible (unless modified by an external source).
+	private var numberOfRegisteredActivities: Int = 0 {
+		didSet {
+			if numberOfRegisteredActivities != oldValue {
+				numberOfRegisteredActivitiesChanged()
+			}
+		}
+	}
+	
+	/* Listens to the change from numberOfRegisteredActivities and acts upon that change */
+	private func numberOfRegisteredActivitiesChanged() {
+		#if os(iOS)
+			if numberOfRegisteredActivities > 0 {
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+			}
+			if numberOfRegisteredActivities == 0 {
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+			}
+		#endif
+		if numberOfRegisteredActivities > 0 {
+			activity = true
+		}
+		if numberOfRegisteredActivities == 0 {
+			activity = false
+		}
+		
+	}
 }
