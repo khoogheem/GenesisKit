@@ -132,7 +132,7 @@ func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(rad) }
  
  Functions for converting values
  */
-public class Conversion : NSObject {
+class Conversion : NSObject {
 
 ///---------------------------------------------------------------------------------------
 /// Distance
