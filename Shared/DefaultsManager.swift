@@ -35,10 +35,10 @@ private var sDebug: Bool = false
 
  DefaultsManager allows you to manage system wide default settings using a key-value storage.
  */
-public class DefaultsManager : NSObject {
+class DefaultsManager : NSObject {
 	
 	//Override the initialization and add in some Default Style
-	override public class func initialize() {
+	internal override class func initialize() {
 		super.initialize()
 		
 		DefaultsManager.set("GenesisKit.useMetric", value: false)
