@@ -143,12 +143,11 @@ public class Diagnostics : NSObject {
 
 				#elseif os(OSX)
 				
-				//TODO: Check the OSX Version
-				let versMaj: int,  versMin: int,  versBugFix: int
-				
-				Gestalt(gestaltSystemVersionMajor, &versMaj)
-				Gestalt(gestaltSystemVersionMinor, &versMin)
-				Gestalt(gestaltSystemVersionBugFix, &versBugFix)
+//				let versMaj: Int,  versMin: Int,  versBugFix: Int
+//				
+//				Gestalt(gestaltSystemVersionMajor, &versMaj)
+//				Gestalt(gestaltSystemVersionMinor, &versMin)
+//				Gestalt(gestaltSystemVersionBugFix, &versBugFix)
 				
 				let checkVer: CGFloat = versMaj+(versMin/100);
 				if (checkVer >= version) {
@@ -208,9 +207,9 @@ public class Diagnostics : NSObject {
 				
 				#elseif os(OSX)
 				
-				//TODO: Add the OSX Version
+				//ok.. so we know Swift only works on 10.9 and above.. so just say its 10.9
 				dispatch_once(&Static.onceToken) {
-					Static.systemVer = "10"
+					Static.systemVer = "10.9"
 				}
 
 			#endif
@@ -327,7 +326,7 @@ public class Diagnostics : NSObject {
 	
 	//MARK: Class Private Functions
 	private class func fromInfoBundle(info: String) -> String? {
-		return NSBundle.mainBundle().infoDictionary[info] as NSString?
+		return NSBundle.mainBundle().infoDictionary![info] as NSString?
 	}
 	
 	

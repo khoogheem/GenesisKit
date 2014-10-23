@@ -54,7 +54,7 @@ extension NSDate {
 		c.month = month
 		c.day = day
 		
-		var gregorian = NSCalendar(identifier:NSGregorianCalendar)
+		var gregorian = NSCalendar(identifier:NSGregorianCalendar)!
 		var date = gregorian.dateFromComponents(c)
 		self.init(timeInterval:0, sinceDate:date!)
 	}
@@ -71,7 +71,7 @@ extension NSDate {
 		
 		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
 		var unitFlags : NSCalendarUnit = NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay
-		var dateComponentNow : NSDateComponents = calendar.components(unitFlags, fromDate: NSDate.date())
+		var dateComponentNow : NSDateComponents = calendar.components(unitFlags, fromDate: NSDate())
 		var dateComponentFrom : NSDateComponents = calendar.components(unitFlags, fromDate: date)
 		
 		if ( (dateComponentNow.month < dateComponentFrom.month) ||
@@ -86,7 +86,7 @@ extension NSDate {
 	class func thisYear() -> Int {
 		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
 		var unitFlags : NSCalendarUnit = .CalendarUnitYear
-		var dateComponentNow : NSDateComponents = calendar.components(.CalendarUnitYear, fromDate: NSDate.date())
+		var dateComponentNow : NSDateComponents = calendar.components(.CalendarUnitYear, fromDate: NSDate())
 		return dateComponentNow.year
 	}
 
