@@ -83,14 +83,14 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The string value of the Radio Access Technology name
 	*/
-	@availability(iOS, introduced=4.0)
+	@availability(OSX, unavailable, message="Not Available for OSX")
 	class var radioAccessName: String {
-		
-		//Not really needed.. but will just protect on Simulator and such.
-		if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
-			return CTTelephonyNetworkInfo().currentRadioAccessTechnology
-		}
-		
+		#if os(iOS)
+			//Not really needed.. but will just protect on Simulator and such.
+			if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
+				return CTTelephonyNetworkInfo().currentRadioAccessTechnology
+			}
+		#endif
 		return "No Radio"
 	}
 	
@@ -99,15 +99,17 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The string value of the current Cellular Carriers Name
 	*/
-	@availability(iOS, introduced=4.0)
+	@availability(OSX, unavailable, message="Not Available for OSX")
 	class var carrierName: String {
 		
-		//Not really needed.. but will just protect on Simulator and such.
-		if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
-			var carrier: CTCarrier
-			carrier =  CTTelephonyNetworkInfo().subscriberCellularProvider
-			return carrier.carrierName
-		}
+		#if os(iOS)
+			//Not really needed.. but will just protect on Simulator and such.
+			if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
+				var carrier: CTCarrier
+				carrier =  CTTelephonyNetworkInfo().subscriberCellularProvider
+				return carrier.carrierName
+			}
+		#endif
 		
 		return "Unknown"
 	}
@@ -141,19 +143,11 @@ public class Diagnostics : NSObject {
 				//Old iOS Way
 				systemIsVersion = UIDevice.currentDevice().systemVersion >= String(wholePart)
 
-				#elseif os(OSX)
-				
-//				let versMaj: Int,  versMin: Int,  versBugFix: Int
-//				
-//				Gestalt(gestaltSystemVersionMajor, &versMaj)
-//				Gestalt(gestaltSystemVersionMinor, &versMin)
-//				Gestalt(gestaltSystemVersionBugFix, &versBugFix)
-				
-				let checkVer: CGFloat = versMaj+(versMin/100);
-				if (checkVer >= version) {
-					systemIsVersion = true
+			#elseif os(OSX)
+				if compare >= 10.9 {
+					return true
 				}
-				
+				return false
 			#endif
 
 		}
