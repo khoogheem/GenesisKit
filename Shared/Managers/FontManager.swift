@@ -24,3 +24,10 @@
 //  THE SOFTWARE.
 
 import Foundation
+
+// Provide a private typealias for a platform Font.
+#if os(iOS)
+	private typealias AppFont = UIFont
+#elseif os(OSX)
+	private typealias AppFont = NSFont
+#endif

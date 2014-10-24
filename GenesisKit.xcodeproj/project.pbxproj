@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		961C967B19ED787C005DBB88 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C967A19ED787C005DBB88 /* Stack.swift */; };
 		962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BA51519F44BE500888F19 /* NetworkActivityController.swift */; };
-		962E112B19FB092700A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E112A19FB092700A1C594 /* FontManager.swift */; };
 		962E113619FB09E500A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E113519FB09E500A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		962E113C19FB09E500A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E113119FB09E500A1C594 /* GenesisKitOSX.framework */; };
 		962E114319FB09E500A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E114219FB09E500A1C594 /* GenesisKitOSXTests.swift */; };
 		962E114A19FB0A1C00A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272219EAEC7700F33493 /* Conversion.swift */; };
-		962E114B19FB0A1F00A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272319EAEC7700F33493 /* DefaultsManager.swift */; };
 		962E114C19FB0A2200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272419EAEC7700F33493 /* Diagnostics.swift */; };
 		962E114D19FB0A2A00A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D1CA1619ED984800B9A88B /* Memoization.swift */; };
 		962E114E19FB0A2F00A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */; };
@@ -22,11 +20,14 @@
 		962E115019FB0A3B00A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C967A19ED787C005DBB88 /* Stack.swift */; };
 		962E115119FB0A3B00A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648735C19EDA9D200638279 /* Generator.swift */; };
 		962E115219FB0A4000A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BA51519F44BE500888F19 /* NetworkActivityController.swift */; };
+		962E115719FB0ECF00A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115519FB0ECF00A1C594 /* DefaultsManager.swift */; };
+		962E115819FB0ECF00A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115519FB0ECF00A1C594 /* DefaultsManager.swift */; };
+		962E115919FB0ECF00A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115619FB0ECF00A1C594 /* FontManager.swift */; };
+		962E115A19FB0ECF00A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115619FB0ECF00A1C594 /* FontManager.swift */; };
 		9648735D19EDA9D200638279 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648735C19EDA9D200638279 /* Generator.swift */; };
 		9648739919F4092C00638279 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */; };
 		9648739C19F40F0700638279 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739B19F40F0700638279 /* NSDate+Extension.swift */; };
 		967F272519EAEC7700F33493 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272219EAEC7700F33493 /* Conversion.swift */; };
-		967F272619EAEC7700F33493 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272319EAEC7700F33493 /* DefaultsManager.swift */; };
 		967F272719EAEC7700F33493 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272419EAEC7700F33493 /* Diagnostics.swift */; };
 		96BED12A19E9C7D700ACA0C9 /* GenesisKitiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96BED13419E9C7D700ACA0C9 /* GenesisKitiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */; };
@@ -48,18 +49,18 @@
 		962BA51219F44B2C00888F19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		962BA51419F44B6B00888F19 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		962BA51519F44BE500888F19 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkActivityController.swift; path = UI/Controllers/NetworkActivityController.swift; sourceTree = "<group>"; };
-		962E112A19FB092700A1C594 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		962E113119FB09E500A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E113419FB09E500A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E113519FB09E500A1C594 /* GenesisKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitOSX.h; sourceTree = "<group>"; };
 		962E113B19FB09E500A1C594 /* GenesisKitOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E114119FB09E500A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E114219FB09E500A1C594 /* GenesisKitOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitOSXTests.swift; sourceTree = "<group>"; };
+		962E115519FB0ECF00A1C594 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		962E115619FB0ECF00A1C594 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		9648735C19EDA9D200638279 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Extension.swift"; path = "Extensions/NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		9648739B19F40F0700638279 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extension.swift"; path = "Extensions/NSDate+Extension.swift"; sourceTree = "<group>"; };
 		967F272219EAEC7700F33493 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
-		967F272319EAEC7700F33493 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		967F272419EAEC7700F33493 /* Diagnostics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
 		96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BED12819E9C7D700ACA0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +154,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		962E115419FB0ECF00A1C594 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				962E115519FB0ECF00A1C594 /* DefaultsManager.swift */,
+				962E115619FB0ECF00A1C594 /* FontManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		9648735E19EDAA7100638279 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +187,10 @@
 				962BA51219F44B2C00888F19 /* README.md */,
 				962BA51419F44B6B00888F19 /* LICENSE */,
 				967F272219EAEC7700F33493 /* Conversion.swift */,
-				967F272319EAEC7700F33493 /* DefaultsManager.swift */,
-				962E112A19FB092700A1C594 /* FontManager.swift */,
 				967F272419EAEC7700F33493 /* Diagnostics.swift */,
 				96D1CA1619ED984800B9A88B /* Memoization.swift */,
 				9648739A19F4093300638279 /* Extensions */,
+				962E115419FB0ECF00A1C594 /* Managers */,
 				9648735E19EDAA7100638279 /* Structures */,
 				962BA51719F44BEA00888F19 /* UI */,
 			);
@@ -417,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E115A19FB0ECF00A1C594 /* FontManager.swift in Sources */,
 				962E114F19FB0A3200A1C594 /* NSDate+Extension.swift in Sources */,
 				962E115119FB0A3B00A1C594 /* Generator.swift in Sources */,
 				962E114D19FB0A2A00A1C594 /* Memoization.swift in Sources */,
@@ -424,7 +434,7 @@
 				962E114A19FB0A1C00A1C594 /* Conversion.swift in Sources */,
 				962E114E19FB0A2F00A1C594 /* NSTimeInterval+Extension.swift in Sources */,
 				962E114C19FB0A2200A1C594 /* Diagnostics.swift in Sources */,
-				962E114B19FB0A1F00A1C594 /* DefaultsManager.swift in Sources */,
+				962E115819FB0ECF00A1C594 /* DefaultsManager.swift in Sources */,
 				962E115219FB0A4000A1C594 /* NetworkActivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E112B19FB092700A1C594 /* FontManager.swift in Sources */,
+				962E115919FB0ECF00A1C594 /* FontManager.swift in Sources */,
 				9648739C19F40F0700638279 /* NSDate+Extension.swift in Sources */,
 				96D1CA1719ED984800B9A88B /* Memoization.swift in Sources */,
 				9648739919F4092C00638279 /* NSTimeInterval+Extension.swift in Sources */,
@@ -449,7 +459,7 @@
 				961C967B19ED787C005DBB88 /* Stack.swift in Sources */,
 				967F272719EAEC7700F33493 /* Diagnostics.swift in Sources */,
 				9648735D19EDA9D200638279 /* Generator.swift in Sources */,
-				967F272619EAEC7700F33493 /* DefaultsManager.swift in Sources */,
+				962E115719FB0ECF00A1C594 /* DefaultsManager.swift in Sources */,
 				962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
