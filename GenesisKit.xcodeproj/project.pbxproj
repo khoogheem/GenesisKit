@@ -7,48 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		962E121219FC194800A1C594 /* GenesisKitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E120719FC194800A1C594 /* GenesisKitIOS.framework */; };
 		962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E122919FC195900A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
 		962E123719FC195900A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */; };
-		962E12C719FC1AF200A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B519FC1AF200A1C594 /* Conversion.swift */; };
 		962E12C819FC1AF200A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B519FC1AF200A1C594 /* Conversion.swift */; };
-		962E12C919FC1AF200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B619FC1AF200A1C594 /* Diagnostics.swift */; };
 		962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B619FC1AF200A1C594 /* Diagnostics.swift */; };
-		962E12CB19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */; };
 		962E12CC19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */; };
-		962E12CD19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */; };
 		962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */; };
-		962E12CF19FC1AF200A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BA19FC1AF200A1C594 /* Generator.swift */; };
 		962E12D019FC1AF200A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BA19FC1AF200A1C594 /* Generator.swift */; };
-		962E12D119FC1AF200A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */; };
 		962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */; };
-		962E12D319FC1AF200A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BD19FC1AF200A1C594 /* FontManager.swift */; };
 		962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BD19FC1AF200A1C594 /* FontManager.swift */; };
-		962E12D519FC1AF200A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BE19FC1AF200A1C594 /* Memoization.swift */; };
 		962E12D619FC1AF200A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BE19FC1AF200A1C594 /* Memoization.swift */; };
-		962E12D719FC1AF200A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BF19FC1AF200A1C594 /* Stack.swift */; };
 		962E12D819FC1AF200A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BF19FC1AF200A1C594 /* Stack.swift */; };
-		962E12D919FC1AF200A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */; };
 		962E12DA19FC1AF200A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */; };
-		962E12DB19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
 		962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
-		962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
 		962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
-		962E132419FC66CE00A1C594 /* GenesisKitIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */; };
-		962E132519FC66CE00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E132019FC66CE00A1C594 /* Info.plist */; };
-		962E132619FC66CE00A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */; };
-		962E132719FC66CE00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E132319FC66CE00A1C594 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		962E121319FC194800A1C594 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 962E11DD19FC18EF00A1C594 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 962E120619FC194800A1C594;
-			remoteInfo = GenesisKitIOS;
-		};
 		962E123119FC195900A1C594 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 962E11DD19FC18EF00A1C594 /* Project object */;
@@ -59,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		962E120719FC194800A1C594 /* GenesisKitIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E122519FC195900A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E122819FC195900A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E122919FC195900A1C594 /* GenesisKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitOSX.h; sourceTree = "<group>"; };
@@ -81,28 +55,11 @@
 		962E12C619FC1AF200A1C594 /* emailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailValidator.swift; sourceTree = "<group>"; };
 		962E131A19FC54E000A1C594 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		962E131B19FC54E600A1C594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenesisKitIOS.h; sourceTree = "<group>"; };
-		962E132019FC66CE00A1C594 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
-		962E132319FC66CE00A1C594 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E132819FC67B300A1C594 /* testplayiOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testplayiOS.playground; sourceTree = "<group>"; };
+		962E132919FC67BB00A1C594 /* PlaygroundOSX.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlaygroundOSX.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		962E120319FC194800A1C594 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		962E120E19FC194800A1C594 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				962E121219FC194800A1C594 /* GenesisKitIOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		962E122119FC195900A1C594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,11 +81,11 @@
 		962E11DC19FC18EF00A1C594 = {
 			isa = PBXGroup;
 			children = (
+				962E132819FC67B300A1C594 /* testplayiOS.playground */,
+				962E132919FC67BB00A1C594 /* PlaygroundOSX.playground */,
 				962E131B19FC54E600A1C594 /* README.md */,
 				962E131A19FC54E000A1C594 /* LICENSE */,
 				962E12B419FC1AF200A1C594 /* Shared */,
-				962E131E19FC66CE00A1C594 /* GenesisKitIOS */,
-				962E132119FC66CE00A1C594 /* GenesisKitIOSTests */,
 				962E122619FC195900A1C594 /* GenesisKitOSX */,
 				962E123319FC195900A1C594 /* GenesisKitOSXTests */,
 				962E11E719FC18EF00A1C594 /* Products */,
@@ -138,8 +95,6 @@
 		962E11E719FC18EF00A1C594 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				962E120719FC194800A1C594 /* GenesisKitIOS.framework */,
-				962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */,
 				962E122519FC195900A1C594 /* GenesisKitOSX.framework */,
 				962E122F19FC195900A1C594 /* GenesisKitOSXTests.xctest */,
 			);
@@ -247,35 +202,9 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		962E131E19FC66CE00A1C594 /* GenesisKitIOS */ = {
-			isa = PBXGroup;
-			children = (
-				962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */,
-				962E132019FC66CE00A1C594 /* Info.plist */,
-			);
-			path = GenesisKitIOS;
-			sourceTree = "<group>";
-		};
-		962E132119FC66CE00A1C594 /* GenesisKitIOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */,
-				962E132319FC66CE00A1C594 /* Info.plist */,
-			);
-			path = GenesisKitIOSTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		962E120419FC194800A1C594 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				962E132419FC66CE00A1C594 /* GenesisKitIOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		962E122219FC195900A1C594 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,42 +216,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		962E120619FC194800A1C594 /* GenesisKitIOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 962E121A19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOS" */;
-			buildPhases = (
-				962E120219FC194800A1C594 /* Sources */,
-				962E120319FC194800A1C594 /* Frameworks */,
-				962E120419FC194800A1C594 /* Headers */,
-				962E120519FC194800A1C594 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GenesisKitIOS;
-			productName = GenesisKitIOS;
-			productReference = 962E120719FC194800A1C594 /* GenesisKitIOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		962E121019FC194800A1C594 /* GenesisKitIOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 962E121D19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOSTests" */;
-			buildPhases = (
-				962E120D19FC194800A1C594 /* Sources */,
-				962E120E19FC194800A1C594 /* Frameworks */,
-				962E120F19FC194800A1C594 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				962E121419FC194800A1C594 /* PBXTargetDependency */,
-			);
-			name = GenesisKitIOSTests;
-			productName = GenesisKitIOSTests;
-			productReference = 962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		962E122419FC195900A1C594 /* GenesisKitOSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 962E123819FC195900A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSX" */;
@@ -368,12 +261,6 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Kevin A. Hoogheem";
 				TargetAttributes = {
-					962E120619FC194800A1C594 = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					962E121019FC194800A1C594 = {
-						CreatedOnToolsVersion = 6.1;
-					};
 					962E122419FC195900A1C594 = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -394,8 +281,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				962E120619FC194800A1C594 /* GenesisKitIOS */,
-				962E121019FC194800A1C594 /* GenesisKitIOSTests */,
 				962E122419FC195900A1C594 /* GenesisKitOSX */,
 				962E122E19FC195900A1C594 /* GenesisKitOSXTests */,
 			);
@@ -403,22 +288,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		962E120519FC194800A1C594 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				962E132719FC66CE00A1C594 /* Info.plist in Resources */,
-				962E132519FC66CE00A1C594 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		962E120F19FC194800A1C594 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		962E122319FC195900A1C594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,33 +305,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		962E120219FC194800A1C594 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				962E12DB19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */,
-				962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */,
-				962E12D519FC1AF200A1C594 /* Memoization.swift in Sources */,
-				962E12D919FC1AF200A1C594 /* NetworkActivityController.swift in Sources */,
-				962E12D719FC1AF200A1C594 /* Stack.swift in Sources */,
-				962E12CB19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */,
-				962E12D119FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
-				962E12D319FC1AF200A1C594 /* FontManager.swift in Sources */,
-				962E12C919FC1AF200A1C594 /* Diagnostics.swift in Sources */,
-				962E12CD19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
-				962E12C719FC1AF200A1C594 /* Conversion.swift in Sources */,
-				962E132619FC66CE00A1C594 /* GenesisKitIOSTests.swift in Sources */,
-				962E12CF19FC1AF200A1C594 /* Generator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		962E120D19FC194800A1C594 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		962E122019FC195900A1C594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,11 +335,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		962E121419FC194800A1C594 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 962E120619FC194800A1C594 /* GenesisKitIOS */;
-			targetProxy = 962E121319FC194800A1C594 /* PBXContainerItemProxy */;
-		};
 		962E123219FC195900A1C594 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 962E122419FC195900A1C594 /* GenesisKitOSX */;
@@ -593,74 +430,6 @@
 			};
 			name = Release;
 		};
-		962E121B19FC194800A1C594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GenesisKitIOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		962E121C19FC194800A1C594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GenesisKitIOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		962E121E19FC194800A1C594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GenesisKitIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		962E121F19FC194800A1C594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GenesisKitIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		962E123919FC195900A1C594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -751,24 +520,6 @@
 			buildConfigurations = (
 				962E11FA19FC18EF00A1C594 /* Debug */,
 				962E11FB19FC18EF00A1C594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		962E121A19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				962E121B19FC194800A1C594 /* Debug */,
-				962E121C19FC194800A1C594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		962E121D19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				962E121E19FC194800A1C594 /* Debug */,
-				962E121F19FC194800A1C594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

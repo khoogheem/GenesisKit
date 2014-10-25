@@ -2,9 +2,10 @@
 
 import Foundation
 import UIKit
+import GenesisKit
 
-let blah:UIFont = UIFont()
 
+Defaults
 //
 //{
 //	"code" : "AED",
@@ -109,49 +110,4 @@ enum Suit {
 
 Suit.Spades.simpleDescription()
 
-
-//var _SYS_NAMELEN: Int32 { get }
-//
-//struct utsname {
-//	var sysname: (Int8, Int8) /* [XSI] Name of OS */
-//	var nodename: (Int8, Int8) /* [XSI] Name of this network node */
-//	var release: (Int8, Int8) /* [XSI] Release level */
-//	var version: (Int8, Int8) /* [XSI] Version level */
-//	var machine: (Int8, Int8 ) /* [XSI] Hardware type */
-//}
-//
-
-//LUHN - CC validation
-
-
-//let TDF: Int  = 20123456789
-//
-//let blah: String = String(TDF)
-//var anArray: [String] = Array()
-//
-//
-//for (var i=0; i < countElements(blah); i++) {
-//	let index = advance(blah.startIndex, i)
-//	let character = blah[index] // -> "3"
-//	
-//	println(character)
-//	anArray.append(String(character))
-//}
-//
-//println(anArray)
-
-//Above is the Int to a StringArray
-//Bottom check if valid cc - could return a tuple that says true/false and the CC type.
-
-//for (NSUInteger i = 0; i < [reversedString length]; i++) {
-//	NSInteger digit = [[NSString stringWithFormat:@"%C", [reversedString characterAtIndex:i]] integerValue];
-//
-//	if (i % 2 == 0) {
-//		evenSum += digit;
-//	}
-//	else {
-//		oddSum += digit / 5 + (2 * digit) % 10;
-//	}
-//}
-//return (oddSum + evenSum) % 10 == 0;
 
