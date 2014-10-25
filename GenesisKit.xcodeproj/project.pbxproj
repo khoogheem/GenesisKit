@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		962E121219FC194800A1C594 /* GenesisKitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E120719FC194800A1C594 /* GenesisKitIOS.framework */; };
-		962E121919FC194800A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */; };
 		962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E122919FC195900A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
 		962E123719FC195900A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */; };
@@ -36,7 +35,6 @@
 		962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
 		962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
 		962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
-		962E131D19FC64DB00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E121719FC194800A1C594 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +57,6 @@
 /* Begin PBXFileReference section */
 		962E120719FC194800A1C594 /* GenesisKitIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		962E121719FC194800A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
 		962E122519FC195900A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E122819FC195900A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E122919FC195900A1C594 /* GenesisKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitOSX.h; sourceTree = "<group>"; };
@@ -123,7 +119,6 @@
 				962E131B19FC54E600A1C594 /* README.md */,
 				962E131A19FC54E000A1C594 /* LICENSE */,
 				962E12B419FC1AF200A1C594 /* Shared */,
-				962E121519FC194800A1C594 /* GenesisKitIOSTests */,
 				962E122619FC195900A1C594 /* GenesisKitOSX */,
 				962E123319FC195900A1C594 /* GenesisKitOSXTests */,
 				962E11E719FC18EF00A1C594 /* Products */,
@@ -139,23 +134,6 @@
 				962E122F19FC195900A1C594 /* GenesisKitOSXTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		962E121519FC194800A1C594 /* GenesisKitIOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */,
-				962E121619FC194800A1C594 /* Supporting Files */,
-			);
-			path = GenesisKitIOSTests;
-			sourceTree = "<group>";
-		};
-		962E121619FC194800A1C594 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				962E121719FC194800A1C594 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		962E122619FC195900A1C594 /* GenesisKitOSX */ = {
@@ -407,7 +385,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E131D19FC64DB00A1C594 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E121919FC194800A1C594 /* GenesisKitIOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
