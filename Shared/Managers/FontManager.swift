@@ -25,7 +25,7 @@
 
 import Foundation
 
-// Provide a private typealias for a platform Font.
+// Provide a typealias for a platform Font.
 #if os(iOS)
 	import UIKit
 	public typealias GKFont = UIFont
