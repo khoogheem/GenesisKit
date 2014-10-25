@@ -1,5 +1,8 @@
 # Great Resource -  http://www.gitignore.io
 
+#Playgrounds
+*.playground
+
 # OS X
 .DS_Store
 .AppleDouble
