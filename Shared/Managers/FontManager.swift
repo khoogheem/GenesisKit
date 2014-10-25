@@ -41,12 +41,14 @@ import Foundation
 */
 class FontManager {
 	
-	/** 
-	 Creates a Font with the standard type of given size. On iOS if user has accessability set it will return a standardBold type of the given size
+	/**
+	Creates a Font with the standard type of given size. On iOS if user has accessability set it will return a standardBold type of the given size.
+	
+	You can Override the StandardFont using DefaultsManager.set("GenesisKit.standardFontName", value: "Helvetica") for example
 	 
-	 :param: size The Size of the Font to create
-	 :returns: Font of the standard type in the given `size`
-	 */
+	:param: size The Size of the Font to create
+	:returns: Font of the standard type in the given `size`
+	*/
 	class func standardFontWithSize(size: CGFloat) -> GKFont {
 		if let stdFont = self.standardFontName {
 			return GKFont(name: stdFont, size: size)!
@@ -57,6 +59,8 @@ class FontManager {
 	/**
 	Creates a Font with the bold type of given size.
 	
+	You can Override the StandardBoldFont using DefaultsManager.set("GenesisKit.standardBoldFontName", value: "Helvetica-Bold") for example
+
 	:param: size The Size of the Font to create
 	:returns: Font of the standard bold type in the given `size`
 	*/

@@ -42,8 +42,8 @@ class DefaultsManager : NSObject {
 		super.initialize()
 		
 		DefaultsManager.set("GenesisKit.useMetric", value: false)
-		DefaultsManager.set("GenesisKit.standardFontName", value: "Helvetica")
-		DefaultsManager.set("GenesisKit.standardBoldFontName", value: "Helvetica-Bold")
+//		DefaultsManager.set("GenesisKit.standardFontName", value: "Helvetica")
+//		DefaultsManager.set("GenesisKit.standardBoldFontName", value: "Helvetica-Bold")
 	}
 	
 	class func debug(debug:Bool) {
