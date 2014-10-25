@@ -3,6 +3,7 @@
 //  GenesisKit
 //
 //  Created by Kevin A. Hoogheem on 10/19/14.
+//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,12 +29,15 @@ import Foundation
 import UIKit
 #endif
 
-@objc class NetworkActivityController {
+/**
+	NetworkActivityController manages the network activity indicator for iOS devices.  On OSX it provides a isActive variable to determine if someone is accessing the network.
+*/
+@objc public class NetworkActivityController {
 	
 	/**
 	 The NetworkActivityController singleton
 	*/
-	class var sharedActivity : NetworkActivityController {
+	public class var sharedActivity : NetworkActivityController {
 		struct Static {
 			static var onceToken : dispatch_once_t = 0
 			static var instance : NetworkActivityController? = nil
@@ -47,7 +51,7 @@ import UIKit
 	/**
 	Determines if there is current network acvitiy.  For OSX this can be used to display network activity
 	*/
-	var isActive:Bool {
+	public var isActive:Bool {
 		get {
 			return activity
 		}
@@ -58,7 +62,7 @@ import UIKit
 	 Push a NetworkActivity to the stack.
 	 While there is items in the stack the Network Activity Indicator will be visible
 	*/
-	func push() {
+	public func push() {
 		withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
 		
 		numberOfRegisteredActivities += 1
@@ -74,7 +78,7 @@ import UIKit
 	 Pop a registered NetworkActiity from the stack.
 	 When no more activity is registered it will stop the network activity from being visible
 	*/
-	func pop() {
+	public func pop() {
 		withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
 		
 		let newValue = numberOfRegisteredActivities - 1

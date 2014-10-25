@@ -42,7 +42,7 @@ import Foundation
   :param: body The body of the object to be memoized
   :returns: The memoized result
   */
-func memoize<T: Hashable, U>( body: ( (T)->U, T )->U ) -> (T)->U {
+public func memoize<T: Hashable, U>( body: ( (T)->U, T )->U ) -> (T)->U {
 	var memo = Dictionary<T, U>()
 	var result: ((T)->U)!
 	result = { x in

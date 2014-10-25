@@ -3,7 +3,7 @@
 //  GenesisKit
 //
 //  Created by Kevin A. Hoogheem on 10/14/14.
-//
+//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -33,26 +33,30 @@ import Foundation
 
  It can hold any type of object.
  */
-struct Stack<T: Equatable> {
+public struct Stack<T: Equatable> {
 	private var items = [T]()
 	
+	public init () {
+		
+	}
+	
 	/** Provides the top most object in the `Stack` */
-	var topItem: T? {
+	public var topItem: T? {
 		return items.isEmpty ? nil : items[items.count - 1]
 	}
 	
 	/** Provides the current count of objects in `Stack` */
-	var count: Int {
+	public var count: Int {
 		return items.count
 	}
 	
 	/** Provides the first object in `Stack` */
-	var firstObject: T? {
+	public var firstObject: T? {
 		return items.first
 	}
 	
 	/** Provides the last object in `Stack` */
-	var lastObject: T? {
+	public var lastObject: T? {
 		return items.last
 	}
 
@@ -61,7 +65,7 @@ struct Stack<T: Equatable> {
 	 
 	 :param: item The Item you are pushing onto the stack
 	 */
-	mutating func push(item: T) {
+	public mutating func push(item: T) {
 		items.append(item)
 	}
 	
@@ -70,7 +74,7 @@ struct Stack<T: Equatable> {
 	
 	:returns: The top most object on the `Stack`
 	*/
-	mutating func pop() -> T {
+	public mutating func pop() -> T {
 		return items.removeLast()
 	}
 	
@@ -79,7 +83,7 @@ struct Stack<T: Equatable> {
 	
 	:returns: The top most object on the `Stack`
 	*/
-	func objectAtIndex(index: Int) -> T {
+	public func objectAtIndex(index: Int) -> T {
 		return items[index]
 	}
 	
@@ -88,7 +92,7 @@ struct Stack<T: Equatable> {
 	
 	:returns: An optional Int value of the object in the `Stack`
 	*/
-	func indexOfObject(object:T) -> Int? {
+	public func indexOfObject(object:T) -> Int? {
 		for i in 0..<items.endIndex {
 			if items[i] == object {
 				return i
@@ -100,7 +104,7 @@ struct Stack<T: Equatable> {
 	/** 
 	 Removes all the objects from the Stack
 	 */
-	mutating func removeAll() {
+	public mutating func removeAll() {
 		items.removeAll(keepCapacity: false)
 	}
 
@@ -109,7 +113,7 @@ struct Stack<T: Equatable> {
 //MARK: Extensions
 
 extension Stack : SequenceType {
-	func generate() -> genericGenerator<T> {
+	public func generate() -> genericGenerator<T> {
 		return genericGenerator( items: items[0..<items.endIndex] )
 	}
 }

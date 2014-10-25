@@ -29,9 +29,18 @@ import Foundation
 /**
   Extensions of NSDate Class
  */
-extension NSDate {
+public extension NSDate {
 	
-	convenience init(dateString:String, format:String = "yyyy-MM-dd", timezone:NSTimeZone?) {
+	/**
+	Creates a NSDate from a given string and optional format (default: MM-dd-yyy)
+ 
+	:param: dateString A String representation of a Date
+	:param: format An optional format.  Default is MM-dd-yyyy
+	:param: timezone An optional NSTimeZone.
+	
+	:returns: an NSDate object with the given `dateString` and optional `timezone`
+	*/
+	convenience init(dateString:String, format:String = "MM-dd-yyyy", timezone:NSTimeZone?) {
 		var dateFmt = NSDateFormatter()
 		//dateFmt.timeZone = NSTimeZone.defaultTimeZone()
 		dateFmt.timeZone = timezone
@@ -40,7 +49,15 @@ extension NSDate {
 		self.init(timeInterval:0, sinceDate:d!)
 	}
 	
-	convenience init(dateString:String, format:String = "yyyy-MM-dd") {
+	/**
+	Creates a NSDate from a given string and optional format (default: MM-dd-yyy)
+ 
+	:param: dateString A String representation of a Date
+	:param: format An optional format.  Default is MM-dd-yyyy
+
+	:returns: an NSDate object with the given `dateString`
+	*/
+	convenience init(dateString:String, format:String = "MM-dd-yyyy") {
 		var dateFmt = NSDateFormatter()
 		dateFmt.timeZone = NSTimeZone.defaultTimeZone()
 		dateFmt.dateFormat = format
@@ -48,6 +65,15 @@ extension NSDate {
 		self.init(timeInterval:0, sinceDate:d!)
 	}
 	
+	/**
+	Creates a NSDate from a given year, month, day
+ 
+	:param: year Int value of Year
+	:param: month Int value of Month
+	:param: day Int value of the Day
+	
+	:returns: an NSDate object with the given `dateString`
+	*/
 	convenience init(year:Int, month:Int, day:Int) {
 		var c = NSDateComponents()
 		c.year = year
@@ -59,7 +85,15 @@ extension NSDate {
 		self.init(timeInterval:0, sinceDate:date!)
 	}
 	
-	class func parse(dateString:String, format:String="yyyy-MM-dd") -> NSDate {
+	/**
+	Creates a NSDate from the given date string using optional format (default: MM-dd-yyy)
+ 
+	:param: dateString A String representation of a Date
+	:param: format An optional format.  Default is MM-dd-yyyy
+	
+	:returns: an NSDate object with the given `dateString`
+	*/
+	class func parse(dateString:String, format:String="MM-dd-yyyy") -> NSDate {
 		return NSDate(dateString: dateString, format: format)
 	}
 	
@@ -67,6 +101,13 @@ extension NSDate {
 		return NSDate(year: year, month: month, day: day)
 	}
 	
+	/**
+	Provides back the number of years since the date given.  Can be used to determine someones age.
+ 
+	:param: date The date to caluclate years since
+	
+	:returns: an Int value of the years that have passed since the `date`
+	*/
 	class func yearsFromDate(date: NSDate) -> Int {
 		
 		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
@@ -83,6 +124,11 @@ extension NSDate {
 		}
 	}
 	
+	/**
+	Provides a Int value of the current Year.
+
+	:returns: an Int value of the current year
+	*/
 	class func thisYear() -> Int {
 		var calendar : NSCalendar = NSCalendar.autoupdatingCurrentCalendar()
 		var unitFlags : NSCalendarUnit = .CalendarUnitYear

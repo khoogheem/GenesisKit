@@ -2,8 +2,8 @@
 //  GenesisKitOSX.h
 //  GenesisKitOSX
 //
-//  Created by Kevin A. Hoogheem on 10/24/14.
-//
+//  Created by Kevin A. Hoogheem on 10/25/14.
+//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

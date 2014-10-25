@@ -7,284 +7,344 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		961C967B19ED787C005DBB88 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C967A19ED787C005DBB88 /* Stack.swift */; };
-		962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BA51519F44BE500888F19 /* NetworkActivityController.swift */; };
-		962E113619FB09E500A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E113519FB09E500A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		962E113C19FB09E500A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E113119FB09E500A1C594 /* GenesisKitOSX.framework */; };
-		962E114319FB09E500A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E114219FB09E500A1C594 /* GenesisKitOSXTests.swift */; };
-		962E114A19FB0A1C00A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272219EAEC7700F33493 /* Conversion.swift */; };
-		962E114C19FB0A2200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272419EAEC7700F33493 /* Diagnostics.swift */; };
-		962E114D19FB0A2A00A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D1CA1619ED984800B9A88B /* Memoization.swift */; };
-		962E114E19FB0A2F00A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */; };
-		962E114F19FB0A3200A1C594 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739B19F40F0700638279 /* NSDate+Extension.swift */; };
-		962E115019FB0A3B00A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C967A19ED787C005DBB88 /* Stack.swift */; };
-		962E115119FB0A3B00A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648735C19EDA9D200638279 /* Generator.swift */; };
-		962E115219FB0A4000A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962BA51519F44BE500888F19 /* NetworkActivityController.swift */; };
-		962E115719FB0ECF00A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115519FB0ECF00A1C594 /* DefaultsManager.swift */; };
-		962E115819FB0ECF00A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115519FB0ECF00A1C594 /* DefaultsManager.swift */; };
-		962E115919FB0ECF00A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115619FB0ECF00A1C594 /* FontManager.swift */; };
-		962E115A19FB0ECF00A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E115619FB0ECF00A1C594 /* FontManager.swift */; };
-		9648735D19EDA9D200638279 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648735C19EDA9D200638279 /* Generator.swift */; };
-		9648739919F4092C00638279 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */; };
-		9648739C19F40F0700638279 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648739B19F40F0700638279 /* NSDate+Extension.swift */; };
-		967F272519EAEC7700F33493 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272219EAEC7700F33493 /* Conversion.swift */; };
-		967F272719EAEC7700F33493 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F272419EAEC7700F33493 /* Diagnostics.swift */; };
-		96BED12A19E9C7D700ACA0C9 /* GenesisKitiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96BED13419E9C7D700ACA0C9 /* GenesisKitiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */; };
-		96D1CA1719ED984800B9A88B /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D1CA1619ED984800B9A88B /* Memoization.swift */; };
+		962E120C19FC194800A1C594 /* GenesisKitIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E120B19FC194800A1C594 /* GenesisKitIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		962E121219FC194800A1C594 /* GenesisKitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E120719FC194800A1C594 /* GenesisKitIOS.framework */; };
+		962E121919FC194800A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */; };
+		962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E122919FC195900A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
+		962E123719FC195900A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */; };
+		962E12C719FC1AF200A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B519FC1AF200A1C594 /* Conversion.swift */; };
+		962E12C819FC1AF200A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B519FC1AF200A1C594 /* Conversion.swift */; };
+		962E12C919FC1AF200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B619FC1AF200A1C594 /* Diagnostics.swift */; };
+		962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B619FC1AF200A1C594 /* Diagnostics.swift */; };
+		962E12CB19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */; };
+		962E12CC19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */; };
+		962E12CD19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */; };
+		962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */; };
+		962E12CF19FC1AF200A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BA19FC1AF200A1C594 /* Generator.swift */; };
+		962E12D019FC1AF200A1C594 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BA19FC1AF200A1C594 /* Generator.swift */; };
+		962E12D119FC1AF200A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */; };
+		962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */; };
+		962E12D319FC1AF200A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BD19FC1AF200A1C594 /* FontManager.swift */; };
+		962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BD19FC1AF200A1C594 /* FontManager.swift */; };
+		962E12D519FC1AF200A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BE19FC1AF200A1C594 /* Memoization.swift */; };
+		962E12D619FC1AF200A1C594 /* Memoization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BE19FC1AF200A1C594 /* Memoization.swift */; };
+		962E12D719FC1AF200A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BF19FC1AF200A1C594 /* Stack.swift */; };
+		962E12D819FC1AF200A1C594 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BF19FC1AF200A1C594 /* Stack.swift */; };
+		962E12D919FC1AF200A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */; };
+		962E12DA19FC1AF200A1C594 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */; };
+		962E12DB19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
+		962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
+		962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
+		962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		962E113D19FB09E500A1C594 /* PBXContainerItemProxy */ = {
+		962E121319FC194800A1C594 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 96BED11919E9C7BA00ACA0C9 /* Project object */;
+			containerPortal = 962E11DD19FC18EF00A1C594 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 962E113019FB09E500A1C594;
+			remoteGlobalIDString = 962E120619FC194800A1C594;
+			remoteInfo = GenesisKitIOS;
+		};
+		962E123119FC195900A1C594 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 962E11DD19FC18EF00A1C594 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 962E122419FC195900A1C594;
 			remoteInfo = GenesisKitOSX;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		961C967A19ED787C005DBB88 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		962BA51219F44B2C00888F19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		962BA51419F44B6B00888F19 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		962BA51519F44BE500888F19 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkActivityController.swift; path = UI/Controllers/NetworkActivityController.swift; sourceTree = "<group>"; };
-		962E113119FB09E500A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		962E113419FB09E500A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		962E113519FB09E500A1C594 /* GenesisKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitOSX.h; sourceTree = "<group>"; };
-		962E113B19FB09E500A1C594 /* GenesisKitOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		962E114119FB09E500A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		962E114219FB09E500A1C594 /* GenesisKitOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitOSXTests.swift; sourceTree = "<group>"; };
-		962E115519FB0ECF00A1C594 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
-		962E115619FB0ECF00A1C594 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
-		9648735C19EDA9D200638279 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
-		9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Extension.swift"; path = "Extensions/NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
-		9648739B19F40F0700638279 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Extension.swift"; path = "Extensions/NSDate+Extension.swift"; sourceTree = "<group>"; };
-		967F272219EAEC7700F33493 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
-		967F272419EAEC7700F33493 /* Diagnostics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
-		96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96BED12819E9C7D700ACA0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitiOS.h; sourceTree = "<group>"; };
-		96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96BED13219E9C7D700ACA0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitiOSTests.swift; sourceTree = "<group>"; };
-		96D1CA1619ED984800B9A88B /* Memoization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memoization.swift; sourceTree = "<group>"; };
+		962E120719FC194800A1C594 /* GenesisKitIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		962E120A19FC194800A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E120B19FC194800A1C594 /* GenesisKitIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitIOS.h; sourceTree = "<group>"; };
+		962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		962E121719FC194800A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
+		962E122519FC195900A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		962E122819FC195900A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E122919FC195900A1C594 /* GenesisKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitOSX.h; sourceTree = "<group>"; };
+		962E122F19FC195900A1C594 /* GenesisKitOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		962E123519FC195900A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitOSXTests.swift; sourceTree = "<group>"; };
+		962E12B519FC1AF200A1C594 /* Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		962E12B619FC1AF200A1C594 /* Diagnostics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
+		962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		962E12BA19FC1AF200A1C594 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		962E12BD19FC1AF200A1C594 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		962E12BE19FC1AF200A1C594 /* Memoization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memoization.swift; sourceTree = "<group>"; };
+		962E12BF19FC1AF200A1C594 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityController.swift; sourceTree = "<group>"; };
+		962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorProtocol.swift; sourceTree = "<group>"; };
+		962E12C619FC1AF200A1C594 /* emailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailValidator.swift; sourceTree = "<group>"; };
+		962E131A19FC54E000A1C594 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		962E131B19FC54E600A1C594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		962E112D19FB09E500A1C594 /* Frameworks */ = {
+		962E120319FC194800A1C594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		962E113819FB09E500A1C594 /* Frameworks */ = {
+		962E120E19FC194800A1C594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E113C19FB09E500A1C594 /* GenesisKitOSX.framework in Frameworks */,
+				962E121219FC194800A1C594 /* GenesisKitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12019E9C7D700ACA0C9 /* Frameworks */ = {
+		962E122119FC195900A1C594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12C19E9C7D700ACA0C9 /* Frameworks */ = {
+		962E122C19FC195900A1C594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		962BA51719F44BEA00888F19 /* UI */ = {
+		962E11DC19FC18EF00A1C594 = {
 			isa = PBXGroup;
 			children = (
-				962BA51819F44BEE00888F19 /* Controllers */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		962BA51819F44BEE00888F19 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				962BA51519F44BE500888F19 /* NetworkActivityController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		962E113219FB09E500A1C594 /* GenesisKitOSX */ = {
-			isa = PBXGroup;
-			children = (
-				962E113519FB09E500A1C594 /* GenesisKitOSX.h */,
-				962E113319FB09E500A1C594 /* Supporting Files */,
-			);
-			path = GenesisKitOSX;
-			sourceTree = "<group>";
-		};
-		962E113319FB09E500A1C594 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				962E113419FB09E500A1C594 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		962E113F19FB09E500A1C594 /* GenesisKitOSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				962E114219FB09E500A1C594 /* GenesisKitOSXTests.swift */,
-				962E114019FB09E500A1C594 /* Supporting Files */,
-			);
-			path = GenesisKitOSXTests;
-			sourceTree = "<group>";
-		};
-		962E114019FB09E500A1C594 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				962E114119FB09E500A1C594 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		962E115419FB0ECF00A1C594 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				962E115519FB0ECF00A1C594 /* DefaultsManager.swift */,
-				962E115619FB0ECF00A1C594 /* FontManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		9648735E19EDAA7100638279 /* Structures */ = {
-			isa = PBXGroup;
-			children = (
-				961C967A19ED787C005DBB88 /* Stack.swift */,
-				9648735C19EDA9D200638279 /* Generator.swift */,
-			);
-			name = Structures;
-			sourceTree = "<group>";
-		};
-		9648739A19F4093300638279 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9648739819F4092C00638279 /* NSTimeInterval+Extension.swift */,
-				9648739B19F40F0700638279 /* NSDate+Extension.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		967F272119EAEC7700F33493 /* GenesisKit */ = {
-			isa = PBXGroup;
-			children = (
-				962BA51219F44B2C00888F19 /* README.md */,
-				962BA51419F44B6B00888F19 /* LICENSE */,
-				967F272219EAEC7700F33493 /* Conversion.swift */,
-				967F272419EAEC7700F33493 /* Diagnostics.swift */,
-				96D1CA1619ED984800B9A88B /* Memoization.swift */,
-				9648739A19F4093300638279 /* Extensions */,
-				962E115419FB0ECF00A1C594 /* Managers */,
-				9648735E19EDAA7100638279 /* Structures */,
-				962BA51719F44BEA00888F19 /* UI */,
-			);
-			name = GenesisKit;
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		96BED11819E9C7BA00ACA0C9 = {
-			isa = PBXGroup;
-			children = (
-				967F272119EAEC7700F33493 /* GenesisKit */,
-				96BED12619E9C7D700ACA0C9 /* GenesisKitiOS */,
-				962E113219FB09E500A1C594 /* GenesisKitOSX */,
-				96BED13019E9C7D700ACA0C9 /* GenesisKitiOSTests */,
-				962E113F19FB09E500A1C594 /* GenesisKitOSXTests */,
-				96BED12519E9C7D700ACA0C9 /* Products */,
+				962E131B19FC54E600A1C594 /* README.md */,
+				962E131A19FC54E000A1C594 /* LICENSE */,
+				962E12B419FC1AF200A1C594 /* Shared */,
+				962E120819FC194800A1C594 /* GenesisKitIOS */,
+				962E121519FC194800A1C594 /* GenesisKitIOSTests */,
+				962E122619FC195900A1C594 /* GenesisKitOSX */,
+				962E123319FC195900A1C594 /* GenesisKitOSXTests */,
+				962E11E719FC18EF00A1C594 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		96BED12519E9C7D700ACA0C9 /* Products */ = {
+		962E11E719FC18EF00A1C594 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */,
-				96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */,
-				962E113119FB09E500A1C594 /* GenesisKitOSX.framework */,
-				962E113B19FB09E500A1C594 /* GenesisKitOSXTests.xctest */,
+				962E120719FC194800A1C594 /* GenesisKitIOS.framework */,
+				962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */,
+				962E122519FC195900A1C594 /* GenesisKitOSX.framework */,
+				962E122F19FC195900A1C594 /* GenesisKitOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96BED12619E9C7D700ACA0C9 /* GenesisKitiOS */ = {
+		962E120819FC194800A1C594 /* GenesisKitIOS */ = {
 			isa = PBXGroup;
 			children = (
-				96BED12919E9C7D700ACA0C9 /* GenesisKitiOS.h */,
-				96BED12719E9C7D700ACA0C9 /* Supporting Files */,
+				962E120B19FC194800A1C594 /* GenesisKitIOS.h */,
+				962E120919FC194800A1C594 /* Supporting Files */,
 			);
-			path = GenesisKitiOS;
+			path = GenesisKitIOS;
 			sourceTree = "<group>";
 		};
-		96BED12719E9C7D700ACA0C9 /* Supporting Files */ = {
+		962E120919FC194800A1C594 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				96BED12819E9C7D700ACA0C9 /* Info.plist */,
+				962E120A19FC194800A1C594 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		96BED13019E9C7D700ACA0C9 /* GenesisKitiOSTests */ = {
+		962E121519FC194800A1C594 /* GenesisKitIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				96BED13319E9C7D700ACA0C9 /* GenesisKitiOSTests.swift */,
-				96BED13119E9C7D700ACA0C9 /* Supporting Files */,
+				962E121819FC194800A1C594 /* GenesisKitIOSTests.swift */,
+				962E121619FC194800A1C594 /* Supporting Files */,
 			);
-			path = GenesisKitiOSTests;
+			path = GenesisKitIOSTests;
 			sourceTree = "<group>";
 		};
-		96BED13119E9C7D700ACA0C9 /* Supporting Files */ = {
+		962E121619FC194800A1C594 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				96BED13219E9C7D700ACA0C9 /* Info.plist */,
+				962E121719FC194800A1C594 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		962E122619FC195900A1C594 /* GenesisKitOSX */ = {
+			isa = PBXGroup;
+			children = (
+				962E122919FC195900A1C594 /* GenesisKitOSX.h */,
+				962E122719FC195900A1C594 /* Supporting Files */,
+			);
+			path = GenesisKitOSX;
+			sourceTree = "<group>";
+		};
+		962E122719FC195900A1C594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				962E122819FC195900A1C594 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		962E123319FC195900A1C594 /* GenesisKitOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */,
+				962E123419FC195900A1C594 /* Supporting Files */,
+			);
+			path = GenesisKitOSXTests;
+			sourceTree = "<group>";
+		};
+		962E123419FC195900A1C594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				962E123519FC195900A1C594 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		962E12B419FC1AF200A1C594 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				962E12B519FC1AF200A1C594 /* Conversion.swift */,
+				962E12B619FC1AF200A1C594 /* Diagnostics.swift */,
+				962E12BA19FC1AF200A1C594 /* Generator.swift */,
+				962E12BE19FC1AF200A1C594 /* Memoization.swift */,
+				962E12BF19FC1AF200A1C594 /* Stack.swift */,
+				962E12B719FC1AF200A1C594 /* Extensions */,
+				962E12BB19FC1AF200A1C594 /* Managers */,
+				962E12C019FC1AF200A1C594 /* UI */,
+				962E12C319FC1AF200A1C594 /* Validation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		962E12B719FC1AF200A1C594 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */,
+				962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		962E12BB19FC1AF200A1C594 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */,
+				962E12BD19FC1AF200A1C594 /* FontManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		962E12C019FC1AF200A1C594 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				962E12C119FC1AF200A1C594 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		962E12C119FC1AF200A1C594 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				962E12C219FC1AF200A1C594 /* NetworkActivityController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		962E12C319FC1AF200A1C594 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */,
+				962E12C519FC1AF200A1C594 /* Validators */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		962E12C519FC1AF200A1C594 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				962E12C619FC1AF200A1C594 /* emailValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		962E112E19FB09E500A1C594 /* Headers */ = {
+		962E120419FC194800A1C594 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E113619FB09E500A1C594 /* GenesisKitOSX.h in Headers */,
+				962E120C19FC194800A1C594 /* GenesisKitIOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12119E9C7D700ACA0C9 /* Headers */ = {
+		962E122219FC195900A1C594 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96BED12A19E9C7D700ACA0C9 /* GenesisKitiOS.h in Headers */,
+				962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		962E113019FB09E500A1C594 /* GenesisKitOSX */ = {
+		962E120619FC194800A1C594 /* GenesisKitIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 962E114419FB09E500A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSX" */;
+			buildConfigurationList = 962E121A19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOS" */;
 			buildPhases = (
-				962E112C19FB09E500A1C594 /* Sources */,
-				962E112D19FB09E500A1C594 /* Frameworks */,
-				962E112E19FB09E500A1C594 /* Headers */,
-				962E112F19FB09E500A1C594 /* Resources */,
+				962E120219FC194800A1C594 /* Sources */,
+				962E120319FC194800A1C594 /* Frameworks */,
+				962E120419FC194800A1C594 /* Headers */,
+				962E120519FC194800A1C594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GenesisKitIOS;
+			productName = GenesisKitIOS;
+			productReference = 962E120719FC194800A1C594 /* GenesisKitIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		962E121019FC194800A1C594 /* GenesisKitIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962E121D19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOSTests" */;
+			buildPhases = (
+				962E120D19FC194800A1C594 /* Sources */,
+				962E120E19FC194800A1C594 /* Frameworks */,
+				962E120F19FC194800A1C594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				962E121419FC194800A1C594 /* PBXTargetDependency */,
+			);
+			name = GenesisKitIOSTests;
+			productName = GenesisKitIOSTests;
+			productReference = 962E121119FC194800A1C594 /* GenesisKitIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		962E122419FC195900A1C594 /* GenesisKitOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962E123819FC195900A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSX" */;
+			buildPhases = (
+				962E122019FC195900A1C594 /* Sources */,
+				962E122119FC195900A1C594 /* Frameworks */,
+				962E122219FC195900A1C594 /* Headers */,
+				962E122319FC195900A1C594 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -292,127 +352,93 @@
 			);
 			name = GenesisKitOSX;
 			productName = GenesisKitOSX;
-			productReference = 962E113119FB09E500A1C594 /* GenesisKitOSX.framework */;
+			productReference = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		962E113A19FB09E500A1C594 /* GenesisKitOSXTests */ = {
+		962E122E19FC195900A1C594 /* GenesisKitOSXTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 962E114719FB09E500A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSXTests" */;
+			buildConfigurationList = 962E123B19FC195900A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSXTests" */;
 			buildPhases = (
-				962E113719FB09E500A1C594 /* Sources */,
-				962E113819FB09E500A1C594 /* Frameworks */,
-				962E113919FB09E500A1C594 /* Resources */,
+				962E122B19FC195900A1C594 /* Sources */,
+				962E122C19FC195900A1C594 /* Frameworks */,
+				962E122D19FC195900A1C594 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				962E113E19FB09E500A1C594 /* PBXTargetDependency */,
+				962E123219FC195900A1C594 /* PBXTargetDependency */,
 			);
 			name = GenesisKitOSXTests;
 			productName = GenesisKitOSXTests;
-			productReference = 962E113B19FB09E500A1C594 /* GenesisKitOSXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		96BED12319E9C7D700ACA0C9 /* GenesisKitiOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96BED13519E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOS" */;
-			buildPhases = (
-				96BED11F19E9C7D700ACA0C9 /* Sources */,
-				96BED12019E9C7D700ACA0C9 /* Frameworks */,
-				96BED12119E9C7D700ACA0C9 /* Headers */,
-				96BED12219E9C7D700ACA0C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GenesisKitiOS;
-			productName = GenesisKitiOS;
-			productReference = 96BED12419E9C7D700ACA0C9 /* GenesisKitiOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		96BED12E19E9C7D700ACA0C9 /* GenesisKitiOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96BED13819E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOSTests" */;
-			buildPhases = (
-				96BED12B19E9C7D700ACA0C9 /* Sources */,
-				96BED12C19E9C7D700ACA0C9 /* Frameworks */,
-				96BED12D19E9C7D700ACA0C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GenesisKitiOSTests;
-			productName = GenesisKitiOSTests;
-			productReference = 96BED12F19E9C7D700ACA0C9 /* GenesisKitiOSTests.xctest */;
+			productReference = 962E122F19FC195900A1C594 /* GenesisKitOSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		96BED11919E9C7BA00ACA0C9 /* Project object */ = {
+		962E11DD19FC18EF00A1C594 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Kevin A. Hoogheem";
 				TargetAttributes = {
-					962E113019FB09E500A1C594 = {
+					962E120619FC194800A1C594 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					962E113A19FB09E500A1C594 = {
+					962E121019FC194800A1C594 = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					96BED12319E9C7D700ACA0C9 = {
-						CreatedOnToolsVersion = 6.0.1;
+					962E122419FC195900A1C594 = {
+						CreatedOnToolsVersion = 6.1;
 					};
-					96BED12E19E9C7D700ACA0C9 = {
-						CreatedOnToolsVersion = 6.0.1;
+					962E122E19FC195900A1C594 = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
-			buildConfigurationList = 96BED11C19E9C7BA00ACA0C9 /* Build configuration list for PBXProject "GenesisKit" */;
+			buildConfigurationList = 962E11E019FC18EF00A1C594 /* Build configuration list for PBXProject "GenesisKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 96BED11819E9C7BA00ACA0C9;
-			productRefGroup = 96BED12519E9C7D700ACA0C9 /* Products */;
+			mainGroup = 962E11DC19FC18EF00A1C594;
+			productRefGroup = 962E11E719FC18EF00A1C594 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96BED12319E9C7D700ACA0C9 /* GenesisKitiOS */,
-				96BED12E19E9C7D700ACA0C9 /* GenesisKitiOSTests */,
-				962E113019FB09E500A1C594 /* GenesisKitOSX */,
-				962E113A19FB09E500A1C594 /* GenesisKitOSXTests */,
+				962E120619FC194800A1C594 /* GenesisKitIOS */,
+				962E121019FC194800A1C594 /* GenesisKitIOSTests */,
+				962E122419FC195900A1C594 /* GenesisKitOSX */,
+				962E122E19FC195900A1C594 /* GenesisKitOSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		962E112F19FB09E500A1C594 /* Resources */ = {
+		962E120519FC194800A1C594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		962E113919FB09E500A1C594 /* Resources */ = {
+		962E120F19FC194800A1C594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12219E9C7D700ACA0C9 /* Resources */ = {
+		962E122319FC195900A1C594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12D19E9C7D700ACA0C9 /* Resources */ = {
+		962E122D19FC195900A1C594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,272 +448,77 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		962E112C19FB09E500A1C594 /* Sources */ = {
+		962E120219FC194800A1C594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E115A19FB0ECF00A1C594 /* FontManager.swift in Sources */,
-				962E114F19FB0A3200A1C594 /* NSDate+Extension.swift in Sources */,
-				962E115119FB0A3B00A1C594 /* Generator.swift in Sources */,
-				962E114D19FB0A2A00A1C594 /* Memoization.swift in Sources */,
-				962E115019FB0A3B00A1C594 /* Stack.swift in Sources */,
-				962E114A19FB0A1C00A1C594 /* Conversion.swift in Sources */,
-				962E114E19FB0A2F00A1C594 /* NSTimeInterval+Extension.swift in Sources */,
-				962E114C19FB0A2200A1C594 /* Diagnostics.swift in Sources */,
-				962E115819FB0ECF00A1C594 /* DefaultsManager.swift in Sources */,
-				962E115219FB0A4000A1C594 /* NetworkActivityController.swift in Sources */,
+				962E12DB19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */,
+				962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */,
+				962E12D519FC1AF200A1C594 /* Memoization.swift in Sources */,
+				962E12D919FC1AF200A1C594 /* NetworkActivityController.swift in Sources */,
+				962E12D719FC1AF200A1C594 /* Stack.swift in Sources */,
+				962E12CB19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */,
+				962E12D119FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
+				962E12D319FC1AF200A1C594 /* FontManager.swift in Sources */,
+				962E12C919FC1AF200A1C594 /* Diagnostics.swift in Sources */,
+				962E12CD19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
+				962E12C719FC1AF200A1C594 /* Conversion.swift in Sources */,
+				962E12CF19FC1AF200A1C594 /* Generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		962E113719FB09E500A1C594 /* Sources */ = {
+		962E120D19FC194800A1C594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E114319FB09E500A1C594 /* GenesisKitOSXTests.swift in Sources */,
+				962E121919FC194800A1C594 /* GenesisKitIOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED11F19E9C7D700ACA0C9 /* Sources */ = {
+		962E122019FC195900A1C594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E115919FB0ECF00A1C594 /* FontManager.swift in Sources */,
-				9648739C19F40F0700638279 /* NSDate+Extension.swift in Sources */,
-				96D1CA1719ED984800B9A88B /* Memoization.swift in Sources */,
-				9648739919F4092C00638279 /* NSTimeInterval+Extension.swift in Sources */,
-				967F272519EAEC7700F33493 /* Conversion.swift in Sources */,
-				961C967B19ED787C005DBB88 /* Stack.swift in Sources */,
-				967F272719EAEC7700F33493 /* Diagnostics.swift in Sources */,
-				9648735D19EDA9D200638279 /* Generator.swift in Sources */,
-				962E115719FB0ECF00A1C594 /* DefaultsManager.swift in Sources */,
-				962BA51619F44BE500888F19 /* NetworkActivityController.swift in Sources */,
+				962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */,
+				962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */,
+				962E12D619FC1AF200A1C594 /* Memoization.swift in Sources */,
+				962E12DA19FC1AF200A1C594 /* NetworkActivityController.swift in Sources */,
+				962E12D819FC1AF200A1C594 /* Stack.swift in Sources */,
+				962E12CC19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */,
+				962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
+				962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */,
+				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
+				962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
+				962E12C819FC1AF200A1C594 /* Conversion.swift in Sources */,
+				962E12D019FC1AF200A1C594 /* Generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96BED12B19E9C7D700ACA0C9 /* Sources */ = {
+		962E122B19FC195900A1C594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96BED13419E9C7D700ACA0C9 /* GenesisKitiOSTests.swift in Sources */,
+				962E123719FC195900A1C594 /* GenesisKitOSXTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		962E113E19FB09E500A1C594 /* PBXTargetDependency */ = {
+		962E121419FC194800A1C594 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 962E113019FB09E500A1C594 /* GenesisKitOSX */;
-			targetProxy = 962E113D19FB09E500A1C594 /* PBXContainerItemProxy */;
+			target = 962E120619FC194800A1C594 /* GenesisKitIOS */;
+			targetProxy = 962E121319FC194800A1C594 /* PBXContainerItemProxy */;
+		};
+		962E123219FC195900A1C594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 962E122419FC195900A1C594 /* GenesisKitOSX */;
+			targetProxy = 962E123119FC195900A1C594 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		962E114519FB09E500A1C594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		962E114619FB09E500A1C594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		962E114819FB09E500A1C594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitOSXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		962E114919FB09E500A1C594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitOSXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		96BED11D19E9C7BA00ACA0C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-			};
-			name = Debug;
-		};
-		96BED11E19E9C7BA00ACA0C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		96BED13619E9C7D700ACA0C9 /* Debug */ = {
+		962E11FA19FC18EF00A1C594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -707,10 +538,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -726,15 +553,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitiOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -742,7 +565,7 @@
 			};
 			name = Debug;
 		};
-		96BED13719E9C7D700ACA0C9 /* Release */ = {
+		962E11FB19FC18EF00A1C594 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -762,10 +585,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -775,14 +594,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitiOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -790,141 +605,205 @@
 			};
 			name = Release;
 		};
-		96BED13919E9C7D700ACA0C9 /* Debug */ = {
+		962E121B19FC194800A1C594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitiOSTests/Info.plist;
+				INFOPLIST_FILE = GenesisKitIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		96BED13A19E9C7D700ACA0C9 /* Release */ = {
+		962E121C19FC194800A1C594 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GenesisKitIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		962E121E19FC194800A1C594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GenesisKitiOSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GenesisKitIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		962E121F19FC194800A1C594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GenesisKitIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		962E123919FC195900A1C594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GenesisKitOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		962E123A19FC195900A1C594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = GenesisKitOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		962E123C19FC195900A1C594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GenesisKitOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		962E123D19FC195900A1C594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GenesisKitOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		962E114419FB09E500A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSX" */ = {
+		962E11E019FC18EF00A1C594 /* Build configuration list for PBXProject "GenesisKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				962E114519FB09E500A1C594 /* Debug */,
-				962E114619FB09E500A1C594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		962E114719FB09E500A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				962E114819FB09E500A1C594 /* Debug */,
-				962E114919FB09E500A1C594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		96BED11C19E9C7BA00ACA0C9 /* Build configuration list for PBXProject "GenesisKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96BED11D19E9C7BA00ACA0C9 /* Debug */,
-				96BED11E19E9C7BA00ACA0C9 /* Release */,
+				962E11FA19FC18EF00A1C594 /* Debug */,
+				962E11FB19FC18EF00A1C594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96BED13519E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOS" */ = {
+		962E121A19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96BED13619E9C7D700ACA0C9 /* Debug */,
-				96BED13719E9C7D700ACA0C9 /* Release */,
+				962E121B19FC194800A1C594 /* Debug */,
+				962E121C19FC194800A1C594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96BED13819E9C7D700ACA0C9 /* Build configuration list for PBXNativeTarget "GenesisKitiOSTests" */ = {
+		962E121D19FC194800A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitIOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96BED13919E9C7D700ACA0C9 /* Debug */,
-				96BED13A19E9C7D700ACA0C9 /* Release */,
+				962E121E19FC194800A1C594 /* Debug */,
+				962E121F19FC194800A1C594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962E123819FC195900A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962E123919FC195900A1C594 /* Debug */,
+				962E123A19FC195900A1C594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962E123B19FC195900A1C594 /* Build configuration list for PBXNativeTarget "GenesisKitOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962E123C19FC195900A1C594 /* Debug */,
+				962E123D19FC195900A1C594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 96BED11919E9C7BA00ACA0C9 /* Project object */;
+	rootObject = 962E11DD19FC18EF00A1C594 /* Project object */;
 }

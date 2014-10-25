@@ -35,10 +35,10 @@ private var sDebug: Bool = false
 
  DefaultsManager allows you to manage system wide default settings using a key-value storage.
  */
-class DefaultsManager : NSObject {
+public class DefaultsManager : NSObject {
 	
 	//Override the initialization and add in some Default Style
-	internal override class func initialize() {
+	public override class func initialize() {
 		super.initialize()
 		
 		DefaultsManager.set("GenesisKit.useMetric", value: false)
@@ -56,7 +56,7 @@ class DefaultsManager : NSObject {
 	 :param: key The `key` name for the Default setting
 	 :param: value The `value` of the `key` for the Default setting
 	 */
-	class func set(key:String, value:AnyObject){
+	public class func set(key:String, value:AnyObject){
 		if let unwrappedPreviousValue: AnyObject = defaults.updateValue(value, forKey: key) {
 			if (sDebug){
 				NSLog("Replaced the previous value: \(unwrappedPreviousValue) with: \(value) for key: \(key)")
@@ -74,7 +74,7 @@ class DefaultsManager : NSObject {
 	 :param: key - The `key` for which value you are wanting returned
 	 :returns: A value based on the `key` passed in.  May be a `nil` value.
 	 */
-	class func get(key:String) -> AnyObject?{
+	public class func get(key:String) -> AnyObject?{
 		let obj: AnyObject? = defaults[key]    //retrieve value
 		
 		return obj?
@@ -84,7 +84,7 @@ class DefaultsManager : NSObject {
 	 Reset - Resets the Defaults Key-value storage to its default state
 	 
 	 */
-	class func reset() {
+	public class func reset() {
 		defaults.removeAll(keepCapacity: false)
 	}
 	
@@ -93,7 +93,7 @@ class DefaultsManager : NSObject {
 	 
 	 :param: key The Key for the Default you wish to remove
 	 */
-	class func removeDefault (key:String) {
+	public class func removeDefault (key:String) {
 		defaults.removeValueForKey(key)
 	}
 }

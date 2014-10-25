@@ -34,56 +34,56 @@ import Foundation
 
 //MARK: TypeAlias
 //Just here for documentation
-typealias Fahrenheit = Double
-typealias Celsius = Double
-typealias Mile = Double
-typealias Feet = Double
-typealias Inch = Double
-typealias Kilometer = Double
-typealias Meter = Double
-typealias Kelvin = Double
-typealias Knot = Double
-typealias Day = Double
-typealias Hour = Double
-typealias Minute = Double
-typealias Second = Double
-typealias Pound = Double
-typealias Stone = Double
-typealias Kilo = Double
+public typealias Fahrenheit = Double
+public typealias Celsius = Double
+public typealias Mile = Double
+public typealias Feet = Double
+public typealias Inch = Double
+public typealias Kilometer = Double
+public typealias Meter = Double
+public typealias Kelvin = Double
+public typealias Knot = Double
+public typealias Day = Double
+public typealias Hour = Double
+public typealias Minute = Double
+public typealias Second = Double
+public typealias Pound = Double
+public typealias Stone = Double
+public typealias Kilo = Double
 
 
 //MARK: Constants
 // Length / Distance
-let kConversionMilesPerKilometer = 1.609344
-let kConversionMilesPerFoot = 0.00018939394
-let kConversionKilometersPerMile = 0.621371192237334
-let kConversionMilesPerNauticalMile = 1.15077945
-let kConversionNauticalMilesPerMile = 0.868976
-let kConversionFeetPerMile: Double = 5280
-let kConversionFeetPerMeter = 0.3048
-let kConversionMetersPerMile = 1609.347
-let kConversionMetersPerFoot = 3.280839895
+public let kConversionMilesPerKilometer = 1.609344
+public let kConversionMilesPerFoot = 0.00018939394
+public let kConversionKilometersPerMile = 0.621371192237334
+public let kConversionMilesPerNauticalMile = 1.15077945
+public let kConversionNauticalMilesPerMile = 0.868976
+public let kConversionFeetPerMile: Double = 5280
+public let kConversionFeetPerMeter = 0.3048
+public let kConversionMetersPerMile = 1609.347
+public let kConversionMetersPerFoot = 3.280839895
 
 //GEOGRAPHIC / ANGLE
 /** Radius of Earth at Equator (Clarke Ellipsoid) in km */
-let kConversionEarthRadiusAtEquator: Kilometer  = 6_378.2  //In km
+public let kConversionEarthRadiusAtEquator: Kilometer  = 6_378.2  //In km
 /** Radius of Earth at Pole (Clarke Ellipsoid) in km */
-let kConversionEarthRadiusAtPole: Kilometer  = 6_356.6  //In km
-let kConversionDegreesToRadians = 0.0174532925
-let kConversionDegreesToGradian = 1.111111111
-let kConversionRadiansToDegrees = 57.295779513082
-let kConversionRadiansToGradian = 63.661977236758
+public let kConversionEarthRadiusAtPole: Kilometer  = 6_356.6  //In km
+public let kConversionDegreesToRadians = 0.0174532925
+public let kConversionDegreesToGradian = 1.111111111
+public let kConversionRadiansToDegrees = 57.295779513082
+public let kConversionRadiansToGradian = 63.661977236758
 
 //Weight
-let kConversionPoundsPerKilograms = 2.20462
-let kConversionPoundsPerStones: Double = 14
-let kConversionKilogramsPerPound = 0.453592
-let kConversionKilogramsPerStone = 6.35029
-let kConversionStonesPerPound = 0.0714286
-let kConversionStonesPerKilograms = 0.157473
+public let kConversionPoundsPerKilograms = 2.20462
+public let kConversionPoundsPerStones: Double = 14
+public let kConversionKilogramsPerPound = 0.453592
+public let kConversionKilogramsPerStone = 6.35029
+public let kConversionStonesPerPound = 0.0714286
+public let kConversionStonesPerKilograms = 0.157473
 
 //MARK: Extension of Double
-extension Double {
+public extension Double {
 	
 	/** returns the minimum value in Degress Celsius */
 	static var minDegressCelsius: Celsius {return Conversion.minDegCelsius}
@@ -115,24 +115,23 @@ extension Double {
 }
 
 //MARK: Convenience Functions
-func MINS_2_SECS(min:Minute)->Second { return Conversion.minutesToSeconds(min) }
-func HOURS_2_MINS(hour:Hour)->Minute { return Conversion.hoursToMinutes(hour) }
-func HOURS_2_SECS(hour:Hour)->Second { return MINS_2_SECS(HOURS_2_MINS(hour)) }
-func DAYS_2_HOURS(day:Day)->Hour {return Conversion.daysToHours(day)}
-func DAYS_2_MINS(day:Day)->Minute {return HOURS_2_MINS(DAYS_2_HOURS(day)) }
-func DAYS_2_SECS(day:Day)->Second { return MINS_2_SECS(DAYS_2_MINS(day)) }
-
-func DEG_2_RAD(deg:Double)->Double {return Conversion.degressToRadians(deg) }
-func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(rad) }
+public func MINS_2_SECS(min:Minute)->Second { return Conversion.minutesToSeconds(min) }
+public func HOURS_2_MINS(hour:Hour)->Minute { return Conversion.hoursToMinutes(hour) }
+public func HOURS_2_SECS(hour:Hour)->Second { return MINS_2_SECS(HOURS_2_MINS(hour)) }
+public func DAYS_2_HOURS(day:Day)->Hour {return Conversion.daysToHours(day)}
+public func DAYS_2_MINS(day:Day)->Minute {return HOURS_2_MINS(DAYS_2_HOURS(day)) }
+public func DAYS_2_SECS(day:Day)->Second { return MINS_2_SECS(DAYS_2_MINS(day)) }
+public func DEG_2_RAD(deg:Double)->Double {return Conversion.degressToRadians(deg) }
+public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(rad) }
 
 
 //MARK: Conversion Class
-/** 
+/**
  Conversion Class
  
  Functions for converting values
  */
-class Conversion : NSObject {
+@objc public class Conversion : NSObject {
 
 ///---------------------------------------------------------------------------------------
 /// Distance
@@ -145,7 +144,7 @@ class Conversion : NSObject {
 	:param: miles - The distance in Miles
 	:returns: Returns the distance in Kilometers.
 	*/
-	class func milesToKilometers(miles:Mile) ->Kilometer {
+	public class func milesToKilometers(miles:Mile) ->Kilometer {
 		return miles * kConversionMilesPerKilometer
 	}
 	
@@ -155,7 +154,7 @@ class Conversion : NSObject {
 	:param: km - The distance in Kilometers
 	:returns: Returns the distance in Miles.
 	*/
-	class func kilometersToMiles(km:Kilometer) ->Mile {
+	public class func kilometersToMiles(km:Kilometer) ->Mile {
 		return km * kConversionKilometersPerMile
 	}
 	
@@ -165,7 +164,7 @@ class Conversion : NSObject {
 	:param: feet - The distance in Feet
 	:returns: Returns the distance in Meters.
 	*/
-	class func feetToMeters(feet:Feet) ->Meter {
+	public class func feetToMeters(feet:Feet) ->Meter {
 		return feet * kConversionMetersPerFoot
 	}
 	
@@ -175,7 +174,7 @@ class Conversion : NSObject {
 	:param: meters - The distance in Meters
 	:returns: Returns the distance in Feet.
 	*/
-	class func metersToFeet(meters:Meter) ->Feet {
+	public class func metersToFeet(meters:Meter) ->Feet {
 		return meters * kConversionFeetPerMeter
 	}
 
@@ -185,7 +184,7 @@ class Conversion : NSObject {
 	:param: miles - The distance in Miles
 	:returns: Returns the distance in Feet.
 	*/
-	class func milesToFeet(miles:Mile) ->Feet {
+	public class func milesToFeet(miles:Mile) ->Feet {
 		return miles * kConversionFeetPerMile
 	}
 
@@ -202,7 +201,7 @@ class Conversion : NSObject {
 	:param: kmh - The speed in Kilometers per hour
 	:returns: Returns the speed in Miles.
 	*/
-	class func kmhToMph(kmh:Kilometer) ->Mile {
+	public class func kmhToMph(kmh:Kilometer) ->Mile {
 		return self.kilometersToMiles(kmh)
 	}
 
@@ -212,7 +211,7 @@ class Conversion : NSObject {
 	:param: kmh - The speed in Miles per hour
 	:returns: Returns the speed in KmH.
 	*/
-	class func mphToKmh(mph:Mile) ->Kilometer {
+	public class func mphToKmh(mph:Mile) ->Kilometer {
 		return self.milesToKilometers(mph)
 	}
 	
@@ -222,7 +221,7 @@ class Conversion : NSObject {
 	:param: knots - The speed in Knots
 	:returns: Returns the speed in Mph.
 	*/
-	class func knotsToMph(knots:Knot) ->Mile {
+	public class func knotsToMph(knots:Knot) ->Mile {
 		return knots * kConversionMilesPerNauticalMile
 	}
 	
@@ -232,7 +231,7 @@ class Conversion : NSObject {
 	:param: mph - The speed in Miles per hour
 	:returns: Returns the speed in Knots.
 	*/
-	class func mphToKnots(mph:Mile) ->Knot {
+	public class func mphToKnots(mph:Mile) ->Knot {
 		return mph * kConversionNauticalMilesPerMile
 	}
 
@@ -241,15 +240,15 @@ class Conversion : NSObject {
 ///---------------------------------------------------------------------------------------
 //MARK: Temp
 	
-	class var minDegCelsius: Double {
+	public class var minDegCelsius: Double {
 		return -273.15
 	}
 	
-	class var minDegFahrenheit: Double {
+	public class var minDegFahrenheit: Double {
 		return -459.67
 	}
 	
-	class var minDegKelvin: Double {
+	public class var minDegKelvin: Double {
 		return 0
 	}
 
@@ -259,7 +258,7 @@ class Conversion : NSObject {
 	:param: fahrenheit - The Temprature in Fahrenheit
 	:returns: Returns the temprature in degress Celsius.
 	*/
-	class func fahrenheitToCelsius(fahrenheit:Fahrenheit) ->Celsius {
+	public class func fahrenheitToCelsius(fahrenheit:Fahrenheit) ->Celsius {
 		return (fahrenheit - 32.0) * (5.0/9.0)
 	}
 	
@@ -269,7 +268,7 @@ class Conversion : NSObject {
 	:param: celsius - The Temprature in Celsius
 	:returns: Returns the temprature in degress Fahrenheit.
 	*/
-	class func celsiusToFahrenheit(celsius:Celsius) ->Fahrenheit {
+	public class func celsiusToFahrenheit(celsius:Celsius) ->Fahrenheit {
 		return (celsius * 9.0/5.0) + 32.0
 	}
 
@@ -286,7 +285,7 @@ class Conversion : NSObject {
 	:param: mins - The time in Minutes
 	:returns: Returns the time in Seconds.
 	*/
-	class func minutesToSeconds(mins:Minute) -> Second {
+	public class func minutesToSeconds(mins:Minute) -> Second {
 		return (mins * 60)
 	}
 	
@@ -296,7 +295,7 @@ class Conversion : NSObject {
 	:param: minutes - The time in Minutes
 	:returns: Returns the time in Milliseconds.
 	*/
-	class func minutesToMilliseconds(minutes:Minute) -> Double {
+	public class func minutesToMilliseconds(minutes:Minute) -> Double {
 		return floor(minutes * 60000)
 	}
 
@@ -306,7 +305,7 @@ class Conversion : NSObject {
 	:param: mins - The time in Minutes
 	:returns: Returns the time in Seconds.
 	*/
-	class func hoursToMinutes(hours:Hour) -> Minute {
+	public class func hoursToMinutes(hours:Hour) -> Minute {
 		return (hours * 60)
 	}
 
@@ -316,7 +315,7 @@ class Conversion : NSObject {
 	:param: hours - The time in Hours
 	:returns: Returns the time in Milliseconds.
 	*/
-	class func hoursToMilliseconds(hours:Hour) -> Double {
+	public class func hoursToMilliseconds(hours:Hour) -> Double {
 		return floor(hours * 3600000)
 	}
 
@@ -326,7 +325,7 @@ class Conversion : NSObject {
 	:param: day - The number of Days
 	:returns: Returns the hours from the passed in `day`.
 	*/
-	class func daysToHours(day:Day) -> Hour {
+	public class func daysToHours(day:Day) -> Hour {
 		return (day * 24)
 	}
 	
@@ -336,7 +335,7 @@ class Conversion : NSObject {
 	:param: milliseconds - The time in Milliseconds
 	:returns: Returns the time in Hours.
 	*/
-	class func millisecondsToHours(milliseconds:Double) -> Hour {
+	public class func millisecondsToHours(milliseconds:Double) -> Hour {
 		return (milliseconds / 3600000)
 	}
 
@@ -351,7 +350,7 @@ class Conversion : NSObject {
 	:param: pounds - The weight in Pounds
 	:returns: Returns the weight in Kilos
 	*/
-	class func poundsToKilograms(pounds:Pound) -> Kilo {
+	public class func poundsToKilograms(pounds:Pound) -> Kilo {
 		return pounds * kConversionKilogramsPerPound;
 	}
 
@@ -361,7 +360,7 @@ class Conversion : NSObject {
 	:param: pounds - The weight in Pounds
 	:returns: Returns the weight in Stones
 	*/
-	class func poundsToStones(pounds:Pound) -> Stone {
+	public class func poundsToStones(pounds:Pound) -> Stone {
 		return pounds * kConversionStonesPerPound;
 	}
 	
@@ -371,7 +370,7 @@ class Conversion : NSObject {
 	:param: kilos - The weight in Kilos
 	:returns: Returns the weight in Pounds
 	*/
-	class func kilogramsToPounds(kilos:Kilo) -> Pound {
+	public class func kilogramsToPounds(kilos:Kilo) -> Pound {
 		return kilos * kConversionPoundsPerKilograms;
 	}
 	
@@ -381,7 +380,7 @@ class Conversion : NSObject {
 	:param: kilos - The weight in Kilos
 	:returns: Returns the weight in Stones
 	*/
-	class func kilogramsToStones(kilos:Kilo) -> Stone {
+	public class func kilogramsToStones(kilos:Kilo) -> Stone {
 		return kilos * kConversionStonesPerKilograms;
 	}
 	
@@ -391,7 +390,7 @@ class Conversion : NSObject {
 	:param: stones - The weight in Stones
 	:returns: Returns the weight in Pounds
 	*/
-	class func stonesToPounds(stones:Stone) -> Pound {
+	public class func stonesToPounds(stones:Stone) -> Pound {
 		return stones * kConversionPoundsPerStones;
 	}
 
@@ -401,7 +400,7 @@ class Conversion : NSObject {
 	:param: stones - The weight in Stones
 	:returns: Returns the weight in Kilos
 	*/
-	class func stonesToKilograms(stones:Stone) -> Kilo {
+	public class func stonesToKilograms(stones:Stone) -> Kilo {
 		return stones * kConversionKilogramsPerStone;
 	}
 
@@ -418,7 +417,7 @@ class Conversion : NSObject {
 	:param: degress - The number in Degress
 	:returns: Returns the converted value in Radians
 	*/
-	class func degressToRadians(degress:Double) -> Double {
+	public class func degressToRadians(degress:Double) -> Double {
 		return degress * kConversionDegreesToRadians;
 	}
 
@@ -428,7 +427,7 @@ class Conversion : NSObject {
 	:param: degress - The number in Degress
 	:returns: Returns the converted value in Gradian
 	*/
-	class func degressToGradian(degress:Double) -> Double {
+	public class func degressToGradian(degress:Double) -> Double {
 		return degress * kConversionDegreesToGradian;
 	}
 
@@ -438,7 +437,7 @@ class Conversion : NSObject {
 	:param: radian - The number in Radians
 	:returns: Returns the converted value in Degress
 	*/
-	class func radiansToDegress(radian:Double) -> Double {
+	public class func radiansToDegress(radian:Double) -> Double {
 		return radian * kConversionRadiansToDegrees;
 	}
 	
@@ -448,7 +447,7 @@ class Conversion : NSObject {
 	:param: radian - The number in Radians
 	:returns: Returns the converted value in Gradian
 	*/
-	class func radiansToGradian(radian:Double) -> Double {
+	public class func radiansToGradian(radian:Double) -> Double {
 		return radian * kConversionRadiansToGradian;
 	}
 	

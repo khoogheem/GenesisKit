@@ -31,46 +31,46 @@ import Foundation
 	import CoreTelephony
 
 	/** Helper for System Type: iOS8 */
-	let IOS8 = Diagnostics.OSVerison(8.0)
+	public let IOS8 = Diagnostics.OSVerison(8.0)
 	/** Helper for System Type: iOS7 */
-	let IOS7 = Diagnostics.OSVerison(7.0)
+	public let IOS7 = Diagnostics.OSVerison(7.0)
 	let IOS6 = Diagnostics.OSVerison(6.0) //this would be odd given swift doesn't support it ;)-
 	
-	let IPAD = UIDevice.currentDevice().userInterfaceIdiom == .Pad
-	let IPHONE = UIDevice.currentDevice().userInterfaceIdiom == .Phone
+	public let IPAD = UIDevice.currentDevice().userInterfaceIdiom == .Pad
+	public let IPHONE = UIDevice.currentDevice().userInterfaceIdiom == .Phone
 
-	let isLandscape = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
-	let isPortrait = UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)
+	public let isLandscape = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
+	public let isPortrait = UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)
 
 	#elseif os(OSX)
 	import Cocoa
 
 	/** Helper for System Type: Yosemite OSX 10.10 */
-	let OSX_Yosemite = Diagnostics.OSVerison(10.10)
+	public let OSX_Yosemite = Diagnostics.OSVerison(10.10)
 	/** Helper for System Type: Mavericks OSX 10.9 */
-	let OSX_Mavericks = Diagnostics.OSVerison(10.9)
+	public let OSX_Mavericks = Diagnostics.OSVerison(10.9)
 
 #endif
 
 
 //MARK: Class
-public class Diagnostics : NSObject {
+@objc public class Diagnostics {
 	
 	// MARK: App Info
-	class var appName: String {
+	public class var appName: String {
 		return self.fromInfoBundle("CFBundleName")!
 	}
 	
 	
-	class var appVersion: String {
+	public class var appVersion: String {
 		return self.fromInfoBundle("CFBundleShortVersionString")!
 	}
 
-	class var appBuild: String {
+	public class var appBuild: String {
 		return self.fromInfoBundle("CFBundleVersion")!
 	}
 	
-	class var appIdentifer: String {
+	public class var appIdentifer: String {
 		return self.fromInfoBundle("CFBundleIdentifier")!
 	}
 
@@ -84,7 +84,7 @@ public class Diagnostics : NSObject {
 	:returns: returns The string value of the Radio Access Technology name
 	*/
 	@availability(OSX, unavailable, message="Not Available for OSX")
-	class var radioAccessName: String {
+	public class var radioAccessName: String {
 		#if os(iOS)
 			//Not really needed.. but will just protect on Simulator and such.
 			if CTTelephonyNetworkInfo().respondsToSelector(Selector("currentRadioAccessTechnology")) {
@@ -100,7 +100,7 @@ public class Diagnostics : NSObject {
 	:returns: returns The string value of the current Cellular Carriers Name
 	*/
 	@availability(OSX, unavailable, message="Not Available for OSX")
-	class var carrierName: String {
+	public class var carrierName: String {
 		
 		#if os(iOS)
 			//Not really needed.. but will just protect on Simulator and such.
@@ -125,7 +125,7 @@ public class Diagnostics : NSObject {
 	:param: compare A float value of the System Version.  ie `"8.0"`
 	:returns: returns a bool value
 	*/
-	class func OSVerison(compare: Float) -> Bool {
+	public class func OSVerison(compare: Float) -> Bool {
 		var systemIsVersion: Bool = false
 		let wholePart = Int(compare)
 		let fractionalPart = fmod(compare, 1.0)
@@ -155,14 +155,14 @@ public class Diagnostics : NSObject {
 		return systemIsVersion
 	}
 	
-	typealias SystemVerisonCompletion = (success: Bool) -> Void
+	public typealias SystemVerisonCompletion = (success: Bool) -> Void
 	/**
 	Compares a float representation of the system version and returns a Closure
  
 	:param: sysVersion A float value of the System Version.  ie `"8.0"`
 	:returns: returns SystemVerisonCompletion with `success` as a bool value
 	*/
-	class func onSystemVerison(sysVersion: Float, completion: SystemVerisonCompletion) {
+	public class func onSystemVerison(sysVersion: Float, completion: SystemVerisonCompletion) {
 		
 		if self.OSVerison(sysVersion) {
 			completion(success: true)
@@ -176,7 +176,7 @@ public class Diagnostics : NSObject {
  
 	:returns: returns The Systems Version as a String value
 	*/
-	class var systemVersion: String {
+	public class var systemVersion: String {
 		struct Static {
 			static var systemVer: String? = nil
 			static var onceToken : dispatch_once_t = 0
@@ -246,7 +246,7 @@ public class Diagnostics : NSObject {
 	 :returns: desciption A string of the Device types full description.. Verizon iPhone 4
 	 :returns: number An optional Int value of the device.. 6 - for iPhone 6 or 6 Plus
 	*/
-	class var platformString:(device: String, desciption: String, number: Int?) {
+	public class var platformString:(device: String, desciption: String, number: Int?) {
 //	class func platformString() -> (device: String, desciption: String, number: Int?) {
 		
 		//will keep it simple here..

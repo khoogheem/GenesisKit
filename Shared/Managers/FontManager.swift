@@ -28,10 +28,10 @@ import Foundation
 // Provide a private typealias for a platform Font.
 #if os(iOS)
 	import UIKit
-	typealias GKFont = UIFont
+	public typealias GKFont = UIFont
 #elseif os(OSX)
 	import Cocoa
-	typealias GKFont = NSFont
+	public typealias GKFont = NSFont
 #endif
 
 
@@ -39,7 +39,7 @@ import Foundation
 /**
   Manager class for Fonts - This is not useable in Objc due to the use of typealias. You would have to do another wrapper around it.
 */
-class FontManager {
+public class FontManager {
 	
 	/**
 	Creates a Font with the standard type of given size. On iOS if user has accessability set it will return a standardBold type of the given size.
@@ -49,7 +49,7 @@ class FontManager {
 	:param: size The Size of the Font to create
 	:returns: Font of the standard type in the given `size`
 	*/
-	class func standardFontWithSize(size: CGFloat) -> GKFont {
+	public class func standardFontWithSize(size: CGFloat) -> GKFont {
 		if let stdFont = self.standardFontName {
 			return GKFont(name: stdFont, size: size)!
 		}
@@ -64,7 +64,7 @@ class FontManager {
 	:param: size The Size of the Font to create
 	:returns: Font of the standard bold type in the given `size`
 	*/
-	class func standardBoldFontWithSize(size: CGFloat) -> GKFont {
+	public class func standardBoldFontWithSize(size: CGFloat) -> GKFont {
 		if let stdBldFont = self.standardBoldFontName {
 			return GKFont(name: stdBldFont, size: size)!
 		}

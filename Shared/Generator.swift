@@ -3,7 +3,7 @@
 //  GenesisKit
 //
 //  Created by Kevin A. Hoogheem on 10/14/14.
-//
+//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -30,10 +30,10 @@ import Foundation
 /**
   Generator for Structures.. Generic in type
 */
-struct genericGenerator<T>: GeneratorType {
+public struct genericGenerator<T>: GeneratorType {
 	var items: Slice<T>
 	
-	mutating func next() -> T? {
+	public mutating func next() -> T? {
 		if items.isEmpty {return nil}
 		let ret = items[0]
 		items = items[1..<items.count]

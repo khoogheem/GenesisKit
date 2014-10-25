@@ -1,9 +1,9 @@
 //
-//  NSTimeInterval+Extension.swift
+//  ValidatorProtocol.swift
 //  GenesisKit
 //
-//  Created by Kevin A. Hoogheem on 10/19/14.
-//
+//  Created by Kevin A. Hoogheem on 10/25/14.
+//  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,29 +26,15 @@
 import Foundation
 
 /**
-  Extensions to NSTimeInterval
- */
-public extension NSTimeInterval {
+	Validator Protocol defines the functions for Validators
+*/
+@objc public protocol Validator {
 	
-	var seconds: NSTimeInterval { return self }
-	var second: NSTimeInterval { return self.seconds }
-	
-	var minutes: NSTimeInterval { return self * 60 }
-	var minute: NSTimeInterval { return self.minutes }
-	
-	var hours: NSTimeInterval { return self.minutes * 60}
-	var hour: NSTimeInterval { return self.hours }
-	
-	var days: NSTimeInterval {return self.hours * 24}
-	var day: NSTimeInterval { return self.days }
-	
-	var months: NSTimeInterval {return self.days * 31}
-	var month: NSTimeInterval { return self.months }
-	
-	var years: NSTimeInterval { return self.months * 12}
-	var year: NSTimeInterval { return self.years }
-	
-	var ago: NSDate {return NSDate(timeIntervalSinceNow: -self)}
-	
-	var fromNow: NSDate {return NSDate(timeIntervalSinceNow: self)}
+	/**
+	Validates the input and provides a Bool back based on the validation attempt
+
+	:param: error A pointer to NSError
+	:returns: A Bool value based on the validation of the input
+	*/
+	func validateWithError(error: NSErrorPointer) -> Bool
 }
