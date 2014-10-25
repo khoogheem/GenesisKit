@@ -35,6 +35,10 @@
 		962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
 		962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
 		962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
+		962E132419FC66CE00A1C594 /* GenesisKitIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */; };
+		962E132519FC66CE00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E132019FC66CE00A1C594 /* Info.plist */; };
+		962E132619FC66CE00A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */; };
+		962E132719FC66CE00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E132319FC66CE00A1C594 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		962E12C619FC1AF200A1C594 /* emailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailValidator.swift; sourceTree = "<group>"; };
 		962E131A19FC54E000A1C594 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		962E131B19FC54E600A1C594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenesisKitIOS.h; sourceTree = "<group>"; };
+		962E132019FC66CE00A1C594 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
+		962E132319FC66CE00A1C594 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,8 @@
 				962E131B19FC54E600A1C594 /* README.md */,
 				962E131A19FC54E000A1C594 /* LICENSE */,
 				962E12B419FC1AF200A1C594 /* Shared */,
+				962E131E19FC66CE00A1C594 /* GenesisKitIOS */,
+				962E132119FC66CE00A1C594 /* GenesisKitIOSTests */,
 				962E122619FC195900A1C594 /* GenesisKitOSX */,
 				962E123319FC195900A1C594 /* GenesisKitOSXTests */,
 				962E11E719FC18EF00A1C594 /* Products */,
@@ -237,6 +247,24 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		962E131E19FC66CE00A1C594 /* GenesisKitIOS */ = {
+			isa = PBXGroup;
+			children = (
+				962E131F19FC66CE00A1C594 /* GenesisKitIOS.h */,
+				962E132019FC66CE00A1C594 /* Info.plist */,
+			);
+			path = GenesisKitIOS;
+			sourceTree = "<group>";
+		};
+		962E132119FC66CE00A1C594 /* GenesisKitIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				962E132219FC66CE00A1C594 /* GenesisKitIOSTests.swift */,
+				962E132319FC66CE00A1C594 /* Info.plist */,
+			);
+			path = GenesisKitIOSTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -244,6 +272,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E132419FC66CE00A1C594 /* GenesisKitIOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E132719FC66CE00A1C594 /* Info.plist in Resources */,
+				962E132519FC66CE00A1C594 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +451,7 @@
 				962E12C919FC1AF200A1C594 /* Diagnostics.swift in Sources */,
 				962E12CD19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
 				962E12C719FC1AF200A1C594 /* Conversion.swift in Sources */,
+				962E132619FC66CE00A1C594 /* GenesisKitIOSTests.swift in Sources */,
 				962E12CF19FC1AF200A1C594 /* Generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
