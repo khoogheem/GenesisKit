@@ -65,7 +65,6 @@
 		962E12C619FC1AF200A1C594 /* emailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailValidator.swift; sourceTree = "<group>"; };
 		962E131A19FC54E000A1C594 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		962E131B19FC54E600A1C594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		962E132919FC67BB00A1C594 /* PlaygroundOSX.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlaygroundOSX.playground; sourceTree = "<group>"; };
 		962E132F19FC689E00A1C594 /* GenesisKitIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E133219FC689E00A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E133319FC689E00A1C594 /* GenesisKitIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenesisKitIOS.h; sourceTree = "<group>"; };
@@ -113,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				962E134F19FC6C9100A1C594 /* PlayGroundIOS.playground */,
-				962E132919FC67BB00A1C594 /* PlaygroundOSX.playground */,
 				962E131B19FC54E600A1C594 /* README.md */,
 				962E131A19FC54E000A1C594 /* LICENSE */,
 				962E12B419FC1AF200A1C594 /* Shared */,
