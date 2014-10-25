@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double GenesisKitOSXVersionNumber;
 FOUNDATION_EXPORT const unsigned char GenesisKitOSXVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GenesisKitOSX/PublicHeader.h>
-
-
