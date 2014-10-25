@@ -72,6 +72,7 @@
 		962E133919FC689F00A1C594 /* GenesisKitIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E133F19FC689F00A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
+		962E134F19FC6C9100A1C594 /* PlayGroundIOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGroundIOS.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +112,7 @@
 		962E11DC19FC18EF00A1C594 = {
 			isa = PBXGroup;
 			children = (
+				962E134F19FC6C9100A1C594 /* PlayGroundIOS.playground */,
 				962E132919FC67BB00A1C594 /* PlaygroundOSX.playground */,
 				962E131B19FC54E600A1C594 /* README.md */,
 				962E131A19FC54E000A1C594 /* LICENSE */,
