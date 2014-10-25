@@ -37,6 +37,8 @@
 		962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C419FC1AF200A1C594 /* ValidatorProtocol.swift */; };
 		962E12DD19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
 		962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
+		962E131C19FC64CF00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E120A19FC194800A1C594 /* Info.plist */; };
+		962E131D19FC64DB00A1C594 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962E121719FC194800A1C594 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -421,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E131C19FC64CF00A1C594 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962E131D19FC64DB00A1C594 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
