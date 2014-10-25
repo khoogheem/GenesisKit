@@ -27,7 +27,92 @@ import Foundation
 
 // Provide a private typealias for a platform Font.
 #if os(iOS)
-	private typealias AppFont = UIFont
+	import UIKit
+	typealias GKFont = UIFont
 #elseif os(OSX)
-	private typealias AppFont = NSFont
+	import Cocoa
+	typealias GKFont = NSFont
 #endif
+
+
+
+/**
+  Manager class for Fonts - This is not useable in Objc due to the use of typealias. You would have to do another wrapper around it.
+*/
+class FontManager {
+	
+	/** 
+	 Creates a Font with the standard type of given size. On iOS if user has accessability set it will return a standardBold type of the given size
+	 
+	 :param: size The Size of the Font to create
+	 :returns: Font of the standard type in the given `size`
+	 */
+	class func standardFontWithSize(size: CGFloat) -> GKFont {
+		if let stdFont = self.standardFontName {
+			return GKFont(name: stdFont, size: size)!
+		}
+		return GKFont.systemFontOfSize(size)
+	}
+	
+	/**
+	Creates a Font with the bold type of given size.
+	
+	:param: size The Size of the Font to create
+	:returns: Font of the standard bold type in the given `size`
+	*/
+	class func standardBoldFontWithSize(size: CGFloat) -> GKFont {
+		if let stdBldFont = self.standardBoldFontName {
+			return GKFont(name: stdBldFont, size: size)!
+		}
+
+		return GKFont.boldSystemFontOfSize(size)
+	}
+	
+	
+	//MARK: Private
+	private class var standardFontName: String? {
+		
+		#if os(iOS)
+			var accessibilityFont:String? {
+				if IOS8 {
+					if UIAccessibilityIsBoldTextEnabled() {
+						return self.standardBoldFontName
+					}
+				}
+				return nil
+			}
+			
+			#elseif os(OSX)
+			let accessibilityFont = nil
+		#endif
+		
+		//Lets check if they set a standardFont in Defaults Manger..
+		if let stdFont = DefaultsManager.get("GenesisKit.standardFontName") as? String {
+			if accessibilityFont != nil {
+				return accessibilityFont!
+			}
+			return stdFont
+		}
+		
+		//Ok no font was set in Defaults Manager.. Lets return our Default
+		if accessibilityFont != nil {
+			return accessibilityFont!
+		}
+		
+		return nil
+//		return "Avenir-Light"
+	}
+	
+	private class var standardBoldFontName: String? {
+		//Lets check if they set a standardBoldFont in Defaults Manger..
+		if let stdBoldFont = DefaultsManager.get("GenesisKit.standardBoldFontName") as? String {
+			return stdBoldFont
+		}
+		
+		return nil
+//		return "Avenir-Medium"
+		//		return "Helvetica-Bold"
+	}
+
+	
+}
