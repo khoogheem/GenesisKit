@@ -32,8 +32,7 @@ public class emailValidator : NSObject, Validator {
 	public var input: String?
 	
 	public func validateWithError(error: NSErrorPointer) -> Bool {
-//		let emailRegEx = "[A-Z0-9a-z._%+-#]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]"
+//		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]"
 		let seperatorSet = NSCharacterSet(charactersInString:"@")
 
 		let goodEmailError = NSError.createError("Success", code: 200)
@@ -41,13 +40,12 @@ public class emailValidator : NSObject, Validator {
 
 		var emailParts: [String] = input!.componentsSeparatedByCharactersInSet(seperatorSet).filter({$0 != ""})
 
-//		println("Email: \(emailParts[1])")
-		//TODO: use Reachability to see if domain is a vaild one?
+		//TODO: use hostchecks to see if domain is a vaild one?
 		
 		if (input != nil) {
-			NSLog("asfasdf")
-			let range = input!.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
-			let result = range != nil ? true : false
+//			let range = input!.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
+//			let result = range != nil ? true : false
+			let result = emailParts.count == 2 ? true : false
 			
 			if error != nil {
 				if (result) {
