@@ -1,8 +1,8 @@
 //
-//  emailValidator.swift
+//  Error.swift
 //  GenesisKit
 //
-//  Created by Kevin A. Hoogheem on 10/25/14.
+//  Created by Kevin A. Hoogheem on 10/26/14.
 //  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,47 +23,28 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
 import Foundation
 
 /**
-	emailValidator validates emails
+	Internal Error Class to make sending errors regarding the framework easier
 */
-public class emailValidator : NSObject, Validator {
-	public var input: String?
-	
-	public func validateWithError(error: NSErrorPointer) -> Bool {
-//		let emailRegEx = "[A-Z0-9a-z._%+-#]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]"
-		let seperatorSet = NSCharacterSet(charactersInString:"@")
 
-		let goodEmailError = NSError.createError("Success", code: 200)
-		let badEmailError = NSError.createError("Email is not Valid", code: 404)
+let kGenesisKitErrorDomain = "com.GenesisKit.framework"
 
-		var emailParts: [String] = input!.componentsSeparatedByCharactersInSet(seperatorSet).filter({$0 != ""})
+extension NSError {
 
-//		println("Email: \(emailParts[1])")
-		//TODO: use Reachability to see if domain is a vaild one?
-		
-		if (input != nil) {
-			NSLog("asfasdf")
-			let range = input!.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
-			let result = range != nil ? true : false
-			
-			if error != nil {
-				if (result) {
-					error.memory = goodEmailError
-				}else {
-					error.memory = badEmailError
-				}
-			}
-
-			return result
+	/**
+	Constructs an NSError with the given message and Code
+ 
+	:param: message A message to attach to the NSError
+	:param: code A numeric code that is attached to the NSError
+	:returns: returns a constructed NSError
+	*/
+	class func createError(message: String?, code: Int) -> NSError {
+		if message != nil {
+			return NSError(domain: kGenesisKitErrorDomain, code: code, userInfo: [NSLocalizedDescriptionKey: message!])
 		}
-		
-		if error != nil {
-			error.memory = badEmailError
-		}
-
-		return false
+		return NSError(domain: kGenesisKitErrorDomain, code: code, userInfo: nil)
 	}
 }
