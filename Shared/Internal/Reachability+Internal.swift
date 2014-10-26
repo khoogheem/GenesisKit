@@ -33,6 +33,8 @@ let ReachabilityChangedNotification = "ReachabilityChangedNotification"
 	Internal Reachability Class to determine the reachability of network
 */
 class Reachability {
+	//TODO: Add in the Start Notifier/stop Notifier
+	//TODO: Make it a shared instance
 	let kShouldPrintReachabilityFlags = true
 
 	enum NetworkStatus {
