@@ -12,4 +12,5 @@ To install the framework copy the project into your existing project.  Under you
 
 ##Supported OS
 
-**Supported OS**: iOS8, iOS7 (if you remove the files from the framework)
+**Supported iOS**: iOS8, iOS7 (if you remove the files from the framework *some items may still not work outside*)
+**Supported OSX**: 10.9+

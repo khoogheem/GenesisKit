@@ -41,6 +41,11 @@
 		9698239B19FD5FD900E6E226 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12BF19FC1AF200A1C594 /* Stack.swift */; };
 		9698239F19FD6CD200E6E226 /* Reachability+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */; };
 		969823A419FD6ECF00E6E226 /* Reachability+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */; };
+		969823B419FDAE7800E6E226 /* CountryFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823B319FDAE7800E6E226 /* CountryFlag.swift */; };
+		969823B519FDAE7800E6E226 /* CountryFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823B319FDAE7800E6E226 /* CountryFlag.swift */; };
+		969823B719FDB67A00E6E226 /* NSBundle+Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823B619FDB67A00E6E226 /* NSBundle+Framework.swift */; };
+		969823B819FDB67A00E6E226 /* NSBundle+Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823B619FDB67A00E6E226 /* NSBundle+Framework.swift */; };
+		969823C119FEFA0800E6E226 /* flags-iso in Resources */ = {isa = PBXBuildFile; fileRef = 969823BE19FEF9D200E6E226 /* flags-iso */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,9 @@
 		9698238719FD582D00E6E226 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9698239D19FD60F000E6E226 /* PlayGroundIOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGroundIOS.playground; sourceTree = "<group>"; };
 		9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+Internal.swift"; sourceTree = "<group>"; };
+		969823B319FDAE7800E6E226 /* CountryFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryFlag.swift; sourceTree = "<group>"; };
+		969823B619FDB67A00E6E226 /* NSBundle+Framework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Framework.swift"; sourceTree = "<group>"; };
+		969823BE19FEF9D200E6E226 /* flags-iso */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "flags-iso"; path = "BundleFiles/flags-iso"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 		962E12B419FC1AF200A1C594 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				969823C019FEF9E500E6E226 /* BundleFiles */,
 				962E12B519FC1AF200A1C594 /* Conversion.swift */,
 				962E12B619FC1AF200A1C594 /* Diagnostics.swift */,
 				962E12BA19FC1AF200A1C594 /* Generator.swift */,
@@ -224,6 +233,7 @@
 		962E12C019FC1AF200A1C594 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				969823B319FDAE7800E6E226 /* CountryFlag.swift */,
 				962E12C119FC1AF200A1C594 /* Controllers */,
 			);
 			path = UI;
@@ -292,9 +302,19 @@
 			isa = PBXGroup;
 			children = (
 				9698238719FD582D00E6E226 /* Error.swift */,
+				969823B619FDB67A00E6E226 /* NSBundle+Framework.swift */,
 				9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		969823C019FEF9E500E6E226 /* BundleFiles */ = {
+			isa = PBXGroup;
+			children = (
+				969823BE19FEF9D200E6E226 /* flags-iso */,
+			);
+			name = BundleFiles;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969823C119FEFA0800E6E226 /* flags-iso in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +498,8 @@
 				962E12DA19FC1AF200A1C594 /* NetworkActivityController.swift in Sources */,
 				962E12D819FC1AF200A1C594 /* Stack.swift in Sources */,
 				962E12CC19FC1AF200A1C594 /* NSDate+Extension.swift in Sources */,
+				969823B819FDB67A00E6E226 /* NSBundle+Framework.swift in Sources */,
+				969823B519FDAE7800E6E226 /* CountryFlag.swift in Sources */,
 				962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
 				962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */,
 				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
@@ -506,6 +529,8 @@
 				9698239319FD5FCE00E6E226 /* DefaultsManager.swift in Sources */,
 				9698239719FD5FD900E6E226 /* Conversion.swift in Sources */,
 				9698239019FD5FC200E6E226 /* emailValidator.swift in Sources */,
+				969823B719FDB67A00E6E226 /* NSBundle+Framework.swift in Sources */,
+				969823B419FDAE7800E6E226 /* CountryFlag.swift in Sources */,
 				9698239419FD5FCE00E6E226 /* FontManager.swift in Sources */,
 				9698239919FD5FD900E6E226 /* Generator.swift in Sources */,
 				9698239119FD5FC700E6E226 /* ValidatorProtocol.swift in Sources */,

@@ -30,7 +30,9 @@ import SystemConfiguration
 let ReachabilityChangedNotification = "ReachabilityChangedNotification"
 
 /**
-	Internal Reachability Class to determine the reachability of network
+	Internal Reachability Class to determine the reachability of network.  Works much like Apple's Reachability.  
+
+	Note: Does not actually check if a hostname is accepting data.. but if it could be reachable.
 */
 class Reachability {
 	//TODO: Add in the Start Notifier/stop Notifier
