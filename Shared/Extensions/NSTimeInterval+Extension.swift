@@ -48,6 +48,9 @@ public extension NSTimeInterval {
 	var years: NSTimeInterval { return self.months * 12}
 	var year: NSTimeInterval { return self.years }
 	
+	var decades: NSTimeInterval { return self.years * 10}
+	var decade: NSTimeInterval { return self.decades }
+	
 	var ago: NSDate {return NSDate(timeIntervalSinceNow: -self)}
 	
 	var fromNow: NSDate {return NSDate(timeIntervalSinceNow: self)}

@@ -48,28 +48,12 @@ public class CountryFlag {
 	 
 	 :see: CountyFlagSize
 	 */
-	public class func imageFor(alpha_2: String, size: CountyFlagSize = .Normal, shiny: Bool = false) -> GKImage {
+	public class func imageFor(alpha_2: String, size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
 		//TODO: Will use something later to change alpha3 to alpha2 visversa
 		// Lets for now check if alpha_2 is really a Alpha2
 		assert(countElements(alpha_2) == 2, "Two shall be the number thou shalt count, and the number of the counting shall be Two")
 
-		let filetype = "png"
-		var flagDir = kCountryFlagFlatDirectory
-		if (shiny) {
-			flagDir = kCountryFlagShinyDirectory
-		}
-		let unkFlag = "\(flagDir)/\(size.rawValue)/\(kCountryFlagFlagUnknown)"
-		let fileName = "\(flagDir)/\(size.rawValue)/\(alpha_2.uppercaseString)"
-		let frameworkBundle = NSBundle.frameworkBundle()
-		
-		//Unwarp and if ISO flag is found return it
-		if let resoruce = frameworkBundle.pathForResource(fileName, ofType: "png"){
-			return GKImage(contentsOfFile:resoruce)!
-		}
-		
-		//No file for the ISO Code was found above.. Returnt the Unknown flag
-		let resoruce = frameworkBundle.pathForResource(unkFlag, ofType: "png")
-		return GKImage(contentsOfFile:resoruce!)!
+		return getImage(alpha_2.uppercaseString, size: size, shiny: shiny)
 	}
 	
 	/**
@@ -81,19 +65,115 @@ public class CountryFlag {
 	
 	:see: CountyFlagSize
 	*/
-	public class func olympicFlag(size: CountyFlagSize = .Normal, shiny: Bool = false) -> GKImage {
-		let filetype = "png"
-		var flagDir = kCountryFlagFlatDirectory
-		if (shiny) {
-			flagDir = kCountryFlagShinyDirectory
-		}
-		let fileName = "\(flagDir)/\(size.rawValue)/\(kCountryFlagFlagOlympics)"
-		let frameworkBundle = NSBundle.frameworkBundle()
+	public class func olympicFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagOlympics, size: size, shiny: shiny)
 
-		//No need to check for nil as wek now the Olympic flag is there
-		let resoruce = frameworkBundle.pathForResource(fileName, ofType: "png")
-		return GKImage(contentsOfFile:resoruce!)!
+//		let filetype = "png"
+//		var flagDir = kCountryFlagFlatDirectory
+//		if (shiny) {
+//			flagDir = kCountryFlagShinyDirectory
+//		}
+//		let fileName = "\(flagDir)/\(size.rawValue)/\(kCountryFlagFlagOlympics)"
+//		let frameworkBundle = NSBundle.frameworkBundle()
+//		println("fi: \(fileName)")
+//
+//		//No need to check for nil as wek now the Olympic flag is there
+//		let resoruce = frameworkBundle.pathForResource(fileName, ofType: "png")
+//		println(resoruce)
+//		return GKImage(contentsOfFile:resoruce!)!
 	}
+	
+	/**
+	The Offical GenesisKit Country Flag for NATO.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of NATO
+	
+	:see: CountyFlagSize
+	*/
+	public class func natoFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagNATO, size: size, shiny: shiny)
+	}
+
+	/**
+	The Offical GenesisKit Country Flag for the UN.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of the UN
+	
+	:see: CountyFlagSize
+	*/
+	public class func unitedNationsFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagUnitedNations, size: size, shiny: shiny)
+	}
+	
+	/**
+	The Offical GenesisKit Country Flag for England.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of England
+	
+	:see: CountyFlagSize
+	*/
+	public class func englandFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagEngland, size: size, shiny: shiny)
+	}
+
+	/**
+	The Offical GenesisKit Country Flag for The Commonwealth.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of the Commonwealth
+	
+	:see: CountyFlagSize
+	*/
+	public class func commonwealthFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagCommonWealth, size: size, shiny: shiny)
+	}
+	
+	/**
+	The Offical GenesisKit Country Flag for Scotland.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of Scotland
+	
+	:see: CountyFlagSize
+	*/
+	public class func scotlandFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagScotland, size: size, shiny: shiny)
+	}
+
+	/**
+	The Offical GenesisKit Country Flag for Wales.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of Wales
+	
+	:see: CountyFlagSize
+	*/
+	public class func walesFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagWales, size: size, shiny: shiny)
+	}
+
+	/**
+	The Offical GenesisKit Country Flag for Basque.
+	
+	:param: size (default .Normal) The size of the flag you wish to return
+	:param: shiny (default false) If true will return a glossy verison of the flag otherwise it returns a flat image
+	:returns: The GKImage (either a UIImage or NSImage) of Basque
+	
+	:see: CountyFlagSize
+	*/
+	public class func basqueFlag(size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
+		return getImage(kCountryFlagFlagBasque, size: size, shiny: shiny)
+	}
+
 
 	//MARK: Private
 	private class var kCountryFlagFlatDirectory:String { return "flags-iso/flat" }
@@ -102,8 +182,36 @@ public class CountryFlag {
 	private class var kCountryFlagFlagOlympics:String { return "_olympics" }
 	private class var kCountryFlagFlagNATO:String { return "_nato" }
 	private class var kCountryFlagFlagUnitedNations:String { return "_united-nations" }
-	
+	private class var kCountryFlagFlagEngland:String { return "_england" }
+	private class var kCountryFlagFlagCommonWealth:String { return "_commonwealth" }
+	private class var kCountryFlagFlagScotland:String { return "_scotland" }
+	private class var kCountryFlagFlagWales:String { return "_wales" }
+	private class var kCountryFlagFlagBasque:String { return "_basque-country" }
 
+	/**
+	Internal getImage
+	*/
+	private class func getImage(fileName: String, size: CountyFlagSize, shiny: Bool) -> GKImage {
+		let filetype = "png"
+		var flagDir = kCountryFlagFlatDirectory
+		if (shiny) {
+			flagDir = kCountryFlagShinyDirectory
+		}
+		let unkFlag = "\(flagDir)/\(size.rawValue)/\(kCountryFlagFlagUnknown)"
+		let fileName = "\(flagDir)/\(size.rawValue)/\(fileName)"
+		let frameworkBundle = NSBundle.frameworkBundle()
+		
+		//Unwarp and if ISO flag is found return it
+		if let resoruce = frameworkBundle.pathForResource(fileName, ofType: "png"){
+			return GKImage(contentsOfFile:resoruce)!
+		}
+		
+		//No file for the ISO Code was found above.. Returnt the Unknown flag
+		let resoruce = frameworkBundle.pathForResource(unkFlag, ofType: "png")
+		return GKImage(contentsOfFile:resoruce!)!
+	}
+
+	
 }
 
 
