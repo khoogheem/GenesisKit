@@ -1,5 +1,5 @@
 //
-//  GKImage.swift
+//  GKColor.swift
 //  GenesisKit
 //
 //  Created by Kevin A. Hoogheem on 10/28/14.
@@ -24,9 +24,9 @@
 //  THE SOFTWARE.
 
 
-// Provide a typealias for a Images.
+// Provide a typealias for GenesisKit Color.
 #if os(iOS)
-	public typealias GKImage = UIImage
-#elseif os(OSX)
-	public typealias GKImage = NSImage
+	public typealias GKColor = UIColor
+	#elseif os(OSX)
+	public typealias GKColor = NSColor
 #endif
