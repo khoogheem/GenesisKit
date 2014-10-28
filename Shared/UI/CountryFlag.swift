@@ -11,10 +11,8 @@ import Foundation
 // Provide a typealias for a CountryFlag.
 #if os(iOS)
 	import UIKit
-	public typealias GKImage = UIImage
 #elseif os(OSX)
 	import Cocoa
-	public typealias GKImage = NSImage
 #endif
 
 /**
