@@ -58,6 +58,8 @@
 		969823D31A01676700E6E226 /* GKColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D11A01676700E6E226 /* GKColor+FlatColors.swift */; };
 		969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */; };
 		969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */; };
+		96C3248A1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */; };
+		96C3248B1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,7 @@
 		969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+Extension.swift"; sourceTree = "<group>"; };
 		969823D11A01676700E6E226 /* GKColor+FlatColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+FlatColors.swift"; sourceTree = "<group>"; };
 		969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+CompanyColors.swift"; sourceTree = "<group>"; };
+		96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNBA.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +348,7 @@
 			children = (
 				969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */,
 				969823D11A01676700E6E226 /* GKColor+FlatColors.swift */,
+				96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -540,6 +544,7 @@
 				969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
+				96C3248B1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */,
 				969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
 				969823A419FD6ECF00E6E226 /* Reachability+Internal.swift in Sources */,
@@ -577,6 +582,7 @@
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				9698239119FD5FC700E6E226 /* ValidatorProtocol.swift in Sources */,
+				96C3248A1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */,
 				969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				9698239619FD5FD400E6E226 /* NSTimeInterval+Extension.swift in Sources */,
 				9698239F19FD6CD200E6E226 /* Reachability+Internal.swift in Sources */,
