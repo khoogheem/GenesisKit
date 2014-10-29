@@ -52,6 +52,8 @@
 		969823C81A00304800E6E226 /* GKFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823C61A00304800E6E226 /* GKFont.swift */; };
 		969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823C91A0030FC00E6E226 /* GKColor.swift */; };
 		969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823C91A0030FC00E6E226 /* GKColor.swift */; };
+		969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */; };
+		969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,7 @@
 		969823C31A00300900E6E226 /* GKImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKImage.swift; sourceTree = "<group>"; };
 		969823C61A00304800E6E226 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		969823C91A0030FC00E6E226 /* GKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKColor.swift; sourceTree = "<group>"; };
+		969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,7 @@
 		962E12B719FC1AF200A1C594 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */,
 				962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */,
 				962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */,
 			);
@@ -518,6 +522,7 @@
 				969823C51A00300900E6E226 /* GKImage.swift in Sources */,
 				969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
+				969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
 				969823A419FD6ECF00E6E226 /* Reachability+Internal.swift in Sources */,
 				962E12C819FC1AF200A1C594 /* Conversion.swift in Sources */,
@@ -552,6 +557,7 @@
 				969823C41A00300900E6E226 /* GKImage.swift in Sources */,
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				9698239119FD5FC700E6E226 /* ValidatorProtocol.swift in Sources */,
+				969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				9698239619FD5FD400E6E226 /* NSTimeInterval+Extension.swift in Sources */,
 				9698239F19FD6CD200E6E226 /* Reachability+Internal.swift in Sources */,
 				9698239819FD5FD900E6E226 /* Diagnostics.swift in Sources */,

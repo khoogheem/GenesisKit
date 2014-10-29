@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Provide a typealias for a CountryFlag.
+
 #if os(iOS)
 	import UIKit
 #elseif os(OSX)
