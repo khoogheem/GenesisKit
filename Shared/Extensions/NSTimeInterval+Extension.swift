@@ -30,28 +30,44 @@ import Foundation
  */
 public extension NSTimeInterval {
 	
+	/** A NSTimeInterval value in Seconds */
 	var seconds: NSTimeInterval { return self }
+	/** A NSTimeInterval value in Seconds */
 	var second: NSTimeInterval { return self.seconds }
 	
+	/** A NSTimeInterval value in Minutes */
 	var minutes: NSTimeInterval { return self * 60 }
+	/** A NSTimeInterval value in Minutes */
 	var minute: NSTimeInterval { return self.minutes }
 	
+	/** A NSTimeInterval value in Hours */
 	var hours: NSTimeInterval { return self.minutes * 60}
+	/** A NSTimeInterval value in Hours */
 	var hour: NSTimeInterval { return self.hours }
 	
+	/** A NSTimeInterval value in Days */
 	var days: NSTimeInterval {return self.hours * 24}
+	/** A NSTimeInterval value in Days */
 	var day: NSTimeInterval { return self.days }
 	
+	/** A NSTimeInterval value in Months */
 	var months: NSTimeInterval {return self.days * 31}
+	/** A NSTimeInterval value in Months */
 	var month: NSTimeInterval { return self.months }
 	
+	/** A NSTimeInterval value in Years */
 	var years: NSTimeInterval { return self.months * 12}
+	/** A NSTimeInterval value in Years */
 	var year: NSTimeInterval { return self.years }
 	
+	/** A NSTimeInterval value in Decades */
 	var decades: NSTimeInterval { return self.years * 10}
+	/** A NSTimeInterval value in Decades */
 	var decade: NSTimeInterval { return self.decades }
 	
+	/** Constructs a NSDate in the past */
 	var ago: NSDate {return NSDate(timeIntervalSinceNow: -self)}
 	
+	/** Constructs a NSDate in the future */
 	var fromNow: NSDate {return NSDate(timeIntervalSinceNow: self)}
 }
