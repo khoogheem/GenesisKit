@@ -100,7 +100,8 @@ public extension GKColor {
 		var a:CGFloat = 1.0;
 		self.getHue(&h, saturation:&s, brightness:&b, alpha:&a);
 		
-		return (hue:h, saturation:s, brightness:b, alpha:a);
+		//Round off to 3 points like Apple does
+		return (hue:round(h * 1000.0)/1000.0, saturation:round(s * 1000.0)/1000.0, brightness:round(b * 1000.0)/1000.0, alpha:a)
 	}
 	
 	/**
@@ -115,7 +116,8 @@ public extension GKColor {
 		var a:CGFloat = 0.0;
 		self.getRed(&r, green: &g, blue: &b, alpha: &a);
 		
-		return (red:r, green:g, blue:b, alpha:a);
+		//Round off to 3 points like Apple does
+		return (red:round(r * 1000.0)/1000.0, green:round(g * 1000.0)/1000.0, blue:round(b * 1000.0)/1000.0, alpha:a)
 	}
 	
 	/**
@@ -145,7 +147,6 @@ public extension GKColor {
 		return GKColor(hue: hue, saturation: saturation, brightness: newBrightness, alpha: alpha);
 	}
 
-	//MARK: Conveniences
 	
 	//MARK: Private Functions
 	private class func randomFloat() -> CGFloat {

@@ -54,6 +54,10 @@
 		969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823C91A0030FC00E6E226 /* GKColor.swift */; };
 		969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */; };
 		969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */; };
+		969823D21A01676700E6E226 /* GKColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D11A01676700E6E226 /* GKColor+FlatColors.swift */; };
+		969823D31A01676700E6E226 /* GKColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D11A01676700E6E226 /* GKColor+FlatColors.swift */; };
+		969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */; };
+		969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,8 @@
 		969823C61A00304800E6E226 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		969823C91A0030FC00E6E226 /* GKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKColor.swift; sourceTree = "<group>"; };
 		969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+Extension.swift"; sourceTree = "<group>"; };
+		969823D11A01676700E6E226 /* GKColor+FlatColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+FlatColors.swift"; sourceTree = "<group>"; };
+		969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+CompanyColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */,
+				969823D01A01673A00E6E226 /* Color */,
 				962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */,
 				962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */,
 			);
@@ -331,6 +338,15 @@
 			);
 			name = BundleFiles;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		969823D01A01673A00E6E226 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */,
+				969823D11A01676700E6E226 /* GKColor+FlatColors.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,7 +536,9 @@
 				962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
 				962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */,
 				969823C51A00300900E6E226 /* GKImage.swift in Sources */,
+				969823D31A01676700E6E226 /* GKColor+FlatColors.swift in Sources */,
 				969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */,
+				969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
 				969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
@@ -555,7 +573,9 @@
 				9698239419FD5FCE00E6E226 /* FontManager.swift in Sources */,
 				9698239919FD5FD900E6E226 /* Generator.swift in Sources */,
 				969823C41A00300900E6E226 /* GKImage.swift in Sources */,
+				969823D21A01676700E6E226 /* GKColor+FlatColors.swift in Sources */,
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
+				969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				9698239119FD5FC700E6E226 /* ValidatorProtocol.swift in Sources */,
 				969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				9698239619FD5FD400E6E226 /* NSTimeInterval+Extension.swift in Sources */,
