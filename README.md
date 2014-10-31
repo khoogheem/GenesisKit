@@ -36,19 +36,20 @@ To install the framework copy the project into your existing project.  Under you
 
 *GKColor+SportsNHL* - Provides colors for NHL Teams
 
-	*Usage*
-	```swift
-	let GBGreen = GKColor.GreenBayPackers.green.color()
-	```
+*Usage*
+```swift
+let GBGreen = GKColor.GreenBayPackers.green.color()
+```
+
 *NSDate+Extension* - Provides multiple convenice methods to create NSDates
 
 *NSTimeInterval+Extension* - Provides quick methods to create time based on chaining.
 
-	*Usage*
-	```swift
-	let nextYear: NSDate = 1.year.fromNow
-	let lastMonth = 1.month.ago
-	```
+*Usage*
+```swift
+let nextYear: NSDate = 1.year.fromNow
+let lastMonth = 1.month.ago
+```
 
 ##Clases
 
