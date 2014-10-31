@@ -25,6 +25,8 @@
 		962E133419FC689E00A1C594 /* GenesisKitIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E133319FC689E00A1C594 /* GenesisKitIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		962E133A19FC689F00A1C594 /* GenesisKitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E132F19FC689E00A1C594 /* GenesisKitIOS.framework */; };
 		962E134119FC689F00A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */; };
+		962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
+		962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
 		9698238819FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698238919FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698239019FD5FC200E6E226 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
@@ -106,6 +108,7 @@
 		962E133919FC689F00A1C594 /* GenesisKitIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisKitIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E133F19FC689F00A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
+		962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNFL.swift"; sourceTree = "<group>"; };
 		9698238719FD582D00E6E226 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9698239D19FD60F000E6E226 /* PlayGroundIOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGroundIOS.playground; sourceTree = "<group>"; };
 		9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+Internal.swift"; sourceTree = "<group>"; };
@@ -349,6 +352,7 @@
 				969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */,
 				969823D11A01676700E6E226 /* GKColor+FlatColors.swift */,
 				96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */,
+				962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -528,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */,
+				962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */,
 				969823C81A00304800E6E226 /* GKFont.swift in Sources */,
 				962E12D619FC1AF200A1C594 /* Memoization.swift in Sources */,
@@ -566,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9698239A19FD5FD900E6E226 /* Memoization.swift in Sources */,
+				962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				9698239B19FD5FD900E6E226 /* Stack.swift in Sources */,
 				969823C71A00304800E6E226 /* GKFont.swift in Sources */,
 				9698238819FD582D00E6E226 /* Error.swift in Sources */,
