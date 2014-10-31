@@ -13,6 +13,7 @@ To install the framework copy the project into your existing project.  Under you
 ##Supported OS
 
 **Supported iOS**: iOS8, iOS7 (if you remove the files from the framework *some items may still not work outside*)
+
 **Supported OSX**: 10.9+
 
 ##Type Alias
@@ -43,7 +44,7 @@ To install the framework copy the project into your existing project.  Under you
 ##Clases
 
 ###Conversion
-	Provides functions for conversion.. as well as extensions to Double
+Provides functions for conversion.. as well as extensions to Double
 
 ###Diagnostics
-	Provides functions to help with determination of the system
+Provides functions to help with determination of the system
