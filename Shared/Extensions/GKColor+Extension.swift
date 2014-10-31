@@ -115,11 +115,35 @@ public extension GKColor {
 		var b:CGFloat = 0.0;
 		var a:CGFloat = 0.0;
 		self.getRed(&r, green: &g, blue: &b, alpha: &a);
-		
+
 		//Round off to 3 points like Apple does
 		return (red:round(r * 1000.0)/1000.0, green:round(g * 1000.0)/1000.0, blue:round(b * 1000.0)/1000.0, alpha:a)
 	}
 	
+	/**
+	Provides a suitable text color based on the evaluated color.
+	
+	:returns: A either a dark or lightTextColor based on the evaluation
+	*/
+	public func readableColor() -> GKColor {
+		//Per W3C http://www.w3.org/WAI/ER/WD-AERT/#color-contrast
+		let (r,b,g,a) = self.rgba()
+		
+		if CGColorEqualToColor(self.CGColor, GKColor.blackColor().CGColor){
+			return GKColor.whiteColor()
+		}
+		
+		let redscore = ((r*255) * 299)
+		let greenscore = ((g*255) * 587)
+		let bluescore = ((b*255) * 114)
+		let darknessScore = (redscore + greenscore + bluescore) / 1000
+		
+		if darknessScore >= 125 {
+			return GKColor.darkTextColor()
+		}
+		return GKColor.lightTextColor()
+	}
+
 	/**
 	Provides a darker color of the given color.
 	
