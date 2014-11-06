@@ -81,15 +81,20 @@ public struct Stack<T: Equatable> {
 	/**
 	Returns the object at the given `index` in the `Stack`
 	
-	:returns: The top most object on the `Stack`
+	:param: index - The index of the object in the Stack
+	:returns: The optional object in the `Stack` at the given `index`
 	*/
-	public func objectAtIndex(index: Int) -> T {
+	public func objectAtIndex(index: Int) -> T? {
+		if index < 0 || index >= items.count {
+			return nil
+		}
 		return items[index]
 	}
 	
 	/**
 	Returns the `index` of the object in the `Stack`
 	
+	:param: object - The object in the Stack
 	:returns: An optional Int value of the object in the `Stack`
 	*/
 	public func indexOfObject(object:T) -> Int? {
@@ -107,6 +112,32 @@ public struct Stack<T: Equatable> {
 	public mutating func removeAll() {
 		items.removeAll(keepCapacity: false)
 	}
+	
+	//MARK: Index Subscript
+	/**
+	Returns the object at the given subscript `index` in the `Stack`
+	
+	:param: index - The index of the object in the Stack
+	:returns: The optional object in the `Stack` at the given `index`
+	*/
+	public subscript (index:Int) -> T? {
+		return self.objectAtIndex(index)?
+	}
+	
+	//MARK: Range Subscript
+	/**
+	Returns the range of objects in the `Stack`
+	
+	:param: range - The range of the objects in the Stack
+	:returns: The optional Array of ojects in the `Stack`
+	*/
+	public subscript (range: Range<Int>) -> [T]? {
+		if range.startIndex < 0 || range.endIndex > self.count {
+			return nil
+		}
+		return Array(items[range])
+	}
+
 
 }
 
