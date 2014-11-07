@@ -36,6 +36,8 @@ import Foundation
 /**
 	Extensions of GKColor for Colors of NBA Teams
 
+	**Swift Only**
+
 	To get the red color of the Atlanta Hawks... AtlantaHawks.red.color()
 */
 public extension GKColor {

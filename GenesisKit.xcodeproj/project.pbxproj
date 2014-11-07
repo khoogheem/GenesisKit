@@ -63,6 +63,8 @@
 		969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */; };
 		96C3248A1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */; };
 		96C3248B1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */; };
+		96D99B2E1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */; };
+		96D99B2F1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,7 @@
 		969823D11A01676700E6E226 /* GKColor+FlatColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+FlatColors.swift"; sourceTree = "<group>"; };
 		969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+CompanyColors.swift"; sourceTree = "<group>"; };
 		96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNBA.swift"; sourceTree = "<group>"; };
+		96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNHL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +359,7 @@
 				969823D11A01676700E6E226 /* GKColor+FlatColors.swift */,
 				96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */,
 				962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */,
+				96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -535,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				962E12DC19FC1AF200A1C594 /* ValidatorProtocol.swift in Sources */,
+				96D99B2F1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */,
 				962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */,
 				969823C81A00304800E6E226 /* GKFont.swift in Sources */,
@@ -574,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9698239A19FD5FD900E6E226 /* Memoization.swift in Sources */,
+				96D99B2E1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */,
 				962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				9698239B19FD5FD900E6E226 /* Stack.swift in Sources */,
 				969823C71A00304800E6E226 /* GKFont.swift in Sources */,

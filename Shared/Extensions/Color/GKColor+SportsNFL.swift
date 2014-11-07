@@ -34,9 +34,11 @@ import Foundation
 #endif
 
 /**
-Extensions of GKColor for Colors of NBA Teams
+	Extensions of GKColor for Colors of NBA Teams
 
-To get the red color of the Arizona Cardinals... ArizonaCardinals.red.color()
+	**Swift Only**
+
+	To get the red color of the Arizona Cardinals... ArizonaCardinals.red.color()
 */
 public extension GKColor {
 
