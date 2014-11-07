@@ -74,8 +74,11 @@ public struct Stack<T: Equatable> {
 	
 	:returns: The top most object on the `Stack`
 	*/
-	public mutating func pop() -> T {
-		return items.removeLast()
+	public mutating func pop() -> T? {
+		if items.count != 0{
+			return items.removeLast()
+		}
+		return nil
 	}
 	
 	/**
