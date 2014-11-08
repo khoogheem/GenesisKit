@@ -30,6 +30,7 @@
 		962E134119FC689F00A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */; };
 		962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
 		962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
+		9682323B1A0EE44C00C1149F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */; };
 		9698238819FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698238919FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698239019FD5FC200E6E226 /* emailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12C619FC1AF200A1C594 /* emailValidator.swift */; };
@@ -118,6 +119,7 @@
 		962E133F19FC689F00A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
 		962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNFL.swift"; sourceTree = "<group>"; };
+		9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9698238719FD582D00E6E226 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9698239D19FD60F000E6E226 /* PlayGroundIOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGroundIOS.playground; sourceTree = "<group>"; };
 		9698239E19FD6CD200E6E226 /* Reachability+Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+Internal.swift"; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				962E133319FC689E00A1C594 /* GenesisKitIOS.h */,
+				968232391A0EE40B00C1149F /* Extensions */,
 				962E133119FC689E00A1C594 /* Supporting Files */,
 			);
 			path = GenesisKitIOS;
@@ -339,6 +342,14 @@
 				962E133F19FC689F00A1C594 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		968232391A0EE40B00C1149F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9698238619FD57F400E6E226 /* Internal */ = {
@@ -603,6 +614,7 @@
 				9698239419FD5FCE00E6E226 /* FontManager.swift in Sources */,
 				9698239919FD5FD900E6E226 /* Generator.swift in Sources */,
 				969823C41A00300900E6E226 /* GKImage.swift in Sources */,
+				9682323B1A0EE44C00C1149F /* UIImage+Extension.swift in Sources */,
 				96133F3E1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */,
 				969823D21A01676700E6E226 /* GKColor+FlatColors.swift in Sources */,
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
