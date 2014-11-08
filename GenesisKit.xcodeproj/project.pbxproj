@@ -65,6 +65,8 @@
 		96C3248B1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */; };
 		96D99B2E1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */; };
 		96D99B2F1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */; };
+		96D99B321A0E83DB00666BF8 /* AutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B311A0E83DA00666BF8 /* AutoComplete.swift */; };
+		96D99B331A0E83DB00666BF8 /* AutoComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D99B311A0E83DA00666BF8 /* AutoComplete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,7 @@
 		969823D41A01680B00E6E226 /* GKColor+CompanyColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+CompanyColors.swift"; sourceTree = "<group>"; };
 		96C324891A01A29600AC8498 /* GKColor+SportsNBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNBA.swift"; sourceTree = "<group>"; };
 		96D99B2D1A0C4D7300666BF8 /* GKColor+SportsNHL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNHL.swift"; sourceTree = "<group>"; };
+		96D99B311A0E83DA00666BF8 /* AutoComplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoComplete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				969823C019FEF9E500E6E226 /* BundleFiles */,
+				96D99B311A0E83DA00666BF8 /* AutoComplete.swift */,
 				962E12B519FC1AF200A1C594 /* Conversion.swift */,
 				962E12B619FC1AF200A1C594 /* Diagnostics.swift */,
 				962E12BA19FC1AF200A1C594 /* Generator.swift */,
@@ -557,6 +561,7 @@
 				969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */,
+				96D99B331A0E83DB00666BF8 /* AutoComplete.swift in Sources */,
 				96C3248B1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */,
 				969823CF1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				962E12CE19FC1AF200A1C594 /* NSTimeInterval+Extension.swift in Sources */,
@@ -597,6 +602,7 @@
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
 				9698239119FD5FC700E6E226 /* ValidatorProtocol.swift in Sources */,
+				96D99B321A0E83DB00666BF8 /* AutoComplete.swift in Sources */,
 				96C3248A1A01A29600AC8498 /* GKColor+SportsNBA.swift in Sources */,
 				969823CE1A012F3F00E6E226 /* GKColor+Extension.swift in Sources */,
 				9698239619FD5FD400E6E226 /* NSTimeInterval+Extension.swift in Sources */,

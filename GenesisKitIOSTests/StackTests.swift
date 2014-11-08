@@ -12,6 +12,7 @@ import GenesisKitIOS
 
 class StackTests: XCTestCase {
 	var MyStack:Stack<String> = Stack<String>()
+	let items = (1...1000).map { $0 }
 
 	
     override func setUp() {
@@ -86,6 +87,28 @@ class StackTests: XCTestCase {
 
 	}
 
+	//MARK: Performance Tests
+	func testPerformanceMap() {
+		// This is an example of a performance test case.
+		self.measureBlock() {
+			// Put the code you want to measure the time of here.
+			var simpleStack = Stack<Int>()
+			self.items.map { simpleStack.push($0) }
+			
+		}
+	}
+	
+	func testPerformanceRange() {
+		// This is an example of a performance test case.
+		self.measureBlock() {
+			// Put the code you want to measure the time of here.
+			var simpleStack = Stack<Int>()
+			for i in 0..<self.items.count {
+				simpleStack.push(self.items[i])
+			}
+		}
+	}
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
@@ -97,5 +120,5 @@ class StackTests: XCTestCase {
 			}
         }
     }
-
+	
 }

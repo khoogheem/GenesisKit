@@ -40,12 +40,15 @@ public struct Stack<T: Equatable> {
 		
 	}
 	
+	/**
+	 Creates a Stack Object from the array of items
+	
+	 :param: items An array of objects
+	*/
 	public init (items: [T]) {
 		self.init()
-		for i in 0..<items.count {
-			let obj = items[i]
-			self.push(obj)
-		}
+		//This ends up being quicker then doing enumerations
+		items.map { self.push($0) }
 	}
 	
 	/** Provides the top most object in the `Stack` */
