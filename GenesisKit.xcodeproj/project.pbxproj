@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96133F3E1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96133F3D1A0EA7FE00CECF4D /* GKImage+Extension.swift */; };
+		96133F3F1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96133F3D1A0EA7FE00CECF4D /* GKImage+Extension.swift */; };
 		962A97521A0C26C500402071 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A97511A0C26C500402071 /* StackTests.swift */; };
 		962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E122919FC195900A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
@@ -87,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96133F3D1A0EA7FE00CECF4D /* GKImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKImage+Extension.swift"; sourceTree = "<group>"; };
 		962A97511A0C26C500402071 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		962E122519FC195900A1C594 /* GenesisKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenesisKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962E122819FC195900A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -251,6 +254,7 @@
 				969823CD1A012F3F00E6E226 /* GKColor+Extension.swift */,
 				969823D01A01673A00E6E226 /* Color */,
 				962E12B819FC1AF200A1C594 /* NSDate+Extension.swift */,
+				96133F3D1A0EA7FE00CECF4D /* GKImage+Extension.swift */,
 				962E12B919FC1AF200A1C594 /* NSTimeInterval+Extension.swift */,
 			);
 			path = Extensions;
@@ -557,6 +561,7 @@
 				962E12D219FC1AF200A1C594 /* DefaultsManager.swift in Sources */,
 				962E12D419FC1AF200A1C594 /* FontManager.swift in Sources */,
 				969823C51A00300900E6E226 /* GKImage.swift in Sources */,
+				96133F3F1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */,
 				969823D31A01676700E6E226 /* GKColor+FlatColors.swift in Sources */,
 				969823CB1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D61A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
@@ -598,6 +603,7 @@
 				9698239419FD5FCE00E6E226 /* FontManager.swift in Sources */,
 				9698239919FD5FD900E6E226 /* Generator.swift in Sources */,
 				969823C41A00300900E6E226 /* GKImage.swift in Sources */,
+				96133F3E1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */,
 				969823D21A01676700E6E226 /* GKColor+FlatColors.swift in Sources */,
 				969823CA1A0030FC00E6E226 /* GKColor.swift in Sources */,
 				969823D51A01680B00E6E226 /* GKColor+CompanyColors.swift in Sources */,
