@@ -26,7 +26,9 @@
 
 // Provide a typealias for a platform Font.
 #if os(iOS)
+	import UIKit
 	public typealias GKFont = UIFont
 	#elseif os(OSX)
+	import Cocoa
 	public typealias GKFont = NSFont
 #endif

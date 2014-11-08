@@ -26,7 +26,9 @@
 
 // Provide a typealias for GenesisKit Color.
 #if os(iOS)
+	import UIKit
 	public typealias GKColor = UIColor
-	#elseif os(OSX)
+#elseif os(OSX)
+	import Cocoa
 	public typealias GKColor = NSColor
 #endif

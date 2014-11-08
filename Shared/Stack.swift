@@ -40,6 +40,14 @@ public struct Stack<T: Equatable> {
 		
 	}
 	
+	public init (items: [T]) {
+		self.init()
+		for i in 0..<items.count {
+			let obj = items[i]
+			self.push(obj)
+		}
+	}
+	
 	/** Provides the top most object in the `Stack` */
 	public var topItem: T? {
 		return items.isEmpty ? nil : items[items.count - 1]
@@ -116,6 +124,29 @@ public struct Stack<T: Equatable> {
 		items.removeAll(keepCapacity: false)
 	}
 	
+	/**
+	Determines equitability of the Stack to the passed in Stack
+
+	:param: stack The Stack to evaluate
+	:returns: A Bool value that represents the equitability of the two Stacks
+	*/
+	public func isEqualToStack(stack: Stack) -> Bool {
+		// check that both Stacks contain the same number of items
+		if self.count != stack.count {
+			return false
+		}
+		
+		// check each pair of items to see if they are equivalent
+		for i in 0..<self.count {
+			if self[i] != stack[i] {
+				return false
+			}
+		}
+		
+		// all items match, so return true
+		return true
+	}
+	
 	//MARK: Index Subscript
 	/**
 	Returns the object at the given subscript `index` in the `Stack`
@@ -140,9 +171,9 @@ public struct Stack<T: Equatable> {
 		}
 		return Array(items[range])
 	}
-
-
+	
 }
+
 
 //MARK: Extensions
 
@@ -151,4 +182,7 @@ extension Stack : SequenceType {
 		return genericGenerator( items: items[0..<items.endIndex] )
 	}
 }
+
+
+
 
