@@ -25,7 +25,6 @@
 
 import Foundation
 
-// Provide a typealias for a platform Font.
 #if os(iOS)
 	import UIKit
 #elseif os(OSX)
@@ -102,7 +101,6 @@ public class FontManager {
 		}
 		
 		return nil
-//		return "Avenir-Light"
 	}
 	
 	private class var standardBoldFontName: String? {
@@ -112,8 +110,6 @@ public class FontManager {
 		}
 		
 		return nil
-//		return "Avenir-Medium"
-		//		return "Helvetica-Bold"
 	}
 
 	

@@ -36,8 +36,52 @@ import Foundation
 */
 internal extension NSBundle {
 
+	/**
+	The Frameworks Bundle
+
+	:returns: NSBundle for the framework
+	*/
 	class func frameworkBundle() -> NSBundle {
 		return NSBundle(identifier: kGenesisKitBundleName)!
+	}
+
+	/**
+	Provides a Bundle for localization strings.  Looks first in mainBundle for any strings file overrides
+
+	:Usage: NSLocalizedString("Costa Rica", tableName: "GenesisKit.Countries", bundle: NSBundle.localizationBundle("GenesisKit.Countries"), value: "Costa Rica", comment: "Country: Costa Rica")
+
+	:param: stringsFile The String File to find localalization for
+	
+	:returns: NSBundle - MainBundle if strings are found otherwise will just default to frameworks bundle
+	*/
+	class func localizationBundle(stringsFile: String) -> NSBundle  {
+		
+		let currentLang:String = NSLocale.autoupdatingCurrentLocale().objectForKey(NSLocaleLanguageCode) as String
+		let region = NSLocale.autoupdatingCurrentLocale().localeIdentifier
+		
+		let regionFile = "\(region).lproj/\(stringsFile)"
+		let langFile = "\(currentLang).lproj/\(stringsFile)"
+		var useMain = false
+		
+		//Lets check if any of the Strings files are there.. if so we prefer to use the Main Bundle..
+		//Means someone wants to override what we are doing
+		
+		//Lets Check if the Main Bundle.. not in proj folder
+		if let resoruce = NSBundle.mainBundle().pathForResource(stringsFile, ofType: "strings"){
+			useMain = true
+		}
+		
+		//Lets Check if the Main Bundle.. lang only (en)
+		if let resoruce = NSBundle.mainBundle().pathForResource(langFile, ofType: "strings"){
+			useMain = true
+		}
+		
+		//Lets Check if the Main Bundle.. lang_Regions (en_US)
+		if let resoruce = NSBundle.mainBundle().pathForResource(regionFile, ofType: "strings"){
+			useMain = true
+		}
+		
+		return useMain ? NSBundle.mainBundle() : NSBundle.frameworkBundle()
 	}
 
 }
