@@ -229,5 +229,249 @@ public extension UIImage {
 		return image
 	}
 	
+	/**
+	Creates a Gradient Mask
 	
+	:returns: A CGImageRef
+	*/
+	class func gradientMask() -> CGImageRef {
+		struct Static {
+			static var onceToken : dispatch_once_t = 0
+			static var sharedMask: CGImageRef? = nil
+		}
+		
+		dispatch_once(&Static.onceToken) {
+			UIGraphicsBeginImageContextWithOptions(CGSizeMake(1, 256), true, 0.0)
+			let gradientContext = UIGraphicsGetCurrentContext()
+			let colors:[CGFloat] = [0.0, 1.0, 1.0, 1.0]
+			let colorSpace = CGColorSpaceCreateDeviceGray();
+			let gradient = CGGradientCreateWithColorComponents(colorSpace, colors, nil, 2)
+			let gradientStartPoint = CGPointMake(0, 0)
+			let gradientEndPoint = CGPointMake(0, 256)
+			CGContextDrawLinearGradient(gradientContext, gradient!, gradientStartPoint, gradientEndPoint, UInt32(kCGGradientDrawsAfterEndLocation))
+			Static.sharedMask = CGBitmapContextCreateImage(gradientContext)
+			UIGraphicsEndImageContext()
+		}
+		
+		return Static.sharedMask!
+	}
+	
+	/**
+	Creates a Reflection Image of the Image
+ 
+	:param: scale The scale of the reflection image (Default: 1.0)
+	
+	:returns: A UIImage Object
+	*/
+	func createReflection(scale: CGFloat = 1.0 ) -> UIImage {
+		
+		if scale <= 0 {
+			return self
+		}
+		
+		let height = ceil(self.size.height * scale)
+		let size = CGSizeMake(self.size.width, height)
+		let bounds = CGRectMake(0, 0, size.width, size.height)
+		
+		UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+		let currentContext = UIGraphicsGetCurrentContext()
+		
+		//Clip to the Gradient
+		CGContextClipToMask(currentContext, bounds, UIImage.gradientMask())
+		
+		//draw the reflected Mask
+		CGContextScaleCTM(currentContext, 1.0, -1.0)
+		CGContextTranslateCTM(currentContext, 0, -self.size.height)
+		drawInRect(CGRectMake(0, 0, self.size.width, self.size.height))
+		
+		let image = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		
+		return image
+	}
+	
+	/**
+	Adds a Reflection Image of the Image
+ 
+	:param: scale The scale of the reflection image (Default: 1.0)
+	:param: gap The gap between the reflection image and image (Default: 1.0)
+	:param: alpha The alpha of the reflection image (Default: 1.0)
+	
+	:returns: A UIImage Object
+	*/
+	func addReflection(scale: CGFloat = 1.0, gap: CGFloat = 1, alpha: CGFloat = 1 ) -> UIImage {
+		
+		if scale <= 0 {
+			return self
+		}
+		
+		let reflection = self.createReflection(scale: scale)
+		let reflectionOffset = reflection.size.height + gap
+		let img = self.size.height
+		
+		UIGraphicsBeginImageContext(CGSizeMake(self.size.width, self.size.height + reflectionOffset));
+		
+		//draw reflection
+		reflection.drawAtPoint(CGPointMake(0.0, self.size.height + gap), blendMode:kCGBlendModeNormal, alpha:alpha)
+		//draw image
+		drawAtPoint(CGPointMake(0.0, 0.0))
+		
+		let image = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		
+		return image
+	}
+
+	/**
+	Tints Image with UIColor
+ 
+	:param: color The color to tint the image with
+	
+	:returns: A UIImage Object
+	*/
+	func tintImage(color: UIColor) -> UIImage {
+		let rect = CGRectMake(0, 0, self.size.width, self.size.height)
+		
+		UIGraphicsBeginImageContext(self.size)
+		let currentContext = UIGraphicsGetCurrentContext()
+		
+		CGContextTranslateCTM(currentContext, 0, self.size.height)
+		CGContextScaleCTM(currentContext, 1.0, -1.0)
+		
+		// draw alpha-mask
+		CGContextSetBlendMode(currentContext, kCGBlendModeNormal)
+		CGContextDrawImage(currentContext, rect, self.CGImage)
+		
+		// draw tint color, preserving alpha values of original image
+		CGContextSetBlendMode(currentContext, kCGBlendModeSourceIn)
+		color.setFill()
+		CGContextFillRect(currentContext, rect)
+		
+		let image = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		
+		return image
+	}
+	
+	/**
+	Determines if a image needs to Scale to targetSize
+ 
+	:param: targetSize The CGSize to Scale to
+	
+	:returns: A Bool value
+	*/
+	func needsToScale(targetSize:CGSize) -> Bool {
+		var needsToScale = false
+		let source = self.size.width
+		let target = targetSize
+		
+		if self.size.width != targetSize.width {
+			needsToScale = true
+		}
+		if self.size.height != targetSize.height {
+			needsToScale = true
+		}
+		
+		return needsToScale
+	}
+	
+	/**
+	Scaled Image of CGSize
+ 
+	:param: targetSize The CGSize to Scale to
+	:param: onlyIfNeeded Checks if image actually needs to scale
+	
+	:returns: A UIImage Object
+	*/
+	func scaleImage(targetSize:CGSize, onlyIfNeeded:Bool ) -> UIImage {
+		
+		if !onlyIfNeeded || self.needsToScale(targetSize) {
+			var scaleFactor:CGFloat = 0.0
+			var scaledWidth = targetSize.width
+			var scaledHeight = targetSize.height
+			let widthFactor = scaledWidth / self.size.width
+			let heightFactor = scaledHeight / self.size.height
+			
+			if widthFactor < heightFactor {
+				scaleFactor = widthFactor //scale to fit height
+			}else {
+				scaleFactor = heightFactor // scale to fit width
+			}
+			
+			scaledWidth  = self.size.width * scaleFactor
+			scaledHeight = self.size.height * scaleFactor
+			
+			let propperSize = CGSizeMake(scaledWidth, scaledHeight)
+			
+			UIGraphicsBeginImageContext(propperSize)
+			drawInRect(CGRectMake(0, 0, propperSize.width, propperSize.height))
+			
+			let image = UIGraphicsGetImageFromCurrentImageContext()
+			UIGraphicsEndImageContext()
+			
+			return image
+		}
+		
+		return self
+	}
+	
+	/**
+	Scaled and Cropped Image
+ 
+	:param: targetSize The CGSize to Scale and Crop to
+	:param: onlyIfNeeded Checks if image actually needs to scale/crop
+	
+	:returns: A UIImage Object
+	*/
+	func scaleAndCropImage(targetSize:CGSize, onlyIfNeeded:Bool ) -> UIImage {
+		if !onlyIfNeeded || self.needsToScale(targetSize) {
+			let imageSize = self.size
+			let width = imageSize.width
+			let height = imageSize.height
+			let targetWidth = targetSize.width
+			let targetHeight = targetSize.height
+			var scaleFactor:CGFloat = 0.0
+			var scaledWidth = targetWidth
+			var scaledHeight = targetHeight
+			var thumbnailPoint = CGPointMake(0.0,0.0)
+			
+			if CGSizeEqualToSize(imageSize, targetSize) == false {
+				let widthFactor = targetWidth / width
+				let heightFactor = targetHeight / height
+				
+				if widthFactor >= heightFactor {
+					scaleFactor = widthFactor // scale to fit height
+				} else {
+					scaleFactor = heightFactor // scale to fit width
+				}
+				
+				scaledWidth  = width * scaleFactor
+				scaledHeight = height * scaleFactor
+				
+				//Center image
+				if widthFactor >= heightFactor {
+					thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5
+				} else if (widthFactor < heightFactor)	{
+					thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5
+				}
+			}
+			
+			UIGraphicsBeginImageContext(targetSize)
+			var thumbnailRect = CGRectZero
+			thumbnailRect.origin = thumbnailPoint
+			thumbnailRect.size.width  = scaledWidth
+			thumbnailRect.size.height = scaledHeight
+			
+			drawInRect(thumbnailRect)
+			
+			let image = UIGraphicsGetImageFromCurrentImageContext()
+			UIGraphicsEndImageContext()
+			
+			return image
+		}
+		
+		return self
+	}
+
+
 }
