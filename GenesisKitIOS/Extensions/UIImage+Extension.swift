@@ -473,5 +473,18 @@ public extension UIImage {
 		return self
 	}
 
+	/**
+	Scales Image according to UIScreen.mainScreen().scale
+	
+	:returns: A UIImage Object
+	*/
+	func scaleToMainScreenScale() -> UIImage {
+		let image = UIImage(CGImage: self.CGImage, scale: UIScreen.mainScreen().scale, orientation: self.imageOrientation)
+		
+		if let newImage = image {
+			return newImage
+		}
+		return self
+	}
 
 }
