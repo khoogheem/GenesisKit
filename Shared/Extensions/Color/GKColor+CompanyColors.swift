@@ -32,7 +32,7 @@ import Foundation
 #endif
 
 /**
-	Extensions of GKColor for Colors of Companies
+ iOS & OSX Extensions of GKColor for Colors of Companies
 */
 public extension GKColor {
 

@@ -32,7 +32,7 @@ import Foundation
 #endif
 
 /**
- Extensions of GKImage
+ iOS & OSX Extensions of GKImage
 */
 public extension GKImage {
 	

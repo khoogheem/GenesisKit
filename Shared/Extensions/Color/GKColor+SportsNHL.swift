@@ -34,7 +34,7 @@ import Foundation
 #endif
 
 /**
-	Extensions of GKColor for Colors of NHL Teams
+	iOS & OSX Extensions of GKColor for Colors of NHL Teams
 
 	**Swift Only**
 

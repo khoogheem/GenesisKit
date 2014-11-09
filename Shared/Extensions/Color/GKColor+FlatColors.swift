@@ -32,7 +32,7 @@ import Foundation
 #endif
 
 /**
-	Extensions of GKColor for Flat Colors
+ iOS & OSX Extensions of GKColor for Flat Colors
 */
 public extension GKColor {
 	//MARK: Flat Colors

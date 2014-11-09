@@ -34,7 +34,7 @@ import Foundation
 #endif
 
 /**
-	Extensions of GKColor for Colors of NBA Teams
+	iOS & OSX Extensions of GKColor for Colors of NBA Teams
 
 	**Swift Only**
 

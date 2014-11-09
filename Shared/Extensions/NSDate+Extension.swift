@@ -27,7 +27,7 @@ import Foundation
 
 
 /**
-  Extensions of NSDate Class
+  iOS & OSX Extensions of NSDate Class
  */
 public extension NSDate {
 	

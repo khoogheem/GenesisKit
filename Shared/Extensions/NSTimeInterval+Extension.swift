@@ -26,7 +26,7 @@
 import Foundation
 
 /**
-  Extensions to NSTimeInterval
+  iOS & OSX Extensions to NSTimeInterval
  */
 public extension NSTimeInterval {
 	
