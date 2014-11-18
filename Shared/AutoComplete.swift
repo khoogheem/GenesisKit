@@ -49,6 +49,7 @@ import Foundation
 	 Usage: Array of ["Bob", "Bill", "Frank"] - root passed in is B will return ["Bob", "Bill"]
 	
 	 :param: root The string you are evaluating
+	 :returns: Array of Strings of the suggested candidates
 	 */
 	public func getSuggestions(root:String) -> [String] {
 
