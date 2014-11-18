@@ -31,6 +31,9 @@
 		962E134119FC689F00A1C594 /* GenesisKitIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */; };
 		962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
 		962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */; };
+		965E1FD21A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */; };
+		965E1FD31A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */; };
+		965E1FD51A1BFD23008E5E62 /* DirectoryManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD41A1BFD23008E5E62 /* DirectoryManagerTest.swift */; };
 		9682323B1A0EE44C00C1149F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */; };
 		9698238819FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698238919FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
@@ -121,6 +124,8 @@
 		962E133F19FC689F00A1C594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisKitIOSTests.swift; sourceTree = "<group>"; };
 		962F7E0F1A040DF100A7BC6F /* GKColor+SportsNFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKColor+SportsNFL.swift"; sourceTree = "<group>"; };
+		965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
+		965E1FD41A1BFD23008E5E62 /* DirectoryManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryManagerTest.swift; sourceTree = "<group>"; };
 		9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9698238719FD582D00E6E226 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9698239D19FD60F000E6E226 /* PlayGroundIOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGroundIOS.playground; sourceTree = "<group>"; };
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				962E12BC19FC1AF200A1C594 /* DefaultsManager.swift */,
+				965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */,
 				962E12BD19FC1AF200A1C594 /* FontManager.swift */,
 			);
 			path = Managers;
@@ -315,6 +321,7 @@
 			children = (
 				962E133319FC689E00A1C594 /* GenesisKitIOS.h */,
 				968232391A0EE40B00C1149F /* Extensions */,
+				965E1FCF1A1BF021008E5E62 /* UI */,
 				962E133119FC689E00A1C594 /* Supporting Files */,
 			);
 			path = GenesisKitIOS;
@@ -332,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				962E134019FC689F00A1C594 /* GenesisKitIOSTests.swift */,
+				965E1FD41A1BFD23008E5E62 /* DirectoryManagerTest.swift */,
 				962A97511A0C26C500402071 /* StackTests.swift */,
 				962E133E19FC689F00A1C594 /* Supporting Files */,
 			);
@@ -344,6 +352,21 @@
 				962E133F19FC689F00A1C594 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		965E1FCF1A1BF021008E5E62 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				965E1FD01A1BF07F008E5E62 /* Map */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		965E1FD01A1BF07F008E5E62 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		968232391A0EE40B00C1149F /* Extensions */ = {
@@ -565,6 +588,7 @@
 				962F7E111A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				962E12DE19FC1AF200A1C594 /* emailValidator.swift in Sources */,
 				969823C81A00304800E6E226 /* GKFont.swift in Sources */,
+				965E1FD31A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */,
 				962E12D619FC1AF200A1C594 /* Memoization.swift in Sources */,
 				9698238919FD582D00E6E226 /* Error.swift in Sources */,
 				962E12DA19FC1AF200A1C594 /* NetworkActivityController.swift in Sources */,
@@ -605,6 +629,7 @@
 				9698239A19FD5FD900E6E226 /* Memoization.swift in Sources */,
 				96034EFA1A0FF8FC00289C55 /* UIView+Extension.swift in Sources */,
 				96D99B2E1A0C4D7300666BF8 /* GKColor+SportsNHL.swift in Sources */,
+				965E1FD21A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */,
 				962F7E101A040DF100A7BC6F /* GKColor+SportsNFL.swift in Sources */,
 				9698239B19FD5FD900E6E226 /* Stack.swift in Sources */,
 				969823C71A00304800E6E226 /* GKFont.swift in Sources */,
@@ -638,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965E1FD51A1BFD23008E5E62 /* DirectoryManagerTest.swift in Sources */,
 				962A97521A0C26C500402071 /* StackTests.swift in Sources */,
 				962E134119FC689F00A1C594 /* GenesisKitIOSTests.swift in Sources */,
 			);
