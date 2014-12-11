@@ -1,6 +1,6 @@
 //
 //  Diagnostics.swift
-//  Test
+//  GenesisKit
 //
 //  Created by Kevin A. Hoogheem on 10/6/14.
 //  Copyright (c) 2014 Kevin A. Hoogheem. All rights reserved.
@@ -42,7 +42,7 @@ import Foundation
 	public let isLandscape = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
 	public let isPortrait = UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation)
 
-	#elseif os(OSX)
+#elseif os(OSX)
 	import Cocoa
 
 	/** Helper for System Type: Yosemite OSX 10.10 */
@@ -58,20 +58,20 @@ import Foundation
 	
 	// MARK: App Info
 	public class var appName: String {
-		return self.fromInfoBundle("CFBundleName")!
+		return self.fromBundleInfoDict("CFBundleName")!
 	}
 	
 	
 	public class var appVersion: String {
-		return self.fromInfoBundle("CFBundleShortVersionString")!
+		return self.fromBundleInfoDict("CFBundleShortVersionString")!
 	}
 
 	public class var appBuild: String {
-		return self.fromInfoBundle("CFBundleVersion")!
+		return self.fromBundleInfoDict("CFBundleVersion")!
 	}
 	
 	public class var appIdentifer: String {
-		return self.fromInfoBundle("CFBundleIdentifier")!
+		return self.fromBundleInfoDict("CFBundleIdentifier")!
 	}
 
 	
@@ -214,30 +214,6 @@ import Foundation
 	}
 	
 	//MARK: Device Platform
-	/** A String value of the device platform information */
-	private class var platform: String {
-		// Declare an array that can hold the bytes required to store `utsname`, initilized
-		// with zeros. We do this to get a chunk of memory that is freed upon return of
-		// the method
-		var sysInfo: [CChar] = Array(count: sizeof(utsname), repeatedValue: 0)
-		
-		// We need to get to the underlying memory of the array:
-		let machine = sysInfo.withUnsafeMutableBufferPointer {
-			(inout ptr: UnsafeMutableBufferPointer<CChar>) -> String in
-			// Call uname and let it write into the memory Swift allocated for the array
-			uname(UnsafeMutablePointer<utsname>(ptr.baseAddress))
-			
-			// Now here is the ugly part: `machine` is the 5th member of `utsname` and
-			// each member member is `_SYS_NAMELEN` sized. We skip the the first 4 members
-			// of the struct which will land us at the memory address of the `machine`
-			// member
-			let machinePtr = advance(ptr.baseAddress, Int(_SYS_NAMELEN * 4))
-			
-			// Create a Swift string from the C string
-			return String.fromCString(machinePtr)!
-		}
-		return machine
-	}
 	
 	/** 
 	 Provides platform specific information for the current device
@@ -319,9 +295,34 @@ import Foundation
 
 	
 	//MARK: Class Private Functions
-	private class func fromInfoBundle(info: String) -> String? {
+	private class func fromBundleInfoDict(info: String) -> String? {
 		return NSBundle.mainBundle().infoDictionary![info] as NSString?
 	}
 	
+	/** A String value of the device platform information */
+	private class var platform: String {
+		// Declare an array that can hold the bytes required to store `utsname`, initilized
+		// with zeros. We do this to get a chunk of memory that is freed upon return of
+		// the method
+		var sysInfo: [CChar] = Array(count: sizeof(utsname), repeatedValue: 0)
+		
+		// We need to get to the underlying memory of the array:
+		let machine = sysInfo.withUnsafeMutableBufferPointer {
+			(inout ptr: UnsafeMutableBufferPointer<CChar>) -> String in
+			// Call uname and let it write into the memory Swift allocated for the array
+			uname(UnsafeMutablePointer<utsname>(ptr.baseAddress))
+			
+			// Now here is the ugly part: `machine` is the 5th member of `utsname` and
+			// each member member is `_SYS_NAMELEN` sized. We skip the the first 4 members
+			// of the struct which will land us at the memory address of the `machine`
+			// member
+			let machinePtr = advance(ptr.baseAddress, Int(_SYS_NAMELEN * 4))
+			
+			// Create a Swift string from the C string
+			return String.fromCString(machinePtr)!
+		}
+		return machine
+	}
+
 	
 }
