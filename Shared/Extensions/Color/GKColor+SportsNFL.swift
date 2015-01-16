@@ -41,6 +41,7 @@ import Foundation
 	To get the red color of the Arizona Cardinals... ArizonaCardinals.red.color()
 */
 public extension GKColor {
+    //MARK: NFL Colors
 
 	//MARK: Arizona Cardinals
 	/**

@@ -41,7 +41,8 @@ import Foundation
 	To get the red color of the Atlanta Hawks... AtlantaHawks.red.color()
 */
 public extension GKColor {
-	
+    //MARK: NBA Colors
+
 	//MARK: Atlanta Hawks
 	/**
 	Provides the Team Colors for the NBA Atlanta Hawks

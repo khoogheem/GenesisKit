@@ -3,7 +3,7 @@ GenesisKit
 
 GenesisKit is designed to create a base set of functions that will make development easier.  
 
-##Installation
+## Installation
 
 To install the framework copy the project into your existing project.  Under your Target/General add as a Framework.  
 
@@ -37,6 +37,7 @@ To install the framework copy the project into your existing project.  Under you
 *GKColor+SportsNHL* - Provides colors for NHL Teams
 
 *Usage*
+
 ```swift
 let GBGreen = GKColor.GreenBayPackers.green.color()
 ```

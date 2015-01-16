@@ -41,6 +41,7 @@ import Foundation
 	To get the orange color of the Anaheim Ducks... AnaheimDucks.orange.color()
 */
 public extension GKColor {
+    //MARK: NHL Colors
 
 	//MARK: Anaheim Ducks
 	/**
