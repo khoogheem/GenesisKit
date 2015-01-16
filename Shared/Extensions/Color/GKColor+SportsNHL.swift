@@ -72,7 +72,7 @@ public extension GKColor {
 		}
 	}
 
-	//MARK: Anaheim Ducks
+	//MARK: Arizona Coyotes
 	/**
 	Provides the Team Colors for the NHL Arizona Coyotes
 	*/
