@@ -8,6 +8,7 @@
 
 import Cocoa
 import XCTest
+import GenesisKitOSX
 
 class GenesisKitOSXTests: XCTestCase {
     
@@ -23,6 +24,8 @@ class GenesisKitOSXTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
+		
+		NSLog("Diagnostics.platformString: %@", Diagnostics.platformString.desciption)
         XCTAssert(true, "Pass")
     }
     

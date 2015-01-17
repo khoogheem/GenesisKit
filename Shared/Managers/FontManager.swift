@@ -84,7 +84,8 @@ public class FontManager {
 			}
 			
 			#elseif os(OSX)
-			let accessibilityFont = nil
+			//TODO: Add in the accessibility for OSX
+			var accessibilityFont: String? = "Helvetica"
 		#endif
 		
 		//Lets check if they set a standardFont in Defaults Manger..

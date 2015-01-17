@@ -210,46 +210,92 @@ class Reachability {
 	}
 	
 	private func checkFlag(flag: SCNetworkReachabilityFlags) -> Bool {
-		switch flag {
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsWWAN):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsWWAN) != 0 {
-				return true
+		let iOS = false
+		
+
+		#if os(OSX)
+			switch flag {
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect) != 0 {
+					return true
+				}
+			default:
+				return false
 			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable) != 0 {
-				return true
+
+		#else
+			switch flag {
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsWWAN):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsWWAN) != 0 {
+					return true
+				}
+				
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsReachable) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress) != 0 {
+					return true
+				}
+			case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect):
+				if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect) != 0 {
+					return true
+				}
+			default:
+				return false
 			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsTransientConnection) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionRequired) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsInterventionRequired) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsConnectionOnDemand) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsLocalAddress) != 0 {
-				return true
-			}
-		case SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect):
-			if reachabilityFlags & SCNetworkReachabilityFlags(kSCNetworkReachabilityFlagsIsDirect) != 0 {
-				return true
-			}
-		default:
-			return false
-		}
+
+		#endif
+
 		return false
 	}
 	

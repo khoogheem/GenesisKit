@@ -12,7 +12,6 @@
 		96133F3F1A0EA7FE00CECF4D /* GKImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96133F3D1A0EA7FE00CECF4D /* GKImage+Extension.swift */; };
 		962A97521A0C26C500402071 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A97511A0C26C500402071 /* StackTests.swift */; };
 		962E122A19FC195900A1C594 /* GenesisKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E122919FC195900A1C594 /* GenesisKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
 		962E123719FC195900A1C594 /* GenesisKitOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E123619FC195900A1C594 /* GenesisKitOSXTests.swift */; };
 		962E12C819FC1AF200A1C594 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B519FC1AF200A1C594 /* Conversion.swift */; };
 		962E12CA19FC1AF200A1C594 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E12B619FC1AF200A1C594 /* Diagnostics.swift */; };
@@ -34,6 +33,7 @@
 		965E1FD21A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */; };
 		965E1FD31A1BF1DA008E5E62 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD11A1BF1DA008E5E62 /* DirectoryManager.swift */; };
 		965E1FD51A1BFD23008E5E62 /* DirectoryManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E1FD41A1BFD23008E5E62 /* DirectoryManagerTest.swift */; };
+		96640EFA1A6B08DC00DD20D9 /* GenesisKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962E122519FC195900A1C594 /* GenesisKitOSX.framework */; };
 		9682323B1A0EE44C00C1149F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682323A1A0EE44C00C1149F /* UIImage+Extension.swift */; };
 		9698238819FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
 		9698238919FD582D00E6E226 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698238719FD582D00E6E226 /* Error.swift */; };
@@ -156,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E123019FC195900A1C594 /* GenesisKitOSX.framework in Frameworks */,
+				96640EFA1A6B08DC00DD20D9 /* GenesisKitOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

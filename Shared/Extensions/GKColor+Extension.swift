@@ -138,10 +138,18 @@ public extension GKColor {
 		let bluescore = ((b*255) * 114)
 		let darknessScore = (redscore + greenscore + bluescore) / 1000
 		
-		if darknessScore >= 125 {
+		#if os(iOS)
+			if darknessScore >= 125 {
 			return GKColor.darkTextColor()
-		}
-		return GKColor.lightTextColor()
+			}
+			return GKColor.lightTextColor()
+		#elseif os(OSX)
+			if darknessScore >= 125 {
+				return GKColor.blackColor()
+			}
+			return GKColor.whiteColor()
+		#endif
+
 	}
 
 	/**
