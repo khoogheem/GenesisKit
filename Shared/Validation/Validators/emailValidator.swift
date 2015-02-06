@@ -35,8 +35,8 @@ public class emailValidator : NSObject, Validator {
 //		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]"
 		let seperatorSet = NSCharacterSet(charactersInString:"@")
 
-		let goodEmailError = NSError.createError("Success", code: 200)
-		let badEmailError = NSError.createError("Email is not Valid", code: 404)
+		let goodEmailError = NSError.createError("Success", code: GKErrorCode.kGKErrorCodeSuccess)
+		let badEmailError = NSError.createError("Email is not Valid", code: GKErrorCode.kGKErrorCodeFaluire)
 
 		var emailParts: [String] = input!.componentsSeparatedByCharactersInSet(seperatorSet).filter({$0 != ""})
 

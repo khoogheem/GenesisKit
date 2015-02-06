@@ -23,7 +23,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-
 import Foundation
 
 /**
@@ -32,7 +31,32 @@ import Foundation
 
 let kGenesisKitErrorDomain = "com.GenesisKit.framework"
 
-extension NSError {
+
+public enum GKErrorCode: Int {
+	/** A General Success */
+	case kGKErrorCodeSuccess = 200
+	/** A General Faluire */
+	case kGKErrorCodeFaluire = 400
+
+	
+	/**
+	Provides a description of the error Codes
+	
+	:returns: Returns The description of the error code in english
+	*/
+	public func description() -> String {
+		switch self {
+		case .kGKErrorCodeSuccess:
+			return "Success"
+		case .kGKErrorCodeFaluire:
+			return "Faliure"
+		}
+	}
+}
+
+
+
+internal extension NSError {
 
 	/**
 	Constructs an NSError with the given message and Code
@@ -47,4 +71,19 @@ extension NSError {
 		}
 		return NSError(domain: kGenesisKitErrorDomain, code: code, userInfo: nil)
 	}
+	
+	/**
+	Constructs an NSError with the given message and Code
+ 
+	:param: message A message to attach to the NSError
+	:param: code A GKErrorCode that is attached to the NSError
+	:returns: returns a constructed NSError
+	*/
+	class func createError(message: String?, code: GKErrorCode) -> NSError {
+		if message != nil {
+			return NSError(domain: kGenesisKitErrorDomain, code: code.rawValue, userInfo: [NSLocalizedDescriptionKey: message!])
+		}
+		return NSError(domain: kGenesisKitErrorDomain, code: code.rawValue, userInfo: [NSLocalizedDescriptionKey: code.description()])
+	}
+
 }

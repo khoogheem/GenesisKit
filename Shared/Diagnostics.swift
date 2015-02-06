@@ -54,6 +54,9 @@ import Foundation
 
 
 //MARK: Class
+/**
+	A Helper Class which provides System wide Diagnostics informaiton
+*/
 @objc public class Diagnostics {
 	
 	// MARK: App Info

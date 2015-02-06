@@ -34,7 +34,7 @@ let ReachabilityChangedNotification = "ReachabilityChangedNotification"
 
 	Note: Does not actually check if a hostname is accepting data.. but if it could be reachable.
 */
-class Reachability {
+internal class Reachability {
 	//TODO: Add in the Start Notifier/stop Notifier
 	//TODO: Make it a shared instance
 	let kShouldPrintReachabilityFlags = true
