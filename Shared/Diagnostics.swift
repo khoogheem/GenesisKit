@@ -77,6 +77,19 @@ import Foundation
 		return self.fromBundleInfoDict("CFBundleIdentifier")!
 	}
 
+	/**
+	Returns a string value of the current devices Name.  OSX this is the name of the machine found in Sharing, not the hostname
+ 
+	:returns: The string value of the Current Devices name
+	*/
+	public class var deviceName: String {
+		#if os(iOS)
+			return UIDevice.currentDevice().name
+		#elseif os(OSX)
+			return NSHost.currentHost().localizedName
+		#endif
+
+	}
 	
 //	#if os(iOS)
 	// MARK: Radio Information
@@ -84,7 +97,7 @@ import Foundation
 	/**
 	Returns a string value of the current Radio Access Technology
  
-	:returns: returns The string value of the Radio Access Technology name
+	:returns: The string value of the Radio Access Technology name
 	*/
 	@availability(OSX, unavailable, message="Not Available for OSX")
 	public class var radioAccessName: String {
@@ -100,7 +113,7 @@ import Foundation
 	/**
 	Returns a string value of the current Cellular Carriers name
  
-	:returns: returns The string value of the current Cellular Carriers Name
+	:returns: The string value of the current Cellular Carriers Name
 	*/
 	@availability(OSX, unavailable, message="Not Available for OSX")
 	public class var carrierName: String {
@@ -126,7 +139,7 @@ import Foundation
 	Compares a float representation of the system version and returns true/false
  
 	:param: compare A float value of the System Version.  ie `"8.0"`
-	:returns: returns a bool value
+	:returns: A bool value
 	*/
 	public class func OSVerison(compare: Float) -> Bool {
 		var systemIsVersion: Bool = false
@@ -163,7 +176,7 @@ import Foundation
 	Compares a float representation of the system version and returns a Closure
  
 	:param: sysVersion A float value of the System Version.  ie `"8.0"`
-	:returns: returns SystemVerisonCompletion with `success` as a bool value
+	:returns: SystemVerisonCompletion with `success` as a bool value
 	*/
 	public class func onSystemVerison(sysVersion: Float, completion: SystemVerisonCompletion) {
 		
@@ -177,7 +190,7 @@ import Foundation
 	/**
 	Provides the System version as a string
  
-	:returns: returns The Systems Version as a String value
+	:returns: The Systems Version as a String value
 	*/
 	public class var systemVersion: String {
 		struct Static {
@@ -223,7 +236,7 @@ import Foundation
 	 
 	 :returns: device A string of the Device type.  iPhone, iPad, iPod
 	 :returns: desciption A string of the Device types full description.. Verizon iPhone 4
-	 :returns: number An optional Int value of the device.. 6 - for iPhone 6 or 6 Plus
+	 :returns: An optional Int value of the device.. 6 - for iPhone 6 or 6 Plus
 	*/
 	public class var platformString:(device: String, desciption: String, number: Int?) {
 //	class func platformString() -> (device: String, desciption: String, number: Int?) {
