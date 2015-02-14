@@ -97,9 +97,12 @@ import Foundation
 		#if os(iOS)
 			return UIDevice.currentDevice().name
 		#elseif os(OSX)
-			return NSHost.currentHost().localizedName
+			if let host: String = NSHost.currentHost().localizedName {
+				return host
+			}else {
+				return "OSX"
+			}
 		#endif
-
 	}
 	
 //	#if os(iOS)
