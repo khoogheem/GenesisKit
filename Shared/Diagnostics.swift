@@ -53,17 +53,28 @@ import Foundation
 #endif
 
 
-//MARK: Class
+//MARK: - Class
 /**
 	A Helper Class which provides System wide Diagnostics informaiton
 */
 @objc public class Diagnostics {
 	
-	// MARK: App Info
-	public class var appName: String {
+	// MARK: - App Info
+	
+	/**
+	Provides the Application Bundle Name.  This is the last part of the FQN.. if the bundle is com.example.blah it returns blah
+	*/
+	public class var appBundleName: String {
 		return self.fromBundleInfoDict("CFBundleName")!
 	}
 	
+	/**
+	Provides the Application Display name.  The name seen in Springboard
+ 	*/
+	public class var appName: String {
+		return self.fromBundleInfoDict("CFBundleDisplayName")!
+	}
+
 	
 	public class var appVersion: String {
 		return self.fromBundleInfoDict("CFBundleShortVersionString")!
@@ -92,7 +103,7 @@ import Foundation
 	}
 	
 //	#if os(iOS)
-	// MARK: Radio Information
+	// MARK: - Radio Information
 
 	/**
 	Returns a string value of the current Radio Access Technology
@@ -133,7 +144,7 @@ import Foundation
 //	#endif
 
 
-	// MARK: System Version Check
+	// MARK: - System Version Check
 
 	/**
 	Compares a float representation of the system version and returns true/false
@@ -229,7 +240,7 @@ import Foundation
 		return Static.systemVer!
 	}
 	
-	//MARK: Device Platform
+	//MARK: - Device Platform
 	
 	/** 
 	 Provides platform specific information for the current device
@@ -317,7 +328,7 @@ import Foundation
 	}
 
 	
-	//MARK: Class Private Functions
+	//MARK: - Class Private Functions
 	private class func fromBundleInfoDict(info: String) -> String? {
 		return NSBundle.mainBundle().infoDictionary![info] as NSString?
 	}

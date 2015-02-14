@@ -32,7 +32,7 @@ http://www.sfei.org/it/gis/map-interpretation/conversion-constants#Constants%20a
 
 import Foundation
 
-//MARK: TypeAlias
+//MARK: - TypeAlias
 //Just here for documentation
 public typealias Fahrenheit = Double
 public typealias Celsius = Double
@@ -52,7 +52,7 @@ public typealias Stone = Double
 public typealias Kilo = Double
 
 
-//MARK: Constants
+//MARK: - Constants
 // Length / Distance
 public let kConversionMilesPerKilometer = 1.609344
 public let kConversionMilesPerFoot = 0.00018939394
@@ -82,7 +82,7 @@ public let kConversionKilogramsPerStone = 6.35029
 public let kConversionStonesPerPound = 0.0714286
 public let kConversionStonesPerKilograms = 0.157473
 
-//MARK: Extension of Double
+//MARK: - Extension of Double
 public extension Double {
 	
 	/** returns the minimum value in Degress Celsius */
@@ -114,7 +114,7 @@ public extension Double {
 
 }
 
-//MARK: Convenience Functions
+//MARK: - Convenience Functions
 public func MINS_2_SECS(min:Minute)->Second { return Conversion.minutesToSeconds(min) }
 public func HOURS_2_MINS(hour:Hour)->Minute { return Conversion.hoursToMinutes(hour) }
 public func HOURS_2_SECS(hour:Hour)->Second { return MINS_2_SECS(HOURS_2_MINS(hour)) }
@@ -125,7 +125,7 @@ public func DEG_2_RAD(deg:Double)->Double {return Conversion.degressToRadians(de
 public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(rad) }
 
 
-//MARK: Conversion Class
+//MARK: - Conversion Class
 /**
  Conversion Class
  

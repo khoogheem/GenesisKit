@@ -36,7 +36,7 @@ import Foundation
 */
 public extension GKColor {
 	
-	//MARK: INITS
+	//MARK: - INITS
 	/**
 	Create a color with in the given hex value
 	Alpha will be set as 1 by default
@@ -78,7 +78,7 @@ public extension GKColor {
 		self.init(hex:hexNum, alpha: alpha)
 	}
 
-	//MARK: Functions
+	//MARK: - Functions
 	/**
 	A Random color generator.
 	
@@ -180,7 +180,7 @@ public extension GKColor {
 	}
 
 	
-	//MARK: Private Functions
+	//MARK: - Private Functions
 	private class func randomFloat() -> CGFloat {
 		let random: CGFloat = CGFloat(arc4random_uniform(255)) / 255.0
 		return random

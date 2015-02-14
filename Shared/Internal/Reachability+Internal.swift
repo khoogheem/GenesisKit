@@ -199,7 +199,7 @@ internal class Reachability {
 	}
 	
 	
-	//Mark: private
+	//Mark: - private
 	private var reachabilityFlags: SCNetworkReachabilityFlags {
 		var flags: SCNetworkReachabilityFlags = 0
 		let gotFlags = SCNetworkReachabilityGetFlags(reachabilityRef, &flags) != 0

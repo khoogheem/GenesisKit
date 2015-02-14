@@ -70,7 +70,7 @@ public class FontManager {
 	}
 	
 	
-	//MARK: Private
+	//MARK: - Private
 	private class var standardFontName: String? {
 		
 		#if os(iOS)

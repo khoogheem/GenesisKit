@@ -38,7 +38,7 @@ import Foundation
 	///---------------------------------------------------------------------------------------
 	/// @name Methods for Directory Paths
 	///---------------------------------------------------------------------------------------
-	//MARK: Methods and Directory Paths
+	//MARK: - Methods and Directory Paths
 
 	/**
 	 Location for Document files.  
@@ -114,7 +114,7 @@ import Foundation
 	///---------------------------------------------------------------------------------------
 	/// @name Other Methods
 	///---------------------------------------------------------------------------------------
-	//MARK: Other Methods
+	//MARK: - Other Methods
 	
 	/**
 	Sets a File Path to be skipped by iCloud Backup.  This can be either a single file or whole directory.

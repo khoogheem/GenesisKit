@@ -54,7 +54,7 @@ public class CountryFlag {
 		case ExtraSmall = 16
 	}
 	
-	//MARK: Functions
+	//MARK: - Functions
 	/**
 	 The Offical GenesisKit Country Flag for the Countries ISO_Alpha2 code.
 	 
@@ -192,7 +192,7 @@ public class CountryFlag {
 	}
 
 
-	//MARK: Private
+	//MARK: - Private
 	private class var kCountryFlagFlatDirectory:String { return "flags-iso/flat" }
 	private class var kCountryFlagShinyDirectory:String { return "flags-iso/shiny" }
 	private class var kCountryFlagFlagUnknown:String { return "_unknown" }

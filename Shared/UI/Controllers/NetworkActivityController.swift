@@ -90,7 +90,7 @@ import UIKit
 		withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
 	}
 	
-	//MARK: Private
+	//MARK: - Private
 	private var spinLock = OS_SPINLOCK_INIT
 	private var activity: Bool = false
 	

@@ -35,7 +35,7 @@ import Foundation
  iOS & OSX Extensions of GKColor for Colors of Companies
 */
 public extension GKColor {
-    //MARK: Comapny Colors
+    //MARK: - Comapny Colors
 
 	//MARK: A
 	
