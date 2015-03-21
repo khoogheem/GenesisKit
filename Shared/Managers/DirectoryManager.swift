@@ -136,9 +136,9 @@ import Foundation
 			
 			if !success {
 				if let myError = error {
-					NSLog("Error excluding %@ from backup %@", uPath.lastPathComponent, myError);
+					NSLog("Error excluding %@ from backup %@", uPath.lastPathComponent!, myError);
 				}else {
-					NSLog("Error excluding %@ from backup", uPath.lastPathComponent);
+					NSLog("Error excluding %@ from backup", uPath.lastPathComponent!);
 				}
 			}
 
