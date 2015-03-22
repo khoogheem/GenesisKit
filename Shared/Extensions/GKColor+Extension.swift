@@ -159,10 +159,10 @@ public extension GKColor {
 	:returns: A darker color by the step amount
 	*/
 	public func darkerColor(step:Float = 0.25) -> GKColor {
-		let (hue, saturation, brightness, alpha) = self.hsba();
-		let addedBrightness = 1.0 - CGFloat(step);
-		let newBrightness = brightness * addedBrightness;
-		return GKColor(hue: hue, saturation: saturation, brightness: newBrightness, alpha: alpha);
+		let (hue, saturation, brightness, alpha) = self.hsba()
+		let addedBrightness = 1.0 - CGFloat(step)
+		let newBrightness = brightness * addedBrightness
+		return GKColor(hue: hue, saturation: saturation, brightness: newBrightness, alpha: alpha)
 		
 	}
 	
@@ -173,10 +173,48 @@ public extension GKColor {
 	:returns: A lighter color by the step amount
 	*/
 	public func lighterColor(step:Float = 0.25) -> GKColor {
-		let (hue, saturation, brightness, alpha) = self.hsba();
-		let addedBrightness = 1.0 + CGFloat(step);
-		let newBrightness = min(brightness * addedBrightness, 1.0);
-		return GKColor(hue: hue, saturation: saturation, brightness: newBrightness, alpha: alpha);
+		let (hue, saturation, brightness, alpha) = self.hsba()
+		let addedBrightness = 1.0 + CGFloat(step)
+		let newBrightness = min(brightness * addedBrightness, 1.0)
+		return GKColor(hue: hue, saturation: saturation, brightness: newBrightness, alpha: alpha)
+	}
+
+	/**
+	Calculates the Average Color from an Image
+	
+	:param: image The Image to evaluate
+	:returns: The UIColor of the averge color found in the image
+	*/
+	public class func averageColorForImage(image: GKImage ) -> GKColor {
+		
+		let colorSpace = CGColorSpaceCreateDeviceRGB();
+		var rgba: [CGFloat] = [0,0,0,0]
+		
+		var context = CGBitmapContextCreate(&rgba, 1, 1, 8, 4, colorSpace, CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue) | CGBitmapInfo.ByteOrder32Big )
+		
+		#if os(iOS)
+			CGContextDrawImage(context, CGRectMake( 0 , 0, 1, 1), image.CGImage)
+			
+			#elseif os(OSX)
+			
+			var proposedRect = NSRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+			let pro = image.CGImageForProposedRect(&proposedRect, context: nil, hints: nil)?.takeUnretainedValue()
+			CGContextDrawImage(context, CGRectMake( 0 , 0, 1, 1), pro)
+			
+		#endif
+
+		
+		
+		if(rgba[3] == 0) {
+			let alpha = rgba[3] / 255.0
+			let multiplier = alpha / 255.0
+			
+			return GKColor(red: rgba[0] * multiplier, green: rgba[1] * multiplier, blue: rgba[2] * multiplier, alpha: alpha )
+		}
+		else {
+			return GKColor(red: rgba[0] / 255, green: rgba[1] / 255, blue: rgba[2] / 255, alpha:  rgba[3] / 255 )
+			
+		}
 	}
 
 	

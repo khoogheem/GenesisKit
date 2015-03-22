@@ -112,10 +112,9 @@ public extension GKImage {
 			
 			self.unlockFocus()
 			
+			return self
 		#endif
-		
-		return self
-		
+
 	}
 
 }
