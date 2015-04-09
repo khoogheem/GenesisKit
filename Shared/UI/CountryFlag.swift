@@ -68,7 +68,7 @@ public class CountryFlag {
 	public class func imageFor(alpha_2: String, size: CountyFlagSize = CountyFlagSize.Normal, shiny: Bool = false) -> GKImage {
 		//TODO: Will use something later to change alpha3 to alpha2 visversa
 		// Lets for now check if alpha_2 is really a Alpha2
-		assert(countElements(alpha_2) == 2, "Two shall be the number thou shalt count, and the number of the counting shall be Two")
+		assert(count(alpha_2) == 2, "Two shall be the number thou shalt count, and the number of the counting shall be Two")
 
 		return getImage(alpha_2.uppercaseString, size: size, shiny: shiny)
 	}

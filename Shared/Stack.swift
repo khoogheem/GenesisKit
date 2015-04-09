@@ -37,7 +37,6 @@ public struct Stack<T: Equatable> {
 	private var items = [T]()
 	
 	public init () {
-		
 	}
 	
 	/**
@@ -158,7 +157,7 @@ public struct Stack<T: Equatable> {
 	:returns: The optional object in the `Stack` at the given `index`
 	*/
 	public subscript (index:Int) -> T? {
-		return self.objectAtIndex(index)?
+		return self.objectAtIndex(index)
 	}
 	
 	//MARK: Range Subscript

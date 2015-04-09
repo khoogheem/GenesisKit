@@ -72,8 +72,8 @@ internal class Reachability {
 			sin_port: in_port_t(0), sin_addr: in_addr(s_addr: inet_addr("0.0.0.0")), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
 		
 		var sock_addr = sockaddr(sa_len: 0, sa_family: 0, sa_data: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
-		memcpy(&sock_addr, &addr, UInt(sizeof(sockaddr_in)))
-		
+		memcpy(&sock_addr, &addr, Int(sizeof(sockaddr_in)))
+        		
 		let ref = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, &sock_addr).takeRetainedValue()
 		self.init(reachabilityRef: ref)
 	}

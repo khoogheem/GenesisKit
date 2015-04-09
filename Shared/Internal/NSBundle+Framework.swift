@@ -56,7 +56,7 @@ internal extension NSBundle {
 	*/
 	class func localizationBundle(stringsFile: String) -> NSBundle  {
 		
-		let currentLang:String = NSLocale.autoupdatingCurrentLocale().objectForKey(NSLocaleLanguageCode) as String
+		let currentLang:String = NSLocale.autoupdatingCurrentLocale().objectForKey(NSLocaleLanguageCode) as! String
 		let region = NSLocale.autoupdatingCurrentLocale().localeIdentifier
 		
 		let regionFile = "\(region).lproj/\(stringsFile)"

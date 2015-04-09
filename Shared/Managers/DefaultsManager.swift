@@ -77,7 +77,7 @@ public class DefaultsManager : NSObject {
 	public class func get(key:String) -> AnyObject?{
 		let obj: AnyObject? = defaults[key]    //retrieve value
 		
-		return obj?
+		return obj
 	}
 	
 	/** 
