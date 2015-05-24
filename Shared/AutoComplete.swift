@@ -51,13 +51,13 @@ import Foundation
 	 :param: root The string you are evaluating
 	 :returns: Array of Strings of the suggested candidates
 	 */
-	public func getSuggestions(root:String) -> [String] {
+	public func getSuggestions(# rootString:String) -> [String] {
 
-		if count(root) == 0 {
+		if count(rootString) == 0 {
 			return candidates
 		}
 		
-		let startPredicate = NSPredicate(format: "SELF BEGINSWITH[c] %@", root)
+		let startPredicate = NSPredicate(format: "SELF BEGINSWITH[c] %@", rootString)
 		let filteredArray = candidates.filter { startPredicate.evaluateWithObject($0) };
 		
 		return	filteredArray
