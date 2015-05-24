@@ -43,7 +43,7 @@ public extension GKImage {
 	:param: opaque An Optional Bool if image is opaque.  Default is false
 	:returns: A UIImage of the newSize
 	*/
-	public func sizeImageTo(# newSize: CGSize, opaque: Bool = false) -> GKImage {
+	public func sizeImage(# newSize: CGSize, opaque: Bool = false) -> GKImage {
 		
 		let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
 		var scaledImage: GKImage
@@ -75,7 +75,7 @@ public extension GKImage {
 	:param: color The color to tint the image
 	:returns: The UIImage of the tinted color
 	*/
-	public func tintWithColor(#color: GKColor) -> GKImage {
+	public func tint(# color: GKColor) -> GKImage {
 	
 		#if os(iOS)
 

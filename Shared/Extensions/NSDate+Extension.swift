@@ -85,6 +85,9 @@ public extension NSDate {
 		self.init(timeInterval:0, sinceDate:date!)
 	}
 	
+}
+
+public extension NSDate {
 	/**
 	Creates a NSDate from the given date string using optional format (default: MM-dd-yyy)
  
@@ -93,11 +96,11 @@ public extension NSDate {
 	
 	:returns: an NSDate object with the given `dateString`
 	*/
-	class func parse(dateString:String, format:String="MM-dd-yyyy") -> NSDate {
+	class func parse(# dateString:String, format:String="MM-dd-yyyy") -> NSDate {
 		return NSDate(dateString: dateString, format: format)
 	}
 	
-	class func from(#year:Int, month:Int, day:Int) -> NSDate {
+	class func from(# year:Int, month:Int, day:Int) -> NSDate {
 		return NSDate(year: year, month: month, day: day)
 	}
 	
@@ -126,7 +129,7 @@ public extension NSDate {
 	
 	/**
 	Provides a Int value of the current Year.
-
+	
 	:returns: an Int value of the current year
 	*/
 	class func thisYear() -> Int {
@@ -135,5 +138,4 @@ public extension NSDate {
 		var dateComponentNow : NSDateComponents = calendar.components(.CalendarUnitYear, fromDate: NSDate())
 		return dateComponentNow.year
 	}
-
 }

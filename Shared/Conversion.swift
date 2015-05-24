@@ -118,11 +118,11 @@ public extension Double {
 public func MINS_2_SECS(min:Minute)->Second { return Conversion.minutesToSeconds(min) }
 public func HOURS_2_MINS(hour:Hour)->Minute { return Conversion.hoursToMinutes(hour) }
 public func HOURS_2_SECS(hour:Hour)->Second { return MINS_2_SECS(HOURS_2_MINS(hour)) }
-public func DAYS_2_HOURS(day:Day)->Hour {return Conversion.daysToHours(day)}
-public func DAYS_2_MINS(day:Day)->Minute {return HOURS_2_MINS(DAYS_2_HOURS(day)) }
-public func DAYS_2_SECS(day:Day)->Second { return MINS_2_SECS(DAYS_2_MINS(day)) }
-public func DEG_2_RAD(deg:Double)->Double {return Conversion.degressToRadians(deg) }
-public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(rad) }
+public func DAYS_2_HOURS(day:Day)->Hour		{ return Conversion.daysToHours(day)}
+public func DAYS_2_MINS(day:Day)->Minute	{ return HOURS_2_MINS(DAYS_2_HOURS(day)) }
+public func DAYS_2_SECS(day:Day)->Second	{ return MINS_2_SECS(DAYS_2_MINS(day)) }
+public func DEG_2_RAD(deg:Double)->Double	{ return Conversion.degressToRadians(deg) }
+public func RAD_2_DEG(rad:Double)->Double	{ return Conversion.radiansToDegress(rad) }
 
 
 //MARK: - Conversion Class
@@ -132,13 +132,17 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
  Functions for converting values
  */
 @objc public class Conversion : NSObject {
-
-///---------------------------------------------------------------------------------------
-/// Distance
-///---------------------------------------------------------------------------------------
-//MARK: Distance
 	
-	/** 
+}
+
+public extension Conversion {
+	
+	///---------------------------------------------------------------------------------------
+	/// Distance
+	///---------------------------------------------------------------------------------------
+	//MARK: Distance
+	
+	/**
 	Convert from Miles to Kilometers
 	
 	:param: miles - The distance in Miles
@@ -148,7 +152,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return miles * kConversionMilesPerKilometer
 	}
 	
-	/** 
+	/**
 	Convert from Kilometers to Miles
 	
 	:param: km - The distance in Kilometers
@@ -158,7 +162,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return km * kConversionKilometersPerMile
 	}
 	
-	/** 
+	/**
 	Convert from Feet to Meters
 	
 	:param: feet - The distance in Feet
@@ -168,7 +172,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return feet * kConversionMetersPerFoot
 	}
 	
-	/** 
+	/**
 	Convert from Meters to Feet
 	
 	:param: meters - The distance in Meters
@@ -177,8 +181,8 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func metersToFeet(meters:Meter) ->Feet {
 		return meters * kConversionFeetPerMeter
 	}
-
-	/** 
+	
+	/**
 	Convert from Miles to Feet
 	
 	:param: miles - The distance in Miles
@@ -187,15 +191,16 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func milesToFeet(miles:Mile) ->Feet {
 		return miles * kConversionFeetPerMile
 	}
+	
+}
 
-	
-	
 ///---------------------------------------------------------------------------------------
 /// Speed
 ///---------------------------------------------------------------------------------------
-//MARK: Speed
+public extension Conversion {
+	//MARK: Speed
 	
-	/** 
+	/**
 	Convert from KmH (Kilometer per Hour) to Mph (Miles per hour)
 	
 	:param: kmh - The speed in Kilometers per hour
@@ -204,8 +209,8 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func kmhToMph(kmh:Kilometer) ->Mile {
 		return self.kilometersToMiles(kmh)
 	}
-
-	/** 
+	
+	/**
 	Convert from Mph (Miles per hour) to KmH (Kilometer per Hour)
 	
 	:param: kmh - The speed in Miles per hour
@@ -215,7 +220,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return self.milesToKilometers(mph)
 	}
 	
-	/** 
+	/**
 	Convert from Knots to Mph (Miles per hour)
 	
 	:param: knots - The speed in Knots
@@ -225,7 +230,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return knots * kConversionMilesPerNauticalMile
 	}
 	
-	/** 
+	/**
 	Convert from Mph (Miles per hour) to Knots
 	
 	:param: mph - The speed in Miles per hour
@@ -234,11 +239,13 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func mphToKnots(mph:Mile) ->Knot {
 		return mph * kConversionNauticalMilesPerMile
 	}
+}
 
 ///---------------------------------------------------------------------------------------
 /// Temp
 ///---------------------------------------------------------------------------------------
-//MARK: Temp
+public extension Conversion {
+	//MARK: Temp
 	
 	public class var minDegCelsius: Double {
 		return -273.15
@@ -251,8 +258,8 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class var minDegKelvin: Double {
 		return 0
 	}
-
-	/** 
+	
+	/**
 	Convert from Fahrenheit to Celsius
 	
 	:param: fahrenheit - The Temprature in Fahrenheit
@@ -262,7 +269,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 		return (fahrenheit - 32.0) * (5.0/9.0)
 	}
 	
-	/** 
+	/**
 	Convert from Celsius to Fahrenheit
 	
 	:param: celsius - The Temprature in Celsius
@@ -271,15 +278,15 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func celsiusToFahrenheit(celsius:Celsius) ->Fahrenheit {
 		return (celsius * 9.0/5.0) + 32.0
 	}
+}
 
+public extension Conversion {
+	///---------------------------------------------------------------------------------------
+	/// Time
+	///---------------------------------------------------------------------------------------
+	//MARK: Time
 	
-	
-///---------------------------------------------------------------------------------------
-/// Time
-///---------------------------------------------------------------------------------------
-//MARK: Time
-	
-	/** 
+	/**
 	Convert from Minutes to Seconds
 	
 	:param: mins - The time in Minutes
@@ -298,8 +305,8 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func minutesToMilliseconds(minutes:Minute) -> Double {
 		return floor(minutes * 60000)
 	}
-
-	/** 
+	
+	/**
 	Convert from Hours to Minutes
 	
 	:param: mins - The time in Minutes
@@ -308,7 +315,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func hoursToMinutes(hours:Hour) -> Minute {
 		return (hours * 60)
 	}
-
+	
 	/**
 	Convert from Hours to Milliseconds
 	
@@ -318,8 +325,8 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func hoursToMilliseconds(hours:Hour) -> Double {
 		return floor(hours * 3600000)
 	}
-
-	/** 
+	
+	/**
 	Convert from Days to Hours
 	
 	:param: day - The number of Days
@@ -338,12 +345,17 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	public class func millisecondsToHours(milliseconds:Double) -> Hour {
 		return (milliseconds / 3600000)
 	}
+}
 
-///---------------------------------------------------------------------------------------
-/// Weight
-///---------------------------------------------------------------------------------------
-//MARK: Weight
 
+public extension Conversion {
+	
+	
+	///---------------------------------------------------------------------------------------
+	/// Weight
+	///---------------------------------------------------------------------------------------
+	//MARK: Weight
+	
 	/**
 	Convert from Pounds to Kilograms
 	
@@ -351,9 +363,9 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Kilos
 	*/
 	public class func poundsToKilograms(pounds:Pound) -> Kilo {
-		return pounds * kConversionKilogramsPerPound;
+		return pounds * kConversionKilogramsPerPound
 	}
-
+	
 	/**
 	Convert from Pounds to Stones
 	
@@ -361,7 +373,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Stones
 	*/
 	public class func poundsToStones(pounds:Pound) -> Stone {
-		return pounds * kConversionStonesPerPound;
+		return pounds * kConversionStonesPerPound
 	}
 	
 	/**
@@ -371,7 +383,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Pounds
 	*/
 	public class func kilogramsToPounds(kilos:Kilo) -> Pound {
-		return kilos * kConversionPoundsPerKilograms;
+		return kilos * kConversionPoundsPerKilograms
 	}
 	
 	/**
@@ -381,7 +393,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Stones
 	*/
 	public class func kilogramsToStones(kilos:Kilo) -> Stone {
-		return kilos * kConversionStonesPerKilograms;
+		return kilos * kConversionStonesPerKilograms
 	}
 	
 	/**
@@ -391,9 +403,9 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Pounds
 	*/
 	public class func stonesToPounds(stones:Stone) -> Pound {
-		return stones * kConversionPoundsPerStones;
+		return stones * kConversionPoundsPerStones
 	}
-
+	
 	/**
 	Convert from Stones to Kilos
 	
@@ -401,16 +413,16 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the weight in Kilos
 	*/
 	public class func stonesToKilograms(stones:Stone) -> Kilo {
-		return stones * kConversionKilogramsPerStone;
+		return stones * kConversionKilogramsPerStone
 	}
+}
 
-
-
-///---------------------------------------------------------------------------------------
-/// Geographic/Angle
-///---------------------------------------------------------------------------------------
-//MARK: Geographic/Angle
-
+public extension Conversion {
+	///---------------------------------------------------------------------------------------
+	/// Geographic/Angle
+	///---------------------------------------------------------------------------------------
+	//MARK: Geographic/Angle
+	
 	/**
 	Convert from Degress to Radians
 	
@@ -418,9 +430,9 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the converted value in Radians
 	*/
 	public class func degressToRadians(degress:Double) -> Double {
-		return degress * kConversionDegreesToRadians;
+		return degress * kConversionDegreesToRadians
 	}
-
+	
 	/**
 	Convert from Degress to Gradian
 	
@@ -428,9 +440,9 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the converted value in Gradian
 	*/
 	public class func degressToGradian(degress:Double) -> Double {
-		return degress * kConversionDegreesToGradian;
+		return degress * kConversionDegreesToGradian
 	}
-
+	
 	/**
 	Convert from Radians to Degress
 	
@@ -438,7 +450,7 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the converted value in Degress
 	*/
 	public class func radiansToDegress(radian:Double) -> Double {
-		return radian * kConversionRadiansToDegrees;
+		return radian * kConversionRadiansToDegrees
 	}
 	
 	/**
@@ -448,8 +460,6 @@ public func RAD_2_DEG(rad:Double)->Double {return Conversion.radiansToDegress(ra
 	:returns: Returns the converted value in Gradian
 	*/
 	public class func radiansToGradian(radian:Double) -> Double {
-		return radian * kConversionRadiansToGradian;
+		return radian * kConversionRadiansToGradian
 	}
-	
-
 }
