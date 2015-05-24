@@ -80,7 +80,7 @@ public extension NSDate {
 		c.month = month
 		c.day = day
 		
-		var gregorian = NSCalendar(identifier:NSGregorianCalendar)!
+		var gregorian = NSCalendar(identifier:NSCalendarIdentifierGregorian)!
 		var date = gregorian.dateFromComponents(c)
 		self.init(timeInterval:0, sinceDate:date!)
 	}

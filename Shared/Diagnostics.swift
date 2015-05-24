@@ -34,7 +34,7 @@ import Foundation
 	public let IOS8 = Diagnostics.OSVerison(8.0)
 	/** Helper for System Type: iOS7 */
 	public let IOS7 = Diagnostics.OSVerison(7.0)
-	let IOS6 = Diagnostics.OSVerison(6.0) //this would be odd given swift doesn't support it ;)-
+	public let IOS6 = Diagnostics.OSVerison(6.0) //this would be odd given swift doesn't support it ;)-
 	
 	public let IPAD = UIDevice.currentDevice().userInterfaceIdiom == .Pad
 	public let IPHONE = UIDevice.currentDevice().userInterfaceIdiom == .Phone

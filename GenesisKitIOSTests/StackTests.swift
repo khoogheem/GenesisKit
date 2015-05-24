@@ -10,6 +10,7 @@ import UIKit
 import XCTest
 import GenesisKitIOS
 
+/*
 class StackTests: XCTestCase {
 	var MyStack:Stack<String> = Stack<String>()
 	let items = (1...1000).map { $0 }
@@ -122,3 +123,4 @@ class StackTests: XCTestCase {
     }
 	
 }
+*/
