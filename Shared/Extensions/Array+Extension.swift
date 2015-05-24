@@ -13,25 +13,24 @@ import Foundation
 */
 extension Array {
 	
-	/**
-	Provides the index of the object
-	
-	:param: object The object to find the Index of
-	:returns: The index
-	*/
-	func indexOfObject(object : AnyObject) -> Int {
-		return self.indexOfObject(object)
-	}
-	
-	/**
-	Removes the specified object from Array
-	
-	:param: object The object to remove from Array
-	*/
-	mutating func removeObject(object : AnyObject) {
-		for var index = self.indexOfObject(object); index != NSNotFound; index = self.indexOfObject(object) {
-			self.removeAtIndex(index)
-		}
-	}
+    /**
+    Removes the specified object from Array
+    
+    :param: object The object to remove from Array
+    */
+    mutating func removeObject<U: Equatable>(object: U) {
+        var index: Int?
+        for (idx, objectToCompare) in enumerate(self) {
+            if let to = objectToCompare as? U {
+                if object == to {
+                    index = idx
+                }
+            }
+        }
+        
+        if(index != nil) {
+            self.removeAtIndex(index!)
+        }
+    }
 
 }

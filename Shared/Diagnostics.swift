@@ -333,7 +333,7 @@ import Foundation
 	
 	//MARK: - Class Private Functions
 	private class func fromBundleInfoDict(info: String) -> String? {
-		return NSBundle.mainBundle().infoDictionary![info] as NSString?
+		return NSBundle.mainBundle().infoDictionary![info] as? String
 	}
 	
 	/** A String value of the device platform information */

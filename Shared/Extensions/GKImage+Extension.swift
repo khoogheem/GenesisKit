@@ -58,7 +58,8 @@ public extension GKImage {
 
 			let colorSpace:CGColorSpace = CGColorSpaceCreateDeviceRGB()
 			let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
-			let context = CGBitmapContextCreate(nil, UInt(newSize.width), UInt(newSize.height), 8, 0, colorSpace, bitmapInfo)
+			let context = CGBitmapContextCreate(nil, Int(newSize.width), Int(newSize.height), 8, 0, colorSpace, bitmapInfo)
+            
 
 			let imageRef = CGBitmapContextCreateImage(context)
 			scaledImage = GKImage(CGImage: imageRef, size: newSize)

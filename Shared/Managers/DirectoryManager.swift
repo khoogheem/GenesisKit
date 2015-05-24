@@ -50,7 +50,7 @@ import Foundation
 	 :returns: A string of the directories path
 	 */
 	public class var documentDirectoryPath: String {
-		return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+		return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
 	}
 	
 	/**
@@ -65,7 +65,7 @@ import Foundation
 	:returns: A string of the directories path
 	*/
 	public class var libraryDirectoryPath: String {
-		return NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true)[0] as String
+		return NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true)[0] as! String
 	}
 
 	/**
@@ -82,9 +82,9 @@ import Foundation
 	*/
 	public class var cachesDirectoryPath: String {
 		#if os(iOS)
-			return NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as String
+			return NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as! String
 		#elseif os(OSX)
-			let path:String =  NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as String
+			let path:String =  NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as! String
 			return path.stringByAppendingPathComponent(NSBundle.mainBundle().bundleIdentifier!)
 		#endif
 	}
@@ -101,7 +101,7 @@ import Foundation
 	:returns:ß A string of the directories path
 	*/
 	public class var appSupportDirectoryPath: String {
-		let path:String =  NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)[0] as String
+		let path:String =  NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)[0] as! String
 
 		#if os(iOS)
 			//Lets mark it for NO Backup on iOS

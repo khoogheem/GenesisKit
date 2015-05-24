@@ -35,7 +35,7 @@ extension NSMutableData {
 	
 	:param: byte A Byte to append to the NSMutableData
 	*/
-	func appendByte(var byte: Byte) {
+	func appendByte(var byte: UInt8) {
 		self.appendBytes(&byte, length: 1)
 	}
 

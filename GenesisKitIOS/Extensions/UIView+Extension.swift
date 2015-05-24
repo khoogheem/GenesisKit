@@ -35,7 +35,7 @@ public extension UIView {
 	Removes all UIMotionEffects from UIView
 	*/
 	func removeMotionEffects() {
-		let motionEffects = self.motionEffects as [UIMotionEffect]
+		let motionEffects = self.motionEffects as! [UIMotionEffect]
 		for effect in motionEffects {
 			self.removeMotionEffect(effect)
 		}

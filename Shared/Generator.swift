@@ -31,7 +31,7 @@ import Foundation
   Generator for Structures.. Generic in type
 */
 public struct genericGenerator<T>: GeneratorType {
-	var items: Slice<T>
+	var items: ArraySlice<T>
 	
 	public mutating func next() -> T? {
 		if items.isEmpty {return nil}
@@ -39,4 +39,5 @@ public struct genericGenerator<T>: GeneratorType {
 		items = items[1..<items.count]
 		return ret
 	}
+        
 }

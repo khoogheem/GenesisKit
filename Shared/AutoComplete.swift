@@ -53,11 +53,11 @@ import Foundation
 	 */
 	public func getSuggestions(root:String) -> [String] {
 
-		if countElements(root) == 0 {
+		if count(root) == 0 {
 			return candidates
 		}
 		
-		let startPredicate = NSPredicate(format: "SELF BEGINSWITH[c] %@", root)!
+		let startPredicate = NSPredicate(format: "SELF BEGINSWITH[c] %@", root)
 		let filteredArray = candidates.filter { startPredicate.evaluateWithObject($0) };
 		
 		return	filteredArray
