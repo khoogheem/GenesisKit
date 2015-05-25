@@ -37,6 +37,15 @@ import Foundation
 public extension GKColor {
 	//MARK: Flat Colors
 	
+	/**
+	Provides the Flat UI Colors.
+	
+	:Get Color:
+		GKColor.greenSeaColor.color() - Gives you the Color.
+	:Get String Value:
+		GKColor.greenSeaColor.rawValue - Gives you the HEX String of the Color
+	
+	*/
 	public enum FlatColor: String {
 		/** Flat color object whose RGBA values are (r 0.086 g 0.627 b 0.522 a 1.0) */
 		case greenSeaColor = "16A085"
