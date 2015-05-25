@@ -134,4 +134,35 @@ public extension GKColor {
 			}
 		}
 	}
+	
+	/**
+	Provides a String array of the FlatColors
+	
+	:returns: An Array of The FlatColor HexStrings
+	*/
+	class func flatColorStrings() -> [String] {
+		
+		return [
+			GKColor.FlatColor.greenSeaColor.rawValue,
+			GKColor.FlatColor.emeraldColor.rawValue,
+			GKColor.FlatColor.nephritisColor.rawValue,
+			GKColor.FlatColor.peterRiverColor.rawValue,
+			GKColor.FlatColor.belizeHoleColor.rawValue,
+			GKColor.FlatColor.amethystColor.rawValue,
+			GKColor.FlatColor.wisteriaColor.rawValue,
+			GKColor.FlatColor.wetAsphaltColor.rawValue,
+			GKColor.FlatColor.midnightBlueColor.rawValue,
+			GKColor.FlatColor.sunflowerColor.rawValue,
+			GKColor.FlatColor.flatOrangeColor.rawValue,
+			GKColor.FlatColor.carrotColor.rawValue,
+			GKColor.FlatColor.pumpkinColor.rawValue,
+			GKColor.FlatColor.alizarinColor.rawValue,
+			GKColor.FlatColor.pomegranateColor.rawValue,
+			GKColor.FlatColor.cloudsColor.rawValue,
+			GKColor.FlatColor.silverColor.rawValue,
+			GKColor.FlatColor.concreteColor.rawValue,
+			GKColor.FlatColor.asbestosColor.rawValue
+		]
+	}
+
 }
