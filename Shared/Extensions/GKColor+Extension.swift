@@ -70,12 +70,16 @@ public extension GKColor {
 		}
 		
 		// Check for string length
-		assert(count(hex) == 6 || count(hex) == 3, "HEX Colors must be no more then 5 and no less then 3")
+		//		assert(count(hex) == 7 || count(hex) == 3, "HEX Colors must be no more then 6 and no less then 3")
 		
-		var hexNum: UInt32 = 0
-		NSScanner(string: hex).scanHexInt(&hexNum)
-		
-		self.init(hex:hexNum, alpha: alpha)
+		if count(hex) < 7 || count(hex) > 3 {
+			var hexNum: UInt32 = 0
+			NSScanner(string: hex).scanHexInt(&hexNum)
+			
+			self.init(hex:hexNum, alpha: alpha)
+		}else {
+			self.init(hex:0, alpha: alpha)
+		}
 	}
 
 	//MARK: - Functions

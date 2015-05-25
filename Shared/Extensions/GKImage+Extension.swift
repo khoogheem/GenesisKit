@@ -41,7 +41,7 @@ public extension GKImage {
 	
 	:param: newSize The NewSize of the iamge
 	:param: opaque An Optional Bool if image is opaque.  Default is false
-	:returns: A UIImage of the newSize
+	:returns: An Image of the newSize
 	*/
 	public func sizeImage(# newSize: CGSize, opaque: Bool = false) -> GKImage {
 		
