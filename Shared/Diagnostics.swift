@@ -72,7 +72,11 @@ import Foundation
 	Provides the Application Display name.  The name seen in Springboard
  	*/
 	public class var appName: String {
-		return self.fromBundleInfoDict("CFBundleDisplayName")!
+		if let name = self.fromBundleInfoDict("CFBundleDisplayName") {
+			return name
+		}else {
+			return self.appBundleName
+		}
 	}
 
 	
