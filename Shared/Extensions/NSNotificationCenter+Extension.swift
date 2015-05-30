@@ -1,8 +1,8 @@
 //
-//  NSMutableData+Extension.swift
+//  NSNotificationCenter+Extension.swift
 //  GenesisKit
 //
-//  Created by Kevin A. Hoogheem on 2/28/15.
+//  Created by Kevin A. Hoogheem on 5/30/15.
 //  Copyright (c) 2015 Kevin A. Hoogheem. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,40 +23,25 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
+
 import Foundation
 
-/** Extension Extends NSMutableData
+/** Extension Extends NSNotificationCenter
 
 */
-extension NSMutableData {
-    
-	/**
-	Appends a byte to NSMutableData
+extension NSNotificationCenter {
 	
-	:param: byte A Byte to append to the NSMutableData
-	*/
-	func appendByte(var byte: UInt8) {
-		self.appendBytes(&byte, length: 1)
-	}
-}
-
-
-extension NSData {
 	
-	/**
-	For Given NSData it will return back a byte array
-	
-	:returns: An UInt8 Byte Array
-	*/
-	func toByteArray() -> [UInt8] {
-		let pointer = UnsafePointer<UInt8>(self.bytes)
-		let count = self.length
+	class func postNotificationOnMainThread(aName: String, object: AnyObject? = nil, userInfo: [NSObject: AnyObject]? = nil) {
 		
-		// Get our buffer pointer and make an array out of it
-		let buffer = UnsafeBufferPointer<UInt8>(start:pointer, count:count)
-		let byteArray = [UInt8](buffer)
-		
-		return byteArray
+		if NSThread.mainThread() == true {
+			NSNotificationCenter.defaultCenter().postNotificationName(aName, object: object, userInfo: userInfo)
+		} else {
+			dispatch_async(dispatch_get_main_queue(), { () -> Void in
+				NSNotificationCenter.defaultCenter().postNotificationName(aName, object: object, userInfo: userInfo)
+			})
+		}
 	}
-	
+
 }
