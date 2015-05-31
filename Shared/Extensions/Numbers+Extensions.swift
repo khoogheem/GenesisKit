@@ -25,6 +25,14 @@
 
 import Foundation
 
+extension Bool {
+	
+	init<T : IntegerType>(_ integer: T){
+		self.init(integer != 0)
+	}
+	
+}
+
 extension String {
     var hexaToInt      : Int    { return Int(strtoul(self, nil, 16))    }
     var hexaToDouble   : Double { return Double(strtoul(self, nil, 16)) }
@@ -48,6 +56,17 @@ extension Int {
     
     var arrayWithSignificantBits: [Int] { return [(self & 0xFF), ((self & 0xFF00) >> 8)] }
 
+	var boolValue  : Bool	{
+		switch self {
+		case 0:
+			return false
+		case 1:
+			return true
+		default:
+			return false
+		}
+	}
+
 }
 
 extension UInt8 {
@@ -55,4 +74,16 @@ extension UInt8 {
     var hexaString  : String { return String(self, radix: 16) }
     var doubleValue : Double { return Double(self) }
     var asciiValue  : String { return String(UnicodeScalar(self)) }
+	
+	var boolValue  : Bool	{
+		switch self {
+		case 0:
+			return false
+		case 1:
+			return true
+		default:
+			return false
+		}
+	}
+
 }
